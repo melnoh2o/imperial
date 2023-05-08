@@ -1,4 +1,3 @@
-import { Group, Space } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { BsArrowRight } from 'react-icons/bs';
@@ -7,7 +6,16 @@ import useStore from '../../../store';
 import { Variants } from '../../../constants/animation';
 import { ContentWrapper, Container, Description } from '../../styles/index';
 import { useSalesStartsData } from './helpers/useSalesStartsData';
-import { Button, ImageWrapper, Img, InnerTitle, InnerTitleStack, InnerWrapper, YearLine } from './styles';
+import {
+  Button,
+  ImageWrapper,
+  Img,
+  InnerTitle,
+  InnerTitleStack,
+  InnerWrapper,
+  YearLine,
+  Space,
+} from './styles';
 
 const SalesStarts = () => {
   const open = useStore((store) => store.openCallbackModal);
@@ -26,13 +34,14 @@ const SalesStarts = () => {
             </InnerTitle>
             <Description variants={Variants.opacity} custom={1.4}>
               {data.description1}
-              <Space h="md" />
-              <Group spacing={4}>
+              <Space />
+              <span className="group">
                 <MdOutlineLocationOn /> <span>{data.location}</span>
-              </Group>
-              <Space h="md" />
+              </span>
+              <Space />
               <span dangerouslySetInnerHTML={{ __html: data.description2 }} />
             </Description>
+
             <Button onClick={open} type="button" variants={Variants.opacity} custom={1.5}>
               <span>Подробнее</span>
               <BsArrowRight />

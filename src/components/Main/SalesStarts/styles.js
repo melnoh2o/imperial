@@ -89,3 +89,9 @@ export const YearLine = styled.p`
     background-color: var(--black);
   }
 `;
+
+export const Space = styled.span`
+  display: block;
+  height: 1rem;
+  min-height: 1rem;
+`;

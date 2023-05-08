@@ -1,12 +1,16 @@
-import { motion } from 'framer-motion';
 import { Variants } from '../../../constants/animation';
-import { CompanyTitle } from './styles';
+import { Paths } from '../../../constants/Paths';
+import Logo from '../../svgs/Logo';
+import { CompanyTitle, Group } from './styles';
 
 const CompanyLogo = ({ isWhite }) => {
   return (
-    <motion.p variants={Variants.opacity} custom={1.1}>
-      <CompanyTitle $isWhite={isWhite}>Imperial</CompanyTitle>
-    </motion.p>
+    <Group variants={Variants.opacity} custom={1.1}>
+      <Logo color={isWhite ? 'var(--black)' : 'var(--white)'} />
+      <CompanyTitle to={Paths.MAIN} $isWhite={isWhite}>
+        Imperial
+      </CompanyTitle>
+    </Group>
   );
 };
 

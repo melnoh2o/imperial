@@ -7,10 +7,13 @@ const useStore = create(
       isOpen: false,
       isFormClosed: false,
       isCallbackFormOpen: false,
+      isBurgerMenuOpen: false,
       open: () => set({ isOpen: true }),
       openCallbackModal: () => set({ isCallbackFormOpen: true }),
+      toggleBurgerMenu: () => set((state) => ({ isBurgerMenuOpen: !state.isBurgerMenuOpen })),
       close: () => set({ isOpen: false, isFormClosed: true }),
       closeCallbackModal: () => set({ isCallbackFormOpen: false }),
+      closeBurgerMenu: () => set({ isBurgerMenuOpen: false }),
     }),
     {
       name: 'cyprus', // unique name

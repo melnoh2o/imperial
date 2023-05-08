@@ -42,6 +42,11 @@ export const Description = styled(motion.p)`
   font-weight: 400;
   word-wrap: break-word;
   color: var(--gray2);
+
+  .group {
+    ${({ theme }) => theme.mixins.center};
+    gap: 4px;
+  }
 `;
 
 export const SuccessMessage = styled(motion.p)`
