@@ -59,10 +59,12 @@ const CallBackFormModal = () => {
           borderRadius: 0,
         },
         body: {
-          padding: '40px 45px',
+          padding:
+            'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem) clamp(1.56rem, calc(1.07rem + 2.44vw), 2.81rem)',
         },
         header: {
-          padding: '40px 45px 20px',
+          padding:
+            'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem) clamp(1.56rem, calc(1.07rem + 2.44vw), 2.81rem) 20px',
           h2: {
             fontSize: 12,
             width: '80%',

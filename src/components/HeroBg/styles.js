@@ -39,8 +39,8 @@ export const Subtitle = styled(motion.p)`
 `;
 
 export const Title = styled(motion.h1)`
-  font-size: 54px;
-  line-height: 56px;
+  font-size: clamp(2.13rem, calc(1.64rem + 2.44vw), 3.38rem);
+  line-height: clamp(2.38rem, calc(1.94rem + 2.2vw), 3.5rem);
   font-weight: 700;
   color: var(--white);
   text-transform: uppercase;

@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-export const FlexContainer = styled.section`
-  padding: 70px 0;
+import { ContentWrapper } from '../styles/index';
+
+export const FlexContainer = styled(ContentWrapper)`
   width: 95%;
   margin-inline: auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 50px;
+  gap: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+    width: 85%;
+  }
 `;

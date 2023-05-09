@@ -11,7 +11,7 @@ export const Wrapper = styled(motion.div)`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px var(--black-bg4);
 
     img {
       opacity: 0.7;
@@ -25,6 +25,10 @@ export const ImageWrapper = styled.div`
   position: relative;
   height: 200px;
   overflow: hidden;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    height: 170px;
+  }
 `;
 
 export const Img = styled.img`
@@ -51,7 +55,8 @@ export const InfoTitle = styled.span`
 export const ContentWrapper = styled.div`
   ${({ theme }) => theme.mixins.column};
   gap: 8px;
-  padding: 30px 20px 20px;
+  padding: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem) clamp(1.25rem, calc(1.13rem + 0.61vw), 1.56rem)
+    clamp(1.25rem, calc(1.13rem + 0.61vw), 1.56rem);
 `;
 
 export const ContentLink = styled(NavLink)`

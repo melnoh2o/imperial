@@ -1,29 +1,28 @@
-import { useState } from 'react';
+import { Collapse } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 
 import Arrow from '../Arrow';
 import FilterButton from '../FilterButton';
+import { FilterMobileButton, FilterStack } from '../styles';
+import { FilterMobileListContainer } from './styles';
 
 const MobileItem = ({ data, values, setValue, label }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <div className="filter-mobile-stack">
-      <button onClick={() => setIsVisible(!isVisible)} type="button" className="filter-mobile_subtitle">
+    <FilterStack>
+      <FilterMobileButton onClick={toggle} type="button" $isActive={opened}>
         <span>{label}</span>
-        <Arrow isVisible={isVisible} />
-      </button>
-      {isVisible && (
-        <div className="filter-mobile-container">
-          <div className="ftco__filter_stack" id="parent-developer">
-            <div id="developer" className="filter-flex-container">
-              {data.map((item) => (
-                <FilterButton key={item.id} item={item} values={values} setValue={setValue} />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+        <Arrow isVisible={opened} />
+      </FilterMobileButton>
+      <Collapse in={opened}>
+        <FilterMobileListContainer>
+          {data.map((item) => (
+            <FilterButton key={item.id} item={item} values={values} setValue={setValue} />
+          ))}
+        </FilterMobileListContainer>
+      </Collapse>
+    </FilterStack>
   );
 };
 

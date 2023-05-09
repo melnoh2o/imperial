@@ -8,7 +8,7 @@ export const HeaderWrapper = styled(motion.header)`
   right: 0;
   left: 0;
   z-index: 100;
-  padding: 24px 0;
+  padding: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem) 0;
   transition: background 0.3s ease-in, top 0.6s linear;
 
   @media (min-width: 992px) {
@@ -20,6 +20,6 @@ export const HeaderWrapper = styled(motion.header)`
     props.$isWhite &&
     css`
       background: var(--white);
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 5px var(--black-bg3);
     `}
 `;

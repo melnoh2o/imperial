@@ -10,7 +10,7 @@ export const FormWrapper = styled(motion.form)`
 export const CheckboxTitle = styled.p`
   max-width: 80%;
   text-align: left;
-  font-size: 16px;
+  font-size: var(--fs16);
   line-height: 1.55;
   color: var(--gray2);
 `;

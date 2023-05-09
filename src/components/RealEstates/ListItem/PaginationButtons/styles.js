@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled(motion.div)`
   ${({ theme }) => theme.mixins.fCenter};
-  gap: 10px;
+  gap: clamp(0.5rem, calc(0.45rem + 0.24vw), 0.63rem);
 `;
 
 export const Button = styled(motion.button)`

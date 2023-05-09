@@ -3,15 +3,15 @@ import { useQuery } from '@tanstack/react-query';
 import { Variants } from '../../../constants/animation';
 import { LocationServices } from '../../../services/locationServices';
 import Loader from '../../Loader';
-import { Container, ContentStack, Subtitle, Title, TitleStack } from '../../styles';
+import { Container, ContentStack, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles';
 import Item from './Item';
-import { FlexContainer, Wrapper } from './styles';
+import { FlexContainer } from './styles';
 
 const LisItem = () => {
   const { data: locations, isLoading } = useQuery(['locations'], () => LocationServices.getAll());
 
   return (
-    <Wrapper>
+    <ContentWrapper $isBoth>
       <Container>
         <ContentStack>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
@@ -31,7 +31,7 @@ const LisItem = () => {
           </FlexContainer>
         </ContentStack>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

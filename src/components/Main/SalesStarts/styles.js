@@ -8,10 +8,19 @@ export const InnerWrapper = styled(motion.div)`
   min-height: 420px;
   ${({ theme }) => theme.mixins.apart};
   overflow: hidden;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const ImageWrapper = styled(motion.div)`
   width: 58%;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+  }
 `;
 
 export const Img = styled.img`
@@ -23,7 +32,11 @@ export const Img = styled.img`
 export const InnerTitleStack = styled(TitleStack)`
   width: 36%;
   align-items: flex-start;
-  gap: 20px;
+  gap: clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+  }
 `;
 
 export const InnerTitle = styled(motion.h3)`
@@ -82,11 +95,16 @@ export const YearLine = styled.p`
     height: 1px;
     width: 85px;
     display: inline-block;
-    position: absolute;
-    top: 50%;
+    /* position: absolute; */
+    /* / top: 50%; */
     z-index: 70;
     margin-left: 15px;
     background-color: var(--black);
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    ${({ theme }) => theme.mixins.center};
+    justify-content: flex-end;
   }
 `;
 

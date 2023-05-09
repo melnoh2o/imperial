@@ -15,14 +15,14 @@ export const NavbarWrapper = styled(motion.ul)`
 
 export const NavBarItem = styled(motion.li)`
   position: relative;
-  padding: 5px 15px;
+  padding: clamp(0rem, calc(-0.12rem + 0.61vw), 0.31rem) 15px;
 `;
 
 export const NavBarLink = styled.button`
   position: relative;
   display: inline-block;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
+  line-height: clamp(0.88rem, calc(0.78rem + 0.49vw), 1.13rem);
   font-weight: 300;
   letter-spacing: 2px;
   opacity: ${(props) => (props.$isActive ? '1' : ' 0.7')};

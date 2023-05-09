@@ -8,6 +8,22 @@ export const Wrapper = styled(motion.section)`
   grid-template-columns: 1fr 1fr;
   padding-bottom: 33px;
   border-bottom: 1px solid var(--white2);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 28px;
+  }
+`;
+
+export const FlexContainer = styled(motion.div)`
+  ${({ theme }) => theme.mixins.column};
+  gap: 2.375rem;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    align-items: center;
+    gap: 1rem;
+  }
 `;
 
 export const Description = styled(motion.p)`
@@ -17,6 +33,22 @@ export const Description = styled(motion.p)`
   font-weight: 400;
   color: var(--white3);
   text-align: left;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    text-align: center;
+  }
+`;
+
+export const Stack = styled.div`
+  ${({ theme }) => theme.mixins.column};
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 2.375rem;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    align-items: center;
+    gap: 1rem;
+  }
 `;
 
 export const GetInTouchLink = styled(NavLink)`
@@ -43,6 +75,17 @@ export const GetInTouchLink = styled(NavLink)`
     &::before {
       width: 100%;
     }
+  }
+`;
+
+export const ListContainer = styled(motion.div)`
+  ${({ theme }) => theme.mixins.column};
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.45rem;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    align-items: center;
   }
 `;
 

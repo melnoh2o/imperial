@@ -3,10 +3,8 @@ import styled from 'styled-components';
 
 export const LocationCard = styled(motion.div)`
   cursor: pointer;
-  width: 30.0333%;
   position: relative;
   overflow: hidden;
-  margin: 0 15px 30px;
 
   &:hover {
     img {
@@ -25,6 +23,10 @@ export const LocationCard = styled(motion.div)`
         opacity: 0.3;
       }
     }
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    min-height: 235px;
   }
 `;
 

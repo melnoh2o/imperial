@@ -18,25 +18,34 @@ export const Button = styled(motion.button)`
     display: block;
     height: 1.5px;
     width: 100%;
-    background: ${(props) => (props.$isWhite ? 'var(--black)' : 'var(--white)')};
+    background: ${(props) =>
+      props.$isWhite ? (props.$isOpen ? 'var(--white)' : 'var(--black)') : 'var(--white)'};
   }
 
-  .first {
-    transform-origin: 0% 0%;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: ${(props) =>
+      props.$isWhite ? (props.$isOpen ? 'var(--white)' : 'var(--black)') : 'var(--white)'};
+  }
+
+  &::before {
     transform: ${(props) =>
-      props.$isOpen ? 'rotate(45deg) translate(-3px, -1.5px)' : 'rotate(0) translate(0px)'};
+      props.$isOpen ? 'rotate(45deg) translate(3px, 3.5px)' : 'rotate(0) translate(0px, 0px)'};
     transition: transform 0.4s ease-in-out;
   }
 
-  .second {
+  span {
     transform: ${(props) => (props.$isOpen ? 'scaleY(0)' : 'scaleY(1)')};
     transition: transform 0.2s ease-in-out;
   }
 
-  .third {
-    transform-origin: 0% 100%;
+  &::after {
     transform: ${(props) =>
-      props.$isOpen ? 'rotate(-45deg) translate(-1px, 0px)' : 'rotate(0) translate(0px, 0px)'};
+      props.$isOpen ? 'rotate(-45deg) translate(5.3px, -6.2px)' : 'rotate(0) translate(0px, 0px)'};
     transition: transform 0.4s ease-in-out;
   }
 `;

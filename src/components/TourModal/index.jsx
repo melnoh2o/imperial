@@ -1,9 +1,9 @@
 import { useId } from 'react';
-import { Modal, Stack } from '@mantine/core';
+import { Modal, Stack as MantieneStack } from '@mantine/core';
 
 import useStore from '../../store';
 import ModalForm from './ModalForm';
-import { Subtitle, Title } from './styles';
+import { Stack, Subtitle, Title } from './styles';
 
 const TourModal = () => {
   const isOpen = useStore((state) => state.isOpen);
@@ -34,7 +34,8 @@ const TourModal = () => {
           borderRadius: 0,
         },
         body: {
-          padding: '1rem 3rem 2rem !important',
+          padding:
+            'clamp(0.00rem, calc(-0.39rem + 1.95vw), 1.00rem) clamp(1.56rem, calc(1.00rem + 2.80vw), 3.00rem) 2rem !important',
         },
         close: {
           width: 25,
@@ -58,17 +59,17 @@ const TourModal = () => {
         },
       }}
     >
-      <Stack spacing={24}>
-        <Stack spacing={21}>
+      <MantieneStack spacing={24}>
+        <Stack>
           <Title>Долгожданный инвестиционный тур по Северному Кипру</Title>
-          <Stack spacing={2} align="center">
+          <MantieneStack spacing={2} align="center">
             {data.map((item) => (
               <Subtitle key={item.id}>• {item.title}</Subtitle>
             ))}
-          </Stack>
+          </MantieneStack>
         </Stack>
         <ModalForm />
-      </Stack>
+      </MantieneStack>
     </Modal>
   );
 };

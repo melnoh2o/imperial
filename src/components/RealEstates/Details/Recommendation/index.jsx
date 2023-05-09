@@ -32,6 +32,10 @@ const Recommendation = ({ currentItemId, developer }) => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 10,
+
+                '@media (min-width: 320px)': {
+                  top: -70,
+                },
               },
 
               control: {
@@ -53,12 +57,26 @@ const Recommendation = ({ currentItemId, developer }) => {
                   background: 'var(--black)',
                 },
 
-                svg: {
+                '@media (min-width: 320px)': {
                   width: 30,
                   height: 30,
                 },
+
+                svg: {
+                  width: 30,
+                  height: 30,
+
+                  '@media (min-width: 320px)': {
+                    width: 25,
+                    height: 25,
+                  },
+                },
               },
             }}
+            breakpoints={[
+              { maxWidth: 'md', slideSize: '50%' },
+              { maxWidth: 'sm', slideSize: '100%' },
+            ]}
           >
             {filteredItems.map((item) => (
               <Carousel.Slide key={item.id}>

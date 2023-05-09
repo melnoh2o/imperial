@@ -7,10 +7,10 @@ export const Group = styled(motion.div)`
 
   svg {
     position: absolute;
-    top: -1.5px;
+    top: -14.5px;
     left: 0;
-    width: 35px;
-    height: 28px;
+    width: 46px;
+    height: 46px;
   }
 `;
 
@@ -23,5 +23,5 @@ export const CompanyTitle = styled(NavLink)`
   text-transform: uppercase;
   color: ${(props) => (props.$isWhite ? 'var(--black)' : 'var(--white)')};
   letter-spacing: 2px;
-  padding-left: 32px;
+  padding-left: 44px;
 `;

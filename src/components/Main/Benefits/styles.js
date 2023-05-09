@@ -31,7 +31,7 @@ export const InnerWrapper = styled(motion.div)`
   position: relative;
   ${({ theme }) => theme.mixins.column};
   gap: 30px;
-  padding: 50px 0;
+  padding: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem) 0;
 `;
 
 export const InnerTitleStack = styled(TitleStack)`
@@ -48,16 +48,24 @@ export const InnerDescription = styled(Description)`
   opacity: 0.8;
   text-align: center;
   margin-inline: auto;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+  }
 `;
 
 export const ListItem = styled(motion.ul)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: 0.5px solid var(--gray2);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Item = styled(motion.li)`
-  padding: 45px 50px;
+  padding: clamp(1.88rem, calc(1.51rem + 1.83vw), 2.81rem) clamp(2.19rem, calc(1.82rem + 1.83vw), 3.13rem);
   text-align: center;
   border: 0.5px solid var(--gray2);
   background: transparent;

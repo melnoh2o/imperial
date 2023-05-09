@@ -3,7 +3,20 @@ import styled from 'styled-components';
 
 export const Wrapper = styled(motion.section)`
   position: relative;
-  padding-top: 47px;
+  padding-top: clamp(2.06rem, calc(1.72rem + 1.71vw), 2.94rem);
+`;
+
+export const ApartContainer = styled(motion.div)`
+  ${({ theme }) => theme.mixins.center};
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const CopyrightTitle = styled(motion.p)`

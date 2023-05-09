@@ -2,10 +2,6 @@ import styled, { css } from 'styled-components';
 import { Description } from '../../styles';
 import { motion } from 'framer-motion';
 
-export const Wrapper = styled.section`
-  padding: 70px 0;
-`;
-
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   align-items: center;

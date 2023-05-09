@@ -1,10 +1,23 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { Description } from '../../../styles';
 
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.center};
   flex-direction: row;
-  gap: 40px;
+  gap: clamp(1.25rem, calc(0.76rem + 2.44vw), 2.5rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const Separator = styled(motion.span)`
@@ -46,4 +59,8 @@ export const LinkBtn = styled(motion.button)`
       width: 100%;
     }
   }
+`;
+
+export const InfoDescription = styled(Description)`
+  line-height: clamp(1.5rem, calc(1.3rem + 0.98vw), 2rem);
 `;

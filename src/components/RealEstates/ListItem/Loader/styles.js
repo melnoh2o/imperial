@@ -2,10 +2,10 @@ import styled, { css, keyframes } from 'styled-components';
 
 const animloader = keyframes`
   0% {
-    box-shadow: -72px 0 #000000 inset;
+    box-shadow: -72px 0 var(--black) inset;
   }
   100% {
-    box-shadow: 48px 0 #000000 inset;
+    box-shadow: 48px 0 var(--black) inset;
   }
 `;
 

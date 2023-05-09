@@ -8,7 +8,11 @@ export const Wrapper = styled(motion.div)`
 `;
 
 export const Title = styled(motion.h5)`
-  font-size: 1.5rem;
+  font-size: var(--fs24);
   line-height: 20px;
   color: var(--black);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 76%;
+  }
 `;

@@ -1,26 +1,49 @@
 import { createStyles } from '@mantine/core';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-
-export const Wrapper = styled.section`
-  padding: 70px 0;
-`;
+import { Description } from '../../styles';
 
 export const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: flex-start;
-  gap: 70px;
+  gap: clamp(2.5rem, calc(1.77rem + 3.66vw), 4.38rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  gap: 60px;
+  gap: clamp(1.88rem, calc(1.14rem + 3.66vw), 3.75rem);
+`;
+
+export const FormDescription = styled(Description)`
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    text-align: center;
+  }
+`;
+
+export const ContactGroup = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ContactCardWrapper = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  gap: 24px;
+  gap: clamp(0.88rem, calc(0.63rem + 1.22vw), 1.5rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    align-items: center;
+  }
 `;
 
 export const Separator = styled.span`
@@ -62,6 +85,10 @@ export const FormStack = styled(motion.div)`
 export const useInputStyles = createStyles(() => ({
   root: {
     minWidth: '45%',
+
+    '@media (min-width: 320px)': {
+      minWidth: '100%',
+    },
   },
 
   input: {
@@ -111,4 +138,13 @@ export const Group = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+    gap: 20px;
+
+    .react-tel-input {
+      width: 100% !important;
+    }
+  }
 `;

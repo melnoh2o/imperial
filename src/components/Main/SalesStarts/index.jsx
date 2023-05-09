@@ -22,7 +22,7 @@ const SalesStarts = () => {
   const { data } = useSalesStartsData();
 
   return (
-    <ContentWrapper>
+    <ContentWrapper $isLast>
       <Container>
         <InnerWrapper>
           <InnerTitleStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
@@ -59,8 +59,8 @@ const SalesStarts = () => {
             <Carousel
               styles={{
                 control: {
-                  width: 60,
-                  height: 60,
+                  width: 'clamp(2.50rem, calc(2.01rem + 2.44vw), 3.75rem)',
+                  height: 'clamp(2.50rem, calc(2.01rem + 2.44vw), 3.75rem)',
                   color: 'var(--white)',
                   borderRadius: '100%',
                   border: '1px solid var(--black)',
@@ -79,8 +79,8 @@ const SalesStarts = () => {
                   },
 
                   svg: {
-                    height: 35,
-                    width: 35,
+                    height: 'clamp(1.56rem, calc(1.32rem + 1.22vw), 2.19rem)',
+                    width: 'clamp(1.56rem, calc(1.32rem + 1.22vw), 2.19rem)',
                   },
                 },
               }}

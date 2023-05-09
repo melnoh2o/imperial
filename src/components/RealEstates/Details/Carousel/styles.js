@@ -3,17 +3,30 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div``;
 
+export const ImgWrapper = styled.div`
+  height: 465px;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    height: 260px;
+  }
+`;
+
 export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-export const ImageWrapper = styled(motion.div)`
+export const ImgsGroup = styled(motion.div)`
   ${({ theme }) => theme.mixins.center};
-  gap: 10px;
-  padding: 30px 25px;
+  gap: clamp(0.31rem, calc(0.19rem + 0.61vw), 0.63rem);
+  padding: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem) clamp(1.25rem, calc(1.13rem + 0.61vw), 1.56rem);
   border-bottom: 1px solid var(--gray6);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    max-width: 400px;
+    overflow: scroll;
+  }
 `;
 
 export const ImgButton = styled(motion.button)`
@@ -27,5 +40,9 @@ export const ImgButton = styled(motion.button)`
   &:is(:hover, :active, :focus) {
     outline: none;
     opacity: 1;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 50%;
   }
 `;

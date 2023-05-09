@@ -15,7 +15,7 @@ const InvestmentTour = () => {
       />
       <HeroBg
         url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683133332/information-bg_tbs5y6.jpg"
-        title="Инвестиционный тур по недвижимости на Северном Кипре"
+        title="Тур по недвижимости на Северном Кипре"
         subtitle="Инвестиционный тур"
       />
       <TourCard />

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { createStyles } from '@mantine/core';
 
@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
 
 export const ContentStack = styled.div`
   ${({ theme }) => theme.mixins.column};
-  gap: 50px;
+  gap: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem);
 `;
 
 export const Subtitle = styled(motion.p)`
@@ -23,6 +23,10 @@ export const Subtitle = styled(motion.p)`
   font-weight: 300;
   text-transform: uppercase;
   color: var(--black);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    text-align: center;
+  }
 `;
 
 export const Title = styled(motion.h4)`
@@ -30,6 +34,10 @@ export const Title = styled(motion.h4)`
   line-height: 34px;
   font-weight: 700;
   color: var(--black);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    text-align: center;
+  }
 `;
 
 export const TitleStack = styled(motion.div)`
@@ -62,7 +70,7 @@ export const FormButton = styled.button`
   position: relative;
   height: 50px;
   ${({ theme }) => theme.mixins.fCenter};
-  font-size: 16px;
+  font-size: var(--fs16);
   line-height: 18px;
   letter-spacing: 2px;
   font-weight: 500;
@@ -133,5 +141,25 @@ export const useInputStyles = createStyles(() => ({
 }));
 
 export const ContentWrapper = styled(motion.section)`
-  padding: 70px 0;
+  padding: clamp(3.13rem, calc(2.64rem + 2.44vw), 4.38rem) 0;
+
+  ${(props) =>
+    props.$isFirst &&
+    css`
+      padding: clamp(4.38rem, calc(2.67rem + 8.54vw), 8.75rem) 0
+        clamp(3.13rem, calc(2.64rem + 2.44vw), 4.38rem);
+    `}
+
+  ${(props) =>
+    props.$isLast &&
+    css`
+      padding: clamp(3.13rem, calc(2.64rem + 2.44vw), 4.38rem) 0
+        clamp(4.38rem, calc(2.67rem + 8.54vw), 8.75rem);
+    `}
+  
+    ${(props) =>
+    props.$isBoth &&
+    css`
+      padding: clamp(4.38rem, calc(2.67rem + 8.54vw), 8.75rem) 0;
+    `}
 `;

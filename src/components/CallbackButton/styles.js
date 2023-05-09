@@ -22,8 +22,8 @@ export const ButtonWrapper = styled(motion.button)`
   position: fixed;
   bottom: 7%;
   right: 7%;
-  width: 60px;
-  height: 60px;
+  width: clamp(3.13rem, calc(2.88rem + 1.22vw), 3.75rem);
+  height: clamp(3.13rem, calc(2.88rem + 1.22vw), 3.75rem);
   z-index: 100;
   ${({ theme }) => theme.mixins.fCenter};
   color: var(--white);
@@ -35,8 +35,8 @@ export const ButtonWrapper = styled(motion.button)`
   animation: ${pulse} 2.2s linear infinite;
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem);
+    height: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem);
   }
 
   &:is(:hover, :active, :focus) {

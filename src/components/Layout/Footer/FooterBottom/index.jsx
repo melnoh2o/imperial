@@ -3,14 +3,14 @@ import { Group } from '@mantine/core';
 
 import { useNavLinks } from '../../../../helpers/hooks/useNavLinks';
 import { Variants } from '../../../../constants/animation';
-import { CopyrightTitle, SocialLinksGroup, SocialLink, Wrapper } from './styles';
+import { CopyrightTitle, SocialLinksGroup, SocialLink, Wrapper, ApartContainer } from './styles';
 
 const FooterBottom = () => {
   const { socialLinks } = useNavLinks();
 
   return (
     <Wrapper initial="hidden" exit="exit" whileInView="enter">
-      <Group position="apart">
+      <ApartContainer>
         <CopyrightTitle variants={Variants.opacity} custom={1.3}>
           © {new Date().getFullYear()} Все права защищены
         </CopyrightTitle>
@@ -26,7 +26,7 @@ const FooterBottom = () => {
             );
           })}
         </SocialLinksGroup>
-      </Group>
+      </ApartContainer>
     </Wrapper>
   );
 };

@@ -59,4 +59,8 @@ export const LoaderTitle = styled.p`
     transform-origin: center left;
     animation: ${loading} 2s linear infinite forwards;
   }
+
+  @media (min-width: 320px) {
+    font-size: 2em;
+  }
 `;

@@ -5,7 +5,7 @@ const footerBg = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683133295/
 
 export const Wrapper = styled(motion.footer)`
   position: relative;
-  padding: 140px 0 140px;
+  padding: 140px 0;
   background: black url(${footerBg}) center/cover no-repeat;
 
   &::before {
@@ -17,5 +17,9 @@ export const Wrapper = styled(motion.footer)`
     right: 0;
     background-color: black;
     opacity: 0.8;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    padding: 50px 0;
   }
 `;

@@ -1,16 +1,16 @@
 import { Variants } from '../../../constants/animation';
-import { TitleStack } from '../../styles/index';
+import { ContentWrapper, TitleStack } from '../../styles/index';
 import { Subtitle } from '../../styles/index';
 import { Title } from '../../styles/index';
 import { Container, ContentStack } from '../../styles/index';
 import { useAddressesData } from './helpers';
-import { Grid, MeetUsCard, MeetUsLink, MeetUsTitle, MeetUsTitleStack, Separator, Wrapper } from './styles';
+import { Grid, MeetUsCard, MeetUsLink, MeetUsTitle, MeetUsTitleStack, Separator } from './styles';
 
 const MeetUs = () => {
   const { addresses } = useAddressesData();
 
   return (
-    <Wrapper>
+    <ContentWrapper $isLast>
       <Container>
         <ContentStack>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
@@ -35,7 +35,7 @@ const MeetUs = () => {
           </Grid>
         </ContentStack>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

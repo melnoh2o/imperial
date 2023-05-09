@@ -35,8 +35,8 @@ const Benefits = () => {
             <ListItem
               variants={Variants.container}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0.3 }}
+              animate="visible"
+              viewport={{ amount: 0.1, once: true }}
             >
               {benefits &&
                 benefits.map((item) => (

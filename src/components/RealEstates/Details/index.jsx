@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useMediaQuery } from '@mantine/hooks';
 
 import { RealEstatesServices } from '../../../services/realEstateServices';
 import { Container } from '../../styles/index';
@@ -13,13 +14,14 @@ import { FlexContainer, BodyWrapper, Wrapper, Group, LoaderWrapper } from './sty
 
 const Details = () => {
   const { id } = useParams();
+  const matches = useMediaQuery('(max-width: 992px)');
 
   const { data: realEstate, isLoading } = useQuery(['filer-values', id], () =>
     RealEstatesServices.getRealEstateById(id || 0)
   );
 
   return (
-    <Wrapper>
+    <Wrapper $isBoth>
       <Container>
         <LoaderWrapper>
           {!isLoading && !!realEstate ? (
@@ -32,10 +34,12 @@ const Details = () => {
                     <Descriptions realEstate={realEstate} />
                   </BodyWrapper>
 
+                  {matches ? <PriceDescription prices={realEstate.prices} /> : null}
+
                   <Recommendation currentItemId={realEstate.id} developer={realEstate.developer} />
                 </FlexContainer>
 
-                <PriceDescription prices={realEstate.prices} />
+                {!matches ? <PriceDescription prices={realEstate.prices} /> : null}
               </Group>
             </>
           ) : (

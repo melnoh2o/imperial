@@ -5,8 +5,7 @@ import { Carousel, useAnimationOffsetEffect } from '@mantine/carousel';
 import { motion } from 'framer-motion';
 
 import { Variants } from '../../../../constants/animation';
-import { Description } from '../../../styles/index';
-import { FlexContainer, Separator, LinkBtn } from './styles';
+import { FlexContainer, Separator, LinkBtn, ImageWrapper, InfoDescription } from './styles';
 
 const TRANSITION_DURATION = 200;
 
@@ -40,7 +39,8 @@ const Modal = ({ isOpen, close, description, images, location }) => {
           borderRadius: 0,
         },
         body: {
-          padding: '2rem 2rem 2.4rem',
+          padding:
+            'clamp(1.63rem, calc(1.48rem + 0.73vw), 2.00rem) clamp(1.63rem, calc(1.48rem + 0.73vw), 2.00rem) clamp(1.63rem, calc(1.33rem + 1.46vw), 2.38rem)',
         },
         close: {
           border: '1px solid transparent',
@@ -69,7 +69,7 @@ const Modal = ({ isOpen, close, description, images, location }) => {
           <Carousel
             loop
             getEmblaApi={setEmbla}
-            maw={350}
+            slideSize="100%"
             styles={{
               control: {
                 color: ' var(--black)',
@@ -85,15 +85,17 @@ const Modal = ({ isOpen, close, description, images, location }) => {
                 },
               },
             }}
+            breakpoints={[
+              { maxWidth: 'md', slideSize: '100%' },
+              { maxWidth: 'sm', slideSize: '100%' },
+            ]}
           >
             {images &&
               images.map((image, idx) => (
                 <Carousel.Slide key={idx}>
-                  <img
-                    src={image.thumbUrl}
-                    alt="Slider Photo"
-                    style={{ width: rem(350), height: rem(300), objectFit: 'cover' }}
-                  />
+                  <ImageWrapper>
+                    <img src={image.thumbUrl} alt="Slider Photo" />
+                  </ImageWrapper>
                 </Carousel.Slide>
               ))}
           </Carousel>
@@ -101,9 +103,9 @@ const Modal = ({ isOpen, close, description, images, location }) => {
         </motion.div>
         <Stack spacing={10}>
           <Separator variants={Variants.opacity} custom={1.2} />
-          <Description variants={Variants.opacity} custom={1.4}>
+          <InfoDescription variants={Variants.opacity} custom={1.4}>
             {description}
-          </Description>
+          </InfoDescription>
         </Stack>
       </FlexContainer>
     </MantineModal>

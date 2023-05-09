@@ -1,9 +1,17 @@
 import styled from 'styled-components';
 
-export const FilterPriceContainer = styled.div`
+export const FlexContainer = styled.div`
+  ${({ theme }) => theme.mixins.column};
+  gap: 18px;
+  padding: 10px 0 15px;
+`;
+
+export const InputGroup = styled.div`
+  ${({ theme }) => theme.mixins.center};
+`;
+
+export const TrackWrapper = styled.div`
   position: relative;
-  width: 100%;
-  height: 35px;
 
   input[type='range'] {
     -webkit-appearance: none;
@@ -18,11 +26,4 @@ export const FilterPriceContainer = styled.div`
     background-color: transparent;
     pointer-events: none;
   }
-`;
-
-export const RangeInput = styled.input``;
-
-export const InputGroup = styled.div`
-  width: 100%;
-  ${({ theme }) => theme.mixins.apart}
 `;

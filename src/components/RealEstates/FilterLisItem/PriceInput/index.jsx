@@ -1,6 +1,6 @@
 import SliderGradient from '../SliderGradient';
-import { FilterStack, FilterTitle } from '../styles';
-import { FilterPriceContainer, Input, InputGroup, RangeInput } from './styles';
+import { FilterStack, FilterTitle, Input } from '../styles';
+import { FilterPriceContainer, InputGroup, RangeInput } from './styles';
 
 const PriceInput = ({ initialPrice, finalPrice, minMax, setFinalPrice, setInitialPrice }) => {
   return (

@@ -3,17 +3,17 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   min-width: 30%;
-  padding: 30px 20px 10px;
+  padding: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem) clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
   background: var(--white);
 `;
 
 export const PricesStack = styled.div`
   ${({ theme }) => theme.mixins.column};
-  gap: 17px;
+  gap: clamp(0.94rem, calc(0.89rem + 0.24vw), 1.06rem);
 `;
 
 export const PriceTitle = styled(motion.p)`
-  font-size: 1em;
+  font-size: var(--fs16);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--black);
@@ -21,18 +21,19 @@ export const PriceTitle = styled(motion.p)`
 
 export const Stack = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  gap: 20px;
+  gap: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
 `;
 
-export const PriceText = styled(motion.p)`
+export const PriceGroup = styled(motion.div)`
   ${({ theme }) => theme.mixins.center};
   gap: 8px;
-  border-bottom: 1px solid #aaa;
+  font-size: var(--fs16);
+  border-bottom: 1px solid var(--white-gray2);
 `;
 
 export const CallbackButton = styled(motion.button)`
-  height: 40px;
-  font-size: 14px;
+  height: clamp(2.19rem, calc(2.07rem + 0.61vw), 2.5rem);
+  font-size: var(--fs14);
   font-weight: 700;
   color: var(--white);
   line-height: 1.8;

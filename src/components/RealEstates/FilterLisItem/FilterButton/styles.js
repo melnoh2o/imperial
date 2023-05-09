@@ -37,6 +37,18 @@ export const Checkbox = styled.span`
     transition: all 200ms linear;
     opacity: ${(props) => (props.$isClicked ? '1' : '0')};
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    height: 17px;
+    width: 17px;
+
+    &::before {
+      top: 0;
+      left: 5px;
+      width: 5px;
+      height: 10px;
+    }
+  }
 `;
 
 export const Label = styled.span`

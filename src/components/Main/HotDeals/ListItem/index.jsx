@@ -25,7 +25,6 @@ const ListItem = () => {
     <Carousel
       slideSize="33.333%"
       slideGap="sm"
-      loop
       align="start"
       styles={{
         control: {
@@ -53,12 +52,28 @@ const ListItem = () => {
             right: -50,
           },
 
+          '@media (min-width: 320px)': {
+            '&:first-of-type': {
+              position: 'absolute',
+              left: -10,
+            },
+
+            '&:last-child': {
+              position: 'absolute',
+              right: -10,
+            },
+          },
+
           svg: {
-            width: 40,
-            height: 40,
+            width: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
+            height: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
           },
         },
       }}
+      breakpoints={[
+        { maxWidth: 'md', slideSize: '50%' },
+        { maxWidth: 'sm', slideSize: '100%' },
+      ]}
     >
       {hotDeals.map((item) => (
         <Carousel.Slide key={item.id}>

@@ -1,20 +1,23 @@
-import { useState } from 'react';
+import { Collapse } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 
 import Arrow from '../Arrow';
 import SliderGradient from '../SliderGradient';
+import { FilterMobileButton, FilterStack, Input } from '../styles';
+import { FlexContainer, InputGroup, TrackWrapper } from './styles';
 
 const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFinalPrice }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <div className="filter-mobile-stack">
-      <button onClick={() => setIsVisible(!isVisible)} type="button" className="filter-mobile_subtitle">
+    <FilterStack>
+      <FilterMobileButton onClick={toggle} type="button" $isActive={opened}>
         <span>Цена</span>
-        <Arrow isVisible={isVisible} />
-      </button>
-      {isVisible && (
-        <div className="ftco__filter_stack">
-          <div className="slider-track-container">
+        <Arrow isVisible={opened} />
+      </FilterMobileButton>
+      <Collapse in={opened}>
+        <FlexContainer>
+          <TrackWrapper>
             <SliderGradient initialPrice={initialPrice} finalPrice={finalPrice} max={minMax?.max} />
             <input
               value={initialPrice}
@@ -22,7 +25,6 @@ const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFin
               type="range"
               min={minMax?.min}
               max={minMax?.max}
-              id="slider-1"
             />
             <input
               value={finalPrice}
@@ -30,33 +32,28 @@ const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFin
               type="range"
               min={minMax?.min}
               max={minMax?.max}
-              id="slider-2"
             />
-          </div>
-          <div className="ftco__group">
-            <input
+          </TrackWrapper>
+          <InputGroup>
+            <Input
               value={initialPrice}
               min={minMax?.min}
               max={minMax?.max}
               onChange={(event) => setInitialPrice(event.target.value)}
               type="number"
-              className="ftco__number-input"
-              id="ftco__number-input1"
             />
             &nbsp;—&nbsp;
-            <input
+            <Input
               value={finalPrice}
               min={minMax?.min}
               max={minMax?.max}
               onChange={(event) => setFinalPrice(event.target.value)}
               type="number"
-              className="ftco__number-input"
-              id="ftco__number-input2"
             />
-          </div>
-        </div>
-      )}
-    </div>
+          </InputGroup>
+        </FlexContainer>
+      </Collapse>
+    </FilterStack>
   );
 };
 

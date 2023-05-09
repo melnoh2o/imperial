@@ -4,7 +4,7 @@ import { CiMoneyBill } from 'react-icons/ci';
 
 import useStore from '../../../../store';
 import { Variants } from '../../../../constants/animation';
-import { CallbackButton, PriceText, PriceTitle, PricesStack, Stack, Wrapper } from './styles';
+import { CallbackButton, PriceGroup, PriceTitle, PricesStack, Stack, Wrapper } from './styles';
 
 const PriceDescription = ({ prices }) => {
   const openCallbackModal = useStore((store) => store.openCallbackModal);
@@ -18,7 +18,7 @@ const PriceDescription = ({ prices }) => {
 
         <Stack variants={Variants.container} initial="hidden" whileInView="visible">
           {prices?.map((item) => (
-            <PriceText key={item.id} variants={Variants.item}>
+            <PriceGroup key={item.id} variants={Variants.item}>
               <Group spacing={4}>
                 <IoMdBed />
                 <span>{item.description}</span>
@@ -27,7 +27,7 @@ const PriceDescription = ({ prices }) => {
                 <CiMoneyBill />
                 <span>{item.price}</span>
               </Group>
-            </PriceText>
+            </PriceGroup>
           ))}
           <CallbackButton
             type="button"

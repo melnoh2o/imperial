@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import { Button } from './styles';
-import { Variants } from '../../constants/animation';
 
 const BackButton = () => {
   const navigate = useNavigate();

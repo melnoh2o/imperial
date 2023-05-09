@@ -21,20 +21,14 @@ const CustomPhoneInput = ({ isHigh, ...props }) => {
         padding: '16px 20px 10px 54px',
         backgroundColor: 'var(--gray4)',
         transition: 'all 0.3s ease-in',
-
-        '.form-control:focus,.form-control:hover, .form-control:active': {
-          backgroundColor: 'var(--gray4)',
-          borderBottomColor: 'var(--black)',
-          color: 'var(--black)',
-        },
       }}
       containerStyle={{
-        '&.flag-dropdown': {
+        '&.flagDropdown': {
           backgroundColor: 'var(--gray4)',
         },
       }}
       flagStyle={{
-        '&.flag-dropdown': {
+        '&.flagDropdown': {
           backgroundColor: 'var(--gray4)',
         },
         '&img': {
@@ -43,6 +37,7 @@ const CustomPhoneInput = ({ isHigh, ...props }) => {
         },
       }}
       dropdownStyle={{
+        width: 260,
         maxHeight: isHigherThan200,
       }}
     />

@@ -1,7 +1,7 @@
 import { Stack } from '@mantine/core';
 
 import { Variants } from '../../../constants/animation';
-import { Container } from '../../styles/index';
+import { Container, ContentWrapper } from '../../styles/index';
 import { useConceptData } from './helpers/useConceptData';
 import {
   ConceptDescription,
@@ -12,14 +12,13 @@ import {
   ConceptTitle,
   ConceptTitleStack,
   FlexContainer,
-  Wrapper,
 } from './styles';
 
 const Concept = () => {
   const { concepts } = useConceptData();
 
   return (
-    <Wrapper>
+    <ContentWrapper>
       <Container>
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           {concepts &&
@@ -41,7 +40,7 @@ const Concept = () => {
             ))}
         </FlexContainer>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

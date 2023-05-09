@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 
 import { Variants } from '../../../constants/animation';
-import { Container, ContentStack, Subtitle, Title, TitleStack } from '../../styles/index';
-import CollapseCard from './CollapseCard';
+import { Container, ContentStack, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles/index';
 import { useFAQData } from './helpers/useFAQData';
-import { Wrapper } from './styles';
+import CollapseCard from './CollapseCard';
 
 const FAQ = () => {
   const { data } = useFAQData();
 
   return (
-    <Wrapper>
+    <ContentWrapper $isLast>
       <Container>
         <ContentStack>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
@@ -29,7 +28,7 @@ const FAQ = () => {
           </motion.div>
         </ContentStack>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

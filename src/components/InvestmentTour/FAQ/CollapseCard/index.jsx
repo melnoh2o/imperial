@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { AiOutlinePlus } from 'react-icons/ai';
 
 import { Variants } from '../../../../constants/animation';
-import { CollapseButton, CollapseText, Wrapper } from './styled';
+import { CollapseButton, CollapseText, Wrapper } from './styles';
 
 const CollapseCard = ({ item }) => {
   const [opened, { toggle }] = useDisclosure(false);

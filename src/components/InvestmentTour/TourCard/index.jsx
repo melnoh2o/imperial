@@ -1,14 +1,14 @@
 import { Variants } from '../../../constants/animation';
-import { Container, Subtitle, Title } from '../../styles/index';
+import { Container, ContentWrapper, Subtitle, Title } from '../../styles/index';
 import { useTourCardData } from './helpers/useTourCardData';
 import Card from './Card';
-import { FlexContainer, Wrapper, Stack, Grid } from './styles';
+import { FlexContainer, Stack, Grid } from './styles';
 
 const TourCard = () => {
   const { data } = useTourCardData();
 
   return (
-    <Wrapper>
+    <ContentWrapper $isFirst>
       <Container>
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
@@ -25,7 +25,7 @@ const TourCard = () => {
           </Grid>
         </FlexContainer>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

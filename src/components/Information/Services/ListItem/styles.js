@@ -4,7 +4,11 @@ import styled from 'styled-components';
 export const Wrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: clamp(1.5rem, calc(1.35rem + 0.73vw), 1.88rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Card = styled(motion.div)`
@@ -12,7 +16,7 @@ export const Card = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   gap: 16px;
   background-color: var(--white5);
-  padding: 48px 15px 38px 50px;
+  padding: clamp(2.38rem, calc(2.13rem + 1.22vw), 3rem) 15px 38px 50px;
 `;
 
 export const CardTitle = styled.p`

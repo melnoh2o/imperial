@@ -31,7 +31,7 @@ const RealEstates = () => {
         title="Imperial"
         subtitle="Где ваше сердце, там и ваш дом"
       />
-      <FlexContainer>
+      <FlexContainer $isBoth>
         <FilterListItem
           developers={developers}
           locations={locations}

@@ -4,7 +4,7 @@ import { AboutUsTitle, FlexContainer, WelcomeTitleBox } from './styles';
 
 const AboutUs = () => {
   return (
-    <ContentWrapper>
+    <ContentWrapper $isFirst>
       <Container>
         <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
           <AboutUsTitle variants={Variants.opacity} custom={1.2}>

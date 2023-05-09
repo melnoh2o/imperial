@@ -9,7 +9,7 @@ import { MailServices } from '../../../services/mailServices';
 import { useNavLinks } from '../../../helpers/hooks/useNavLinks';
 import { Variants } from '../../../constants/animation';
 import Loader from '../../Loader';
-import { Container, Description, Subtitle, SuccessMessage, Title, TitleStack } from '../../styles';
+import { Container, ContentWrapper, Subtitle, SuccessMessage, Title, TitleStack } from '../../styles';
 import {
   ContactCardLink,
   ContactCardTitle,
@@ -20,9 +20,10 @@ import {
   FormWrapper,
   Grid,
   Separator,
-  Wrapper,
   useInputStyles,
   Group,
+  FormDescription,
+  ContactGroup,
 } from './styles';
 
 const ContactForm = () => {
@@ -58,7 +59,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Wrapper>
+    <ContentWrapper $isFirst>
       <Container>
         <Grid initial="hidden" exit="exit" whileInView="enter">
           <FlexContainer>
@@ -71,12 +72,12 @@ const ContactForm = () => {
                   Связь с нами:
                 </Title>
               </TitleStack>
-              <Description variants={Variants.opacity} custom={1.3}>
+              <FormDescription variants={Variants.opacity} custom={1.3}>
                 Если у вас есть вопросы, пожалуйста, заполните форму ниже. Мы свяжемся с вами в ближайшее
                 время.
-              </Description>
+              </FormDescription>
             </Stack>
-            <Group spacing={15} position="apart">
+            <ContactGroup>
               {contacts &&
                 contacts.slice(0, 2).map((socialLink) => (
                   <ContactCardWrapper key={socialLink.id} variants={Variants.opacity} custom={1.4}>
@@ -85,7 +86,7 @@ const ContactForm = () => {
                     <ContactCardLink href={socialLink.path}>{socialLink.title}</ContactCardLink>
                   </ContactCardWrapper>
                 ))}
-            </Group>
+            </ContactGroup>
           </FlexContainer>
 
           {!isSuccess ? (
@@ -139,7 +140,7 @@ const ContactForm = () => {
           )}
         </Grid>
       </Container>
-    </Wrapper>
+    </ContentWrapper>
   );
 };
 

@@ -5,8 +5,8 @@ export const Button = styled(motion.button)`
   position: absolute;
   top: -55px;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: clamp(2.19rem, calc(2.07rem + 0.61vw), 2.5rem);
+  height: clamp(2.19rem, calc(2.07rem + 0.61vw), 2.5rem);
   ${({ theme }) => theme.mixins.fCenter};
   color: var(--white);
   border: 1px solid var(--black);
@@ -14,8 +14,8 @@ export const Button = styled(motion.button)`
   transition: var(--transition);
 
   svg {
-    width: 19px;
-    height: 19px;
+    width: clamp(1rem, calc(0.93rem + 0.37vw), 1.19rem);
+    height: clamp(1rem, calc(0.93rem + 0.37vw), 1.19rem);
   }
 
   &:is(:hover, :active, :focus) {

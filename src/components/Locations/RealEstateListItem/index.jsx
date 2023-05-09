@@ -13,7 +13,7 @@ const RealEstateListItem = ({ location }) => {
   );
 
   return (
-    <Wrapper>
+    <Wrapper $isBoth>
       <Container>
         <LoaderWrapper $isDataExist={!!realEstates?.length}>
           {!isLoading && !!realEstates ? (
