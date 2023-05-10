@@ -32,6 +32,7 @@ const variables = css`
     --black-bg2: #333333;
     --black-bg3: rgba(0, 0, 0, 0.5);
     --black-bg4: rgba(0, 0, 0, 0.2);
+    --black-bg5: rgba(0, 0, 0, 0.3);
     --purple: #740374;
     --dark-purple: #360536;
 

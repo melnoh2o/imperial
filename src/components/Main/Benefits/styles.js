@@ -30,7 +30,7 @@ export const Overlay = styled(motion.div)`
 export const InnerWrapper = styled(motion.div)`
   position: relative;
   ${({ theme }) => theme.mixins.column};
-  gap: 30px;
+  gap: var(--gap30);
   padding: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem) 0;
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
@@ -85,6 +85,10 @@ export const ListItem = styled(motion.ul)`
   @media ${({ theme }) => theme.bp.bpSmall} {
     width: 100%;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 

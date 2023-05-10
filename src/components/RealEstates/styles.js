@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { ContentWrapper } from '../styles/index';
 
 export const FlexContainer = styled(ContentWrapper)`
-  width: 95%;
   margin-inline: auto;
   display: flex;
   align-items: flex-start;
@@ -11,8 +10,8 @@ export const FlexContainer = styled(ContentWrapper)`
   gap: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
-    flex-direction: column;
     width: 85%;
+    flex-direction: column;
   }
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
@@ -25,5 +24,10 @@ export const FlexContainer = styled(ContentWrapper)`
 
   @media ${({ theme }) => theme.bp.bpSmall} {
     width: 75%;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    width: 95%;
+    flex-direction: row;
   }
 `;

@@ -13,7 +13,6 @@ export const Wrapper = styled(motion.div)`
 export const Grid = styled(motion.div)`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
@@ -22,5 +21,9 @@ export const Grid = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;

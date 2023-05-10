@@ -13,7 +13,7 @@ const Header = () => {
   const location = useLocation();
   const { scrollY } = useScroll();
 
-  const matches = useMediaQuery('(max-width: 992px)');
+  const matches = useMediaQuery('(max-width: 1160px)');
 
   const isWhite =
     location.pathname.startsWith('/real-estate-details') ||

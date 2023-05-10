@@ -28,7 +28,7 @@ export const Img = styled(motion.img)`
 
 export const ContentBox = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  gap: 30px;
+  gap: var(--gap30);
   padding: 25px 30px;
   background: var(--gray4);
 `;

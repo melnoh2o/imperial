@@ -62,6 +62,11 @@ export const ConceptImgWrapper = styled(motion.div)`
         order: 1 !important;
       `}
   }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    width: 100%;
+    height: 370px;
+  }
 `;
 
 export const ConceptImg = styled.img`

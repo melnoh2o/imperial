@@ -18,6 +18,10 @@ export const Wrapper = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpSmall} {
     max-width: initial;
   }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    max-width: 100%;
+  }
 `;
 
 export const Title = styled(motion.h5)`

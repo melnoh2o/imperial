@@ -114,9 +114,6 @@ export const YearLine = styled.p`
     height: 1px;
     width: 85px;
     display: inline-block;
-    /* position: absolute; */
-    /* / top: 50%; */
-    z-index: 70;
     margin-left: 15px;
     background-color: var(--black);
   }
@@ -124,6 +121,15 @@ export const YearLine = styled.p`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     ${({ theme }) => theme.mixins.center};
     justify-content: flex-end;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -92px;
+      z-index: 70;
+    }
   }
 `;
 

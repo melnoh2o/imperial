@@ -44,16 +44,6 @@ const ListItem = () => {
               },
             },
 
-            '&:first-of-type': {
-              position: 'absolute',
-              left: -50,
-            },
-
-            '&:last-child': {
-              position: 'absolute',
-              right: -50,
-            },
-
             '@media (min-width: 320px)': {
               '&:first-of-type': {
                 position: 'absolute',
@@ -75,6 +65,18 @@ const ListItem = () => {
               '&:last-child': {
                 position: 'absolute',
                 right: -40,
+              },
+            },
+
+            '@media (min-width: 64em)': {
+              '&:first-of-type': {
+                position: 'absolute',
+                left: -50,
+              },
+
+              '&:last-child': {
+                position: 'absolute',
+                right: -50,
               },
             },
 

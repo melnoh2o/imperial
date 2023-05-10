@@ -112,10 +112,12 @@ export const FormStack = styled(motion.div)`
 
 export const useInputStyles = createStyles(() => ({
   root: {
-    minWidth: '45%',
-
     '@media (min-width: 320px)': {
       minWidth: '100%',
+    },
+
+    '@media (min-width: 64em)': {
+      minWidth: '45%',
     },
   },
 
@@ -173,6 +175,18 @@ export const Group = styled.div`
 
     .react-tel-input {
       width: 100% !important;
+    }
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    flex-direction: row;
+
+    .react-tel-input {
+      width: 45% !important;
+    }
+
+    .react-tel-input .country-list {
+      width: 230px;
     }
   }
 `;

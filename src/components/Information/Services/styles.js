@@ -28,12 +28,11 @@ export const Overlay = styled.span`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--black-bg5);
 `;
 
 export const BodyWrapper = styled.div`
   position: relative;
-  width: 100%;
   padding-top: clamp(3.13rem, calc(2.64rem + 2.44vw), 4.38rem);
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
@@ -67,7 +66,6 @@ export const Title = styled(motion.h4)`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(1.5rem, calc(1.35rem + 0.73vw), 1.88rem);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
@@ -76,6 +74,10 @@ export const Grid = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
@@ -90,14 +92,17 @@ export const ServiceCard = styled(motion.div)`
   box-shadow: 0 30px 50px var(--black-bg4);
 
   svg {
-    font-size: 48px;
-    line-height: 48px;
     font-weight: 100;
     color: var(--black);
 
     @media ${({ theme }) => theme.bp.bpTinyS} {
       font-size: 35px;
       line-height: 35px;
+    }
+
+    @media ${({ theme }) => theme.bp.bpMedium} {
+      font-size: 48px;
+      line-height: 48px;
     }
   }
 `;

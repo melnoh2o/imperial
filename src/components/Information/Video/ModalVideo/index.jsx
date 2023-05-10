@@ -3,18 +3,19 @@ import { useMediaQuery } from '@mantine/hooks';
 
 const ModalVideo = ({ isOpen, close }) => {
   const smallSize = useMediaQuery('(min-width: 320px)');
-  const WIDTH = 800;
-  const HEIGHT = 500;
+  const mediumSize = useMediaQuery('(min-width: 576px)');
+  const largeSize = useMediaQuery('(min-width: 768px)');
 
-  const smWidth = smallSize && 350;
   const smHeight = smallSize && 250;
+  const msHeight = mediumSize && 350;
+  const lgHeight = largeSize && 400;
 
   return (
     <Modal
       centered
       opened={isOpen}
       onClose={close}
-      size="90%"
+      size="xl"
       padding={0}
       styles={{
         content: {
@@ -22,6 +23,10 @@ const ModalVideo = ({ isOpen, close }) => {
         },
         header: {
           background: 'transparent',
+        },
+        body: {
+          height: 'calc(100vh - 400px)',
+          overflow: 'hidden',
         },
         close: {
           color: 'var(--white)',
@@ -38,8 +43,8 @@ const ModalVideo = ({ isOpen, close }) => {
       }}
     >
       <iframe
-        width={smWidth}
-        height={smHeight}
+        width="100%"
+        height="100%"
         src="https://www.youtube.com/embed/m6PQpwti-CI"
         title="YouTube video player"
         frameBorder="0"

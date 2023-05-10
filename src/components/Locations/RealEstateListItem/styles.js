@@ -13,7 +13,6 @@ export const LoaderWrapper = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--gap30);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
@@ -28,5 +27,9 @@ export const Grid = styled.div`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 100%;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpMedium} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
