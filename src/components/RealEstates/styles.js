@@ -22,4 +22,8 @@ export const FlexContainer = styled(ContentWrapper)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 90%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 75%;
+  }
 `;

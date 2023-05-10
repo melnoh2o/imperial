@@ -5,7 +5,6 @@ import { Description } from '../../styles';
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   place-items: flex-start;
   gap: clamp(2.5rem, calc(1.77rem + 3.66vw), 4.38rem);
 
@@ -21,6 +20,11 @@ export const Grid = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 70%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const FlexContainer = styled(motion.div)`
@@ -32,11 +36,14 @@ export const FormDescription = styled(Description)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    text-align: left;
+  }
 `;
 
 export const ContactGroup = styled.div`
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   gap: 15px;
 
@@ -48,6 +55,10 @@ export const ContactGroup = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyL} {
     flex-direction: row;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    align-items: flex-start;
+  }
 `;
 
 export const ContactCardWrapper = styled(motion.div)`
@@ -56,6 +67,10 @@ export const ContactCardWrapper = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     align-items: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    align-items: flex-start;
   }
 `;
 

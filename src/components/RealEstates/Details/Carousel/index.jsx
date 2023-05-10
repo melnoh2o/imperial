@@ -29,8 +29,6 @@ const Carousel = ({ images }) => {
           },
 
           control: {
-            width: 40,
-            height: 40,
             color: 'var(--white)',
             borderRadius: 0,
             border: '2px solid var(--black)',
@@ -54,13 +52,20 @@ const Carousel = ({ images }) => {
               height: 30,
             },
 
-            svg: {
-              width: 30,
-              height: 30,
+            '@media (min-width: 48em)': {
+              width: 40,
+              height: 40,
+            },
 
+            svg: {
               '@media (min-width: 320px)': {
                 width: 25,
                 height: 25,
+              },
+
+              '@media (min-width: 48em)': {
+                width: 30,
+                height: 30,
               },
             },
           },

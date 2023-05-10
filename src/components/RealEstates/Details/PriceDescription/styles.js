@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
     width: 430px;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 30%;
+  }
 `;
 
 export const PricesStack = styled.div`

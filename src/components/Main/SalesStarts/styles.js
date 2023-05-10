@@ -21,15 +21,21 @@ export const InnerWrapper = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 70%;
-    margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    flex-direction: row;
   }
 `;
 
 export const ImageWrapper = styled(motion.div)`
-  width: 58%;
-
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 58%;
   }
 `;
 
@@ -40,12 +46,15 @@ export const Img = styled.img`
 `;
 
 export const InnerTitleStack = styled(TitleStack)`
-  width: 36%;
   align-items: flex-start;
   gap: clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 36%;
   }
 `;
 

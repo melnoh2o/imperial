@@ -25,7 +25,6 @@ export const ImgsGroup = styled(motion.div)`
 `;
 
 export const ImgButton = styled(motion.button)`
-  width: 20%;
   height: 80px;
   border: none;
   opacity: 0.7;

@@ -22,16 +22,23 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 56%;
+  }
 `;
 
 export const ListContainer = styled(motion.ul)`
-  min-height: 306px;
   ${({ theme }) => theme.mixins.column};
   align-items: flex-start;
   overflow: auto;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     min-height: 134px;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    min-height: 306px;
   }
 `;
 

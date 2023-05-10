@@ -23,12 +23,15 @@ export const Stack = styled(TitleStack)`
     width: 70%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: var(--gap30);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
@@ -36,5 +39,9 @@ export const Grid = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;

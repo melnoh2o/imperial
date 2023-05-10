@@ -2,9 +2,6 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Wrapper = styled(motion.div)`
-  width: 36%;
-  height: 309px;
-  max-height: 309px;
   overflow: hidden;
   ${({ theme }) => theme.mixins.fCenter};
 
@@ -12,6 +9,12 @@ export const Wrapper = styled(motion.div)`
     width: 100%;
     height: 280px;
     max-height: 280px;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 36%;
+    height: 309px;
+    max-height: 309px;
   }
 `;
 

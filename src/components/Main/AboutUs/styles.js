@@ -15,6 +15,10 @@ export const FlexContainer = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 85%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const AboutUsTitle = styled(Title)`
@@ -25,6 +29,10 @@ export const AboutUsTitle = styled(Title)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    text-align: left;
   }
 `;
 

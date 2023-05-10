@@ -4,7 +4,6 @@ import { IoIosQuote } from 'react-icons/io';
 
 export const Wrapper = styled(motion.div)`
   width: 76%;
-  height: 305px;
   background-color: var(--white);
   box-shadow: 0 30px 50px var(--black-bg4);
 
@@ -15,6 +14,10 @@ export const Wrapper = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
     ${({ theme }) => theme.mixins.fCenter};
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    height: 305px;
   }
 `;
 

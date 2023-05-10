@@ -26,6 +26,11 @@ export const Group = styled(motion.div)`
     width: 70%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    flex-direction: row;
+  }
 `;
 
 export const BodyWrapper = styled.div`
@@ -37,4 +42,8 @@ export const BodyWrapper = styled.div`
 export const FlexContainer = styled.div`
   ${({ theme }) => theme.mixins.column};
   gap: clamp(2.5rem, calc(2.26rem + 1.22vw), 3.13rem);
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 65%;
+  }
 `;

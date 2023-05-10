@@ -11,6 +11,10 @@ export const Wrapper = styled(ContentWrapper)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const Group = styled(motion.div)`
@@ -24,5 +28,9 @@ export const Group = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
     gap: 30px;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    flex-direction: row;
   }
 `;

@@ -21,19 +21,25 @@ export const FlexContainer = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 70%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    flex-direction: row;
+  }
 `;
 
 export const Stack = styled(ContentStack)`
-  width: 41%;
-
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 41%;
   }
 `;
 
 export const NumbersWrapper = styled(motion.div)`
   position: relative;
-  width: 50%;
   background-image: url(${bg});
   background-position: center;
   background-size: cover;
@@ -43,17 +49,18 @@ export const NumbersWrapper = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 50%;
+  }
 `;
 
 export const NumberContentWrapper = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
   svg {
     width: 100%;
-    height: 185px;
-    /* fill: var(--white); */
 
     .base {
       fill: white;
@@ -94,11 +101,6 @@ export const NumberContentWrapper = styled.div`
         .number {
           font-size: 35px;
         }
-
-        .title {
-          font-size: 14px;
-          letter-spacing: 3.5px;
-        }
       }
     }
   }
@@ -106,10 +108,26 @@ export const NumberContentWrapper = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyL} {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    svg {
+      height: 185px;
+
+      mask {
+        .number {
+          font-size: 70px;
+        }
+      }
+    }
+  }
 `;
 
 export const NumberDescription = styled(Description)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    text-align: left;
   }
 `;

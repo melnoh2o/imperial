@@ -5,7 +5,6 @@ export const FlexContainer = styled(motion.div)`
   min-height: 100vh;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--gap30);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
@@ -21,5 +20,10 @@ export const FlexContainer = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 100%;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;

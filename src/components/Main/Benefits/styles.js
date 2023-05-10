@@ -42,6 +42,10 @@ export const InnerWrapper = styled(motion.div)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const InnerTitleStack = styled(TitleStack)`
@@ -76,6 +80,11 @@ export const ListItem = styled(motion.ul)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 80%;
     margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

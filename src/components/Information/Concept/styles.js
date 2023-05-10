@@ -15,11 +15,14 @@ export const FlexContainer = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 70%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const ConceptStack = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   text-align: center;
   place-items: center;
   gap: var(--gap40);
@@ -27,12 +30,13 @@ export const ConceptStack = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const ConceptImgWrapper = styled(motion.div)`
-  /* width: 570px;
-  height: 370px; */
-
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 350px;
     height: 230px;
@@ -47,11 +51,17 @@ export const ConceptImgWrapper = styled(motion.div)`
     height: 250px;
   }
 
-  ${(props) =>
-    props.$isOrderChange &&
-    css`
-      order: 1;
-    `}
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    &:first-child {
+      order: initial;
+    }
+
+    ${(props) =>
+      props.$isOrderChange &&
+      css`
+        order: 1 !important;
+      `}
+  }
 `;
 
 export const ConceptImg = styled.img`

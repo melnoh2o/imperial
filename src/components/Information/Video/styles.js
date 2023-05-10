@@ -18,6 +18,10 @@ export const Wrapper = styled(ContentWrapper)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 70%;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const VideoWrapper = styled(motion.div)`
@@ -30,12 +34,14 @@ export const VideoWrapper = styled(motion.div)`
     flex-direction: column;
     gap: var(--gap30);
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    flex-direction: row;
+  }
 `;
 
 export const VideoBox = styled(motion.div)`
   position: relative;
-  width: 58%;
-  height: 420px;
   background-image: url(${bgPreview});
   background-position: center;
   background-size: cover;
@@ -45,6 +51,11 @@ export const VideoBox = styled(motion.div)`
     width: 100%;
     height: 370px;
     ${({ theme }) => theme.mixins.fCenter};
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 58%;
+    height: 420px;
   }
 `;
 
@@ -61,17 +72,12 @@ const pulse = keyframes`
 `;
 
 export const PlayButton = styled(motion.button)`
-  /* position: absolute;
-  top: 40%;
-  right: -40px; */
   width: 80px;
   height: 80px;
   ${({ theme }) => theme.mixins.fCenter};
   font-size: 26px;
-  color: var(--white);
   border: 1px solid var(--black);
   border-radius: 50%;
-  background: var(--black);
   animation: ${pulse} 2s infinite;
   transition: all 0.3s ease-in;
 
@@ -88,5 +94,14 @@ export const PlayButton = styled(motion.button)`
     color: var(--black);
     border-color: transparent;
     background: transparent;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    position: absolute;
+    top: 40%;
+    right: -40px;
+    color: var(--white);
+    border-color: var(--black);
+    background: var(--black);
   }
 `;

@@ -26,7 +26,6 @@ const Recommendation = ({ currentItemId, developer }) => {
             slidesToScroll={3}
             styles={{
               controls: {
-                top: -56,
                 right: 0,
                 left: 'auto',
                 display: 'flex',
@@ -40,11 +39,13 @@ const Recommendation = ({ currentItemId, developer }) => {
                 '@media (min-width: 480px)': {
                   top: -60,
                 },
+
+                '@media (min-width: 48em)': {
+                  top: -62,
+                },
               },
 
               control: {
-                width: 40,
-                height: 40,
                 color: 'var(--black)',
                 borderRadius: 0,
                 border: '2px solid var(--black)',
@@ -66,13 +67,20 @@ const Recommendation = ({ currentItemId, developer }) => {
                   height: 30,
                 },
 
-                svg: {
-                  width: 30,
-                  height: 30,
+                '@media (min-width: 48em)': {
+                  width: 40,
+                  height: 40,
+                },
 
+                svg: {
                   '@media (min-width: 320px)': {
                     width: 25,
                     height: 25,
+                  },
+
+                  '@media (min-width: 48em)': {
+                    width: 30,
+                    height: 30,
                   },
                 },
               },

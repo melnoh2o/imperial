@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
     width: 80%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+  }
 `;
 
 export const CardWrapper = styled(motion.div)`

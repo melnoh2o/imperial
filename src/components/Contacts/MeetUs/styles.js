@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30p;
+  gap: var(--gap30);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
@@ -18,6 +17,11 @@ export const Grid = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 100%;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
