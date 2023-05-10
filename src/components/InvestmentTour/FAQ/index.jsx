@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 
 import { Variants } from '../../../constants/animation';
-import { Container, ContentStack, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles/index';
+import { Container, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles/index';
 import { useFAQData } from './helpers/useFAQData';
 import CollapseCard from './CollapseCard';
+import { FlexContainer } from './styles';
 
 const FAQ = () => {
   const { data } = useFAQData();
@@ -11,7 +12,7 @@ const FAQ = () => {
   return (
     <ContentWrapper $isLast>
       <Container>
-        <ContentStack>
+        <FlexContainer>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
             <Subtitle variants={Variants.opacity} custom={1.1}>
               вопросы
@@ -26,7 +27,7 @@ const FAQ = () => {
               <CollapseCard key={item.id} item={item} />
             ))}
           </motion.div>
-        </ContentStack>
+        </FlexContainer>
       </Container>
     </ContentWrapper>
   );

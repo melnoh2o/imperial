@@ -6,9 +6,14 @@ export const FlexContainer = styled(motion.div)`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: var(--gap30);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
   }
 `;

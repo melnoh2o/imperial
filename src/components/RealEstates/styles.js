@@ -14,4 +14,8 @@ export const FlexContainer = styled(ContentWrapper)`
     flex-direction: column;
     width: 85%;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 70%;
+  }
 `;

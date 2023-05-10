@@ -32,6 +32,11 @@ export const InnerWrapper = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   gap: 30px;
   padding: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem) 0;
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const InnerTitleStack = styled(TitleStack)`

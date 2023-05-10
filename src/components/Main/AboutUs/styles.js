@@ -16,6 +16,11 @@ export const AboutUsTitle = styled(Title)`
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   gap: clamp(1.56rem, calc(1.39rem + 0.85vw), 2rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 80%;
+    margin-inline: auto;
+  }
 `;
 
 export const WelcomeTitleBox = styled(motion.p)`

@@ -5,6 +5,11 @@ import { TitleStack } from '../../styles';
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   gap: clamp(2.81rem, calc(2.32rem + 2.44vw), 4.06rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const Stack = styled(TitleStack)`

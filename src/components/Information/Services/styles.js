@@ -35,6 +35,11 @@ export const BodyWrapper = styled.div`
   position: relative;
   width: 100%;
   padding-top: clamp(3.13rem, calc(2.64rem + 2.44vw), 4.38rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const Stack = styled.div`

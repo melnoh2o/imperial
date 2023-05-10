@@ -5,6 +5,11 @@ export const Wrapper = styled.div`
   min-width: 30%;
   padding: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem) clamp(0.94rem, calc(0.82rem + 0.61vw), 1.25rem);
   background: var(--white);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 430px;
+    margin-inline: auto;
+  }
 `;
 
 export const PricesStack = styled.div`

@@ -6,6 +6,11 @@ export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   align-items: center;
   gap: var(--gap95);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const ConceptStack = styled.div`
@@ -31,6 +36,11 @@ export const ConceptImgWrapper = styled(motion.div)`
     &:first-child {
       order: 2;
     }
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 400px;
+    height: 250px;
   }
 
   ${(props) =>

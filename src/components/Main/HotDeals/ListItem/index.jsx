@@ -64,6 +64,18 @@ const ListItem = () => {
             },
           },
 
+          '@media (min-width: 480px)': {
+            '&:first-of-type': {
+              position: 'absolute',
+              left: -40,
+            },
+
+            '&:last-child': {
+              position: 'absolute',
+              right: -40,
+            },
+          },
+
           svg: {
             width: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
             height: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',

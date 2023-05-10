@@ -8,6 +8,11 @@ export const Wrapper = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     max-width: 337px;
+    margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    max-width: 430px;
   }
 `;
 
@@ -18,5 +23,9 @@ export const Title = styled(motion.h5)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 76%;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 100%;
   }
 `;

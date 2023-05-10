@@ -29,6 +29,10 @@ export const ImageWrapper = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     height: 170px;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    height: 200px;
+  }
 `;
 
 export const Img = styled.img`

@@ -36,6 +36,10 @@ const Recommendation = ({ currentItemId, developer }) => {
                 '@media (min-width: 320px)': {
                   top: -70,
                 },
+
+                '@media (min-width: 480px)': {
+                  top: -60,
+                },
               },
 
               control: {

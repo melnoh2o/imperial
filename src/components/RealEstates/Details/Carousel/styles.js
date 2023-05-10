@@ -22,11 +22,6 @@ export const ImgsGroup = styled(motion.div)`
   gap: clamp(0.31rem, calc(0.19rem + 0.61vw), 0.63rem);
   padding: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem) clamp(1.25rem, calc(1.13rem + 0.61vw), 1.56rem);
   border-bottom: 1px solid var(--gray6);
-
-  @media ${({ theme }) => theme.bp.bpTinyS} {
-    max-width: 350px;
-    overflow: scroll;
-  }
 `;
 
 export const ImgButton = styled(motion.button)`

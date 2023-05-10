@@ -5,15 +5,24 @@ import { ContentWrapper } from '../../styles';
 
 export const Wrapper = styled(ContentWrapper)`
   ${({ theme }) => theme.mixins.column};
-  gap: 30px;
+  gap: var(--gap30);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const Group = styled(motion.div)`
   ${({ theme }) => theme.mixins.center};
   justify-content: space-between;
-  gap: 20px;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    gap: 30px;
   }
 `;

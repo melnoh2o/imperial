@@ -12,6 +12,11 @@ export const FlexContainer = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     flex-direction: column;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const Stack = styled(ContentStack)`
@@ -92,6 +97,10 @@ export const NumberContentWrapper = styled.div`
         }
       }
     }
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

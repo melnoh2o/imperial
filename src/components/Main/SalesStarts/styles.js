@@ -13,6 +13,11 @@ export const InnerWrapper = styled(motion.div)`
     flex-direction: column;
     gap: 20px;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const ImageWrapper = styled(motion.div)`

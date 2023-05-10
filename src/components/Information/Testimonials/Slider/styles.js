@@ -12,6 +12,10 @@ export const Wrapper = styled(motion.div)`
     width: 100%;
     height: 280px;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    ${({ theme }) => theme.mixins.fCenter};
+  }
 `;
 
 export const Stack = styled(motion.div)`

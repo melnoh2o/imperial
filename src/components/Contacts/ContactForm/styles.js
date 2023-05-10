@@ -12,6 +12,11 @@ export const Grid = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const FlexContainer = styled(motion.div)`
@@ -34,6 +39,10 @@ export const ContactGroup = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     flex-direction: column;
     align-items: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    flex-direction: row;
   }
 `;
 

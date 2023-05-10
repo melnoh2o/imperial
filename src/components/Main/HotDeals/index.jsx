@@ -1,19 +1,20 @@
 import { Variants } from '../../../constants/animation';
-import { ContentWrapper, Container, ContentStack, TitleStack, Subtitle, Title } from '../../styles/index';
+import { ContentWrapper, Container, TitleStack, Subtitle, Title } from '../../styles/index';
 import ListItem from './ListItem';
+import { FlexContainer } from './styles';
 
 const HotDeals = () => {
   return (
     <ContentWrapper>
       <Container>
-        <ContentStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
+        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
           <TitleStack variants={Variants.opacity} custom={1.2}>
             <Subtitle>Последние старты продаж</Subtitle>
             <Title>Возможность приобрести недвижимость по лучшим условиям</Title>
           </TitleStack>
 
           <ListItem />
-        </ContentStack>
+        </FlexContainer>
       </Container>
     </ContentWrapper>
   );

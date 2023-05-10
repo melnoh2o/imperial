@@ -9,6 +9,11 @@ export const Wrapper = styled(ContentWrapper)`
   ${({ theme }) => theme.mixins.column};
   align-items: flex-start;
   gap: var(--gap50);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const VideoWrapper = styled(motion.div)`

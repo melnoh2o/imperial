@@ -9,6 +9,11 @@ export const Wrapper = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
   }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 85%;
+    margin-inline: auto;
+  }
 `;
 
 export const Card = styled(motion.div)`
