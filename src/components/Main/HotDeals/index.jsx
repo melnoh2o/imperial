@@ -7,7 +7,7 @@ const HotDeals = () => {
   return (
     <ContentWrapper>
       <Container>
-        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
+        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
           <TitleStack variants={Variants.opacity} custom={1.2}>
             <Subtitle>Последние старты продаж</Subtitle>
             <Title>Возможность приобрести недвижимость по лучшим условиям</Title>

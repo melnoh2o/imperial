@@ -23,7 +23,7 @@ const Benefits = () => {
         <Overlay />
         <Container>
           <InnerWrapper>
-            <InnerTitleStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
+            <InnerTitleStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
               <InnerTitle variants={Variants.opacity} custom={1.2}>
                 Работа вместе с Imperial
               </InnerTitle>
@@ -36,7 +36,7 @@ const Benefits = () => {
               variants={Variants.container}
               initial="hidden"
               animate="visible"
-              viewport={{ amount: 0.1, once: true }}
+              viewport={{ amount: 0.2 }}
             >
               {benefits &&
                 benefits.map((item) => (

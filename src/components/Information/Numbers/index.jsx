@@ -43,17 +43,17 @@ const Numbers = () => {
       <Container>
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
-            <TitleStack variants={Variants.opacity} custom={1.3}>
+            <TitleStack variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.3 }}>
               <Subtitle>Число</Subtitle>
               <Title>Делать с любовью все, что мы делаем.</Title>
             </TitleStack>
-            <NumberDescription variants={Variants.opacity} custom={1.4}>
+            <NumberDescription variants={Variants.opacity} custom={1.4} viewport={{ amount: 0.2 }}>
               Наша команда берет на себя все, от разработки идеи и концепции до реализации. Мы верим в
               традиции и учитываем их в наших инновациях. Все наши проекты сочетают в себе уникальный
               художественный образ и функциональные решения.
             </NumberDescription>
           </Stack>
-          <NumbersWrapper variants={Variants.opacity} custom={1.3}>
+          <NumbersWrapper variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.2 }}>
             <NumberContentWrapper>
               {numbers.map((number) => (
                 <Svg
