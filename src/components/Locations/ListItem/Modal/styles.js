@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { Description } from '../../../styles';
 
 export const FlexContainer = styled(motion.div)`
-  ${({ theme }) => theme.mixins.center};
-  flex-direction: row;
   gap: clamp(1.25rem, calc(0.76rem + 2.44vw), 2.5rem);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
+    ${({ theme }) => theme.mixins.center};
     flex-direction: column;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

@@ -1,6 +1,21 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+
 import { Title } from '../../styles';
+
+export const FlexContainer = styled(motion.div)`
+  ${({ theme }) => theme.mixins.column};
+  gap: clamp(1.56rem, calc(1.39rem + 0.85vw), 2rem);
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 85%;
+  }
+`;
 
 export const AboutUsTitle = styled(Title)`
   font-size: clamp(1.63rem, calc(1.53rem + 0.49vw), 1.88rem);
@@ -10,16 +25,6 @@ export const AboutUsTitle = styled(Title)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
-  }
-`;
-
-export const FlexContainer = styled(motion.div)`
-  ${({ theme }) => theme.mixins.column};
-  gap: clamp(1.56rem, calc(1.39rem + 0.85vw), 2rem);
-
-  @media ${({ theme }) => theme.bp.bpTinyL} {
-    width: 80%;
-    margin-inline: auto;
   }
 `;
 

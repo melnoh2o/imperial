@@ -5,7 +5,6 @@ import styled from 'styled-components';
 export const Wrapper = styled(motion.section)`
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   padding-bottom: 33px;
   border-bottom: 1px solid var(--white2);
 
@@ -14,40 +13,57 @@ export const Wrapper = styled(motion.section)`
     place-items: center;
     gap: 28px;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    grid-template-columns: 1fr 1fr;
+    place-items: flex-start;
+  }
 `;
 
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  gap: 2.375rem;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     align-items: center;
     gap: 1rem;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    align-items: flex-start;
+    gap: 2.375rem;
+  }
 `;
 
 export const Description = styled(motion.p)`
-  max-width: 80%;
   font-size: 13px;
   line-height: 26px;
   font-weight: 400;
   color: var(--white3);
-  text-align: left;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
+    max-width: 80%;
     text-align: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    max-width: 100%;
+    text-align: left;
   }
 `;
 
 export const Stack = styled.div`
   ${({ theme }) => theme.mixins.column};
-  align-items: flex-end;
   justify-content: flex-start;
-  gap: 2.375rem;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     align-items: center;
     gap: 1rem;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 100%;
+    align-items: flex-end;
+    gap: 2.375rem;
   }
 `;
 
@@ -80,12 +96,15 @@ export const GetInTouchLink = styled(NavLink)`
 
 export const ListContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
-  align-items: flex-end;
   justify-content: flex-start;
   gap: 0.45rem;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     align-items: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    align-items: flex-end;
   }
 `;
 

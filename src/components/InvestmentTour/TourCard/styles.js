@@ -10,10 +10,19 @@ export const FlexContainer = styled(motion.div)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 100%;
+  }
 `;
 
 export const Stack = styled(TitleStack)`
   align-items: center;
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 70%;
+    margin-inline: auto;
+  }
 `;
 
 export const Grid = styled(motion.div)`
@@ -23,5 +32,9 @@ export const Grid = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    grid-template-columns: 1fr 1fr;
   }
 `;

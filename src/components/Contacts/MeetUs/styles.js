@@ -14,6 +14,11 @@ export const Grid = styled(motion.div)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const MeetUsCard = styled(motion.div)`

@@ -45,7 +45,7 @@ export const Button = styled(motion.button)`
 
   &::after {
     transform: ${(props) =>
-      props.$isOpen ? 'rotate(-45deg) translate(6.6px, -6.2px)' : 'rotate(0) translate(0px, 0px)'};
+      props.$isOpen ? 'rotate(-45deg) translate(5.5px, -6.2px)' : 'rotate(0) translate(0px, 0px)'};
     transition: transform 0.4s ease-in-out;
   }
 `;

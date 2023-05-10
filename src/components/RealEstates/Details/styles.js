@@ -21,11 +21,16 @@ export const Group = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     flex-direction: column;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 70%;
+    margin-inline: auto;
+  }
 `;
 
 export const BodyWrapper = styled.div`
   ${({ theme }) => theme.mixins.column};
-  gap: clamp(1.88rem, calc(1.63rem + 1.22vw), 2.5rem);
+  gap: clamp(1.25rem, calc(1.01rem + 1.22vw), 1.88rem);
   background: var(--white);
 `;
 

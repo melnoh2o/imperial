@@ -18,4 +18,8 @@ export const FlexContainer = styled(ContentWrapper)`
   @media ${({ theme }) => theme.bp.bpTinyL} {
     width: 70%;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 90%;
+  }
 `;

@@ -15,6 +15,7 @@ import {
   ImageWrapper,
   Img,
   PriceDescriptionList,
+  Wrapper,
 } from './styles';
 
 const ListItem = () => {
@@ -22,117 +23,119 @@ const ListItem = () => {
   const { hotDeals } = useHotDealsData();
 
   return (
-    <Carousel
-      slideSize="33.333%"
-      slideGap="sm"
-      align="start"
-      styles={{
-        control: {
-          borderRadius: 0,
-          border: '1px solid var(--white)',
-          background: 'var(--white)',
-          transition: 'var(--transition)',
+    <Wrapper>
+      <Carousel
+        slideSize="33.333%"
+        slideGap="sm"
+        align="start"
+        styles={{
+          control: {
+            borderRadius: 0,
+            border: '1px solid var(--white)',
+            background: 'var(--white)',
+            transition: 'var(--transition)',
 
-          '&:hover': {
-            borderColor: 'var(--black)',
-            background: 'var(--black)',
+            '&:hover': {
+              borderColor: 'var(--black)',
+              background: 'var(--black)',
+
+              svg: {
+                color: 'var(--white)',
+              },
+            },
+
+            '&:first-of-type': {
+              position: 'absolute',
+              left: -50,
+            },
+
+            '&:last-child': {
+              position: 'absolute',
+              right: -50,
+            },
+
+            '@media (min-width: 320px)': {
+              '&:first-of-type': {
+                position: 'absolute',
+                left: -10,
+              },
+
+              '&:last-child': {
+                position: 'absolute',
+                right: -10,
+              },
+            },
+
+            '@media (min-width: 480px)': {
+              '&:first-of-type': {
+                position: 'absolute',
+                left: -40,
+              },
+
+              '&:last-child': {
+                position: 'absolute',
+                right: -40,
+              },
+            },
 
             svg: {
-              color: 'var(--white)',
+              width: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
+              height: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
             },
           },
-
-          '&:first-of-type': {
-            position: 'absolute',
-            left: -50,
-          },
-
-          '&:last-child': {
-            position: 'absolute',
-            right: -50,
-          },
-
-          '@media (min-width: 320px)': {
-            '&:first-of-type': {
-              position: 'absolute',
-              left: -10,
-            },
-
-            '&:last-child': {
-              position: 'absolute',
-              right: -10,
-            },
-          },
-
-          '@media (min-width: 480px)': {
-            '&:first-of-type': {
-              position: 'absolute',
-              left: -40,
-            },
-
-            '&:last-child': {
-              position: 'absolute',
-              right: -40,
-            },
-          },
-
-          svg: {
-            width: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
-            height: 'clamp(1.88rem, calc(1.63rem + 1.22vw), 2.50rem)',
-          },
-        },
-      }}
-      breakpoints={[
-        { maxWidth: 'md', slideSize: '50%' },
-        { maxWidth: 'sm', slideSize: '100%' },
-      ]}
-    >
-      {hotDeals.map((item) => (
-        <Carousel.Slide key={item.id}>
-          <CardWrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
-            <ImageWrapper variants={Variants.opacity} custom={1.2}>
-              <Img src={item.img} alt={`${item.title} photo`} />
-            </ImageWrapper>
-            <ContentBox>
-              <Stack spacing={8}>
-                <CardTitle variants={Variants.opacity} custom={1.3}>
-                  {item.title}
-                </CardTitle>
-                <CardDescription variants={Variants.opacity} custom={1.3}>
-                  {item.description}
-                </CardDescription>
-              </Stack>
-
-              <PriceDescriptionList
-                variants={Variants.container}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.3 }}
-              >
-                <motion.div variants={Variants.item}>
-                  <Group position="apart">
-                    <p>В продаже:</p>
-                    <Group spacing={4}>
-                      <MdOutlineLocationOn className="strong" />
-                      <p className="strong">{item.location}</p>
-                    </Group>
-                  </Group>
-                </motion.div>
-                {item.descriptions.map((item) => (
-                  <motion.p variants={Variants.item} key={item.id}>
+        }}
+        breakpoints={[
+          { maxWidth: 'md', slideSize: '50%' },
+          { maxWidth: 'sm', slideSize: '100%' },
+        ]}
+      >
+        {hotDeals.map((item) => (
+          <Carousel.Slide key={item.id}>
+            <CardWrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
+              <ImageWrapper variants={Variants.opacity} custom={1.2}>
+                <Img src={item.img} alt={`${item.title} photo`} />
+              </ImageWrapper>
+              <ContentBox>
+                <Stack spacing={8}>
+                  <CardTitle variants={Variants.opacity} custom={1.3}>
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription variants={Variants.opacity} custom={1.3}>
                     {item.description}
-                  </motion.p>
-                ))}
-              </PriceDescriptionList>
+                  </CardDescription>
+                </Stack>
 
-              <CardButton onClick={openModal} type="button" variants={Variants.opacity} custom={1.4}>
-                Узнать подробнее
-              </CardButton>
-            </ContentBox>
-          </CardWrapper>
-        </Carousel.Slide>
-      ))}
-    </Carousel>
+                <PriceDescriptionList
+                  variants={Variants.container}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ amount: 0.3 }}
+                >
+                  <motion.div variants={Variants.item}>
+                    <Group position="apart">
+                      <p>В продаже:</p>
+                      <Group spacing={4}>
+                        <MdOutlineLocationOn className="strong" />
+                        <p className="strong">{item.location}</p>
+                      </Group>
+                    </Group>
+                  </motion.div>
+                  {item.descriptions.map((item) => (
+                    <motion.p variants={Variants.item} key={item.id}>
+                      {item.description}
+                    </motion.p>
+                  ))}
+                </PriceDescriptionList>
+
+                <CardButton onClick={openModal} type="button" variants={Variants.opacity} custom={1.4}>
+                  Узнать подробнее
+                </CardButton>
+              </ContentBox>
+            </CardWrapper>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+    </Wrapper>
   );
 };
 

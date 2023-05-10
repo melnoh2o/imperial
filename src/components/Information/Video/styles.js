@@ -14,6 +14,10 @@ export const Wrapper = styled(ContentWrapper)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 70%;
+  }
 `;
 
 export const VideoWrapper = styled(motion.div)`

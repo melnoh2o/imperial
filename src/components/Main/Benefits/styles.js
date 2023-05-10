@@ -34,6 +34,11 @@ export const InnerWrapper = styled(motion.div)`
   padding: clamp(2.81rem, calc(2.69rem + 0.61vw), 3.13rem) 0;
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
     width: 85%;
     margin-inline: auto;
   }
@@ -66,6 +71,11 @@ export const ListItem = styled(motion.ul)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 80%;
+    margin-inline: auto;
   }
 `;
 

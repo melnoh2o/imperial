@@ -17,6 +17,10 @@ export const Grid = styled(motion.div)`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 70%;
+  }
 `;
 
 export const FlexContainer = styled(motion.div)`

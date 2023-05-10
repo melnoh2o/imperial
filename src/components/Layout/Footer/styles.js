@@ -22,4 +22,8 @@ export const Wrapper = styled(motion.footer)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     padding: 50px 0;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    padding: 70px 0;
+  }
 `;

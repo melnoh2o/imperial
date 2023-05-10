@@ -10,12 +10,16 @@ export const ApartContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.center};
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 1rem;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 

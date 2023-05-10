@@ -14,7 +14,7 @@ import { FlexContainer, BodyWrapper, Wrapper, Group, LoaderWrapper } from './sty
 
 const Details = () => {
   const { id } = useParams();
-  const matches = useMediaQuery('(max-width: 992px)');
+  const matches = useMediaQuery('(max-width:  768px)');
 
   const { data: realEstate, isLoading } = useQuery(['filer-values', id], () =>
     RealEstatesServices.getRealEstateById(id || 0)

@@ -33,7 +33,6 @@ export const LoaderTitle = styled.p`
   overflow: hidden;
   vertical-align: middle;
   height: 2em;
-  font-size: 5em;
   line-height: 2em;
   font-weight: 700;
   letter-spacing: 4px;
@@ -62,5 +61,21 @@ export const LoaderTitle = styled.p`
 
   @media (min-width: 320px) {
     font-size: 2em;
+  }
+
+  @media (min-width: 480px) {
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 3em;
+  }
+
+  @media (min-width: 48em) {
+    font-size: 4em;
+  }
+
+  @media (min-width: 64em) {
+    font-size: 5em;
   }
 `;

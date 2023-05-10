@@ -15,7 +15,12 @@ export const InnerWrapper = styled(motion.div)`
   }
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
-    width: 85%;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 70%;
     margin-inline: auto;
   }
 `;

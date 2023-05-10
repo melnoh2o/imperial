@@ -16,7 +16,12 @@ const Descriptions = ({ realEstate }) => {
           </Location>
         </Group>
 
-        <ListContainer variants={Variants.container} initial="hidden" whileInView="visible">
+        <ListContainer
+          variants={Variants.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {realEstate.descriptions.map((item) => (
             <Item key={item.id} variants={Variants.item}>
               <p>{item.description}</p>

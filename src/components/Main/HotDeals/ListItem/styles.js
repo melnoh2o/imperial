@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 80%;
+    margin-inline: auto;
+  }
+`;
+
 export const CardWrapper = styled(motion.div)`
   overflow: hidden;
 `;

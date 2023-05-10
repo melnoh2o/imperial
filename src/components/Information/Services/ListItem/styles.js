@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: clamp(1.5rem, calc(1.35rem + 0.73vw), 1.88rem);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
@@ -13,6 +12,11 @@ export const Wrapper = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyL} {
     width: 85%;
     margin-inline: auto;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

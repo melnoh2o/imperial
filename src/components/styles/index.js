@@ -27,6 +27,10 @@ export const Subtitle = styled(motion.p)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
   }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    text-align: left;
+  }
 `;
 
 export const Title = styled(motion.h4)`
@@ -37,6 +41,10 @@ export const Title = styled(motion.h4)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     text-align: center;
+  }
+
+  @media ${({ theme }) => theme.bp.bpSmall} {
+    text-align: left;
   }
 `;
 

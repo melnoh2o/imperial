@@ -40,6 +40,10 @@ export const BodyWrapper = styled.div`
     width: 85%;
     margin-inline: auto;
   }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    width: 100%;
+  }
 `;
 
 export const Stack = styled.div`
@@ -68,6 +72,10 @@ export const Grid = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
+  }
+
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
