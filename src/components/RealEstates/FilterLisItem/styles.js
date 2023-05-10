@@ -15,7 +15,14 @@ export const FilterWrapper = styled(motion.div)`
 export const FilterStack = styled.div`
   ${({ theme }) => theme.mixins.column};
   gap: 10px;
-  border-bottom: 1px solid var(--black);
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    border-bottom: 1px solid var(--black);
+  }
+
+  @media (min-width: 1024px) {
+    border-bottom: none;
+  }
 `;
 
 export const FilterTitle = styled.p`

@@ -23,7 +23,7 @@ export const Grid = styled(motion.div)`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media ${({ theme }) => theme.bp.bpMedium} {
+  @media (min-width: 1300px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;

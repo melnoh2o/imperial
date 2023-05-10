@@ -13,7 +13,7 @@ const Header = () => {
   const location = useLocation();
   const { scrollY } = useScroll();
 
-  const matches = useMediaQuery('(max-width: 1160px)');
+  const matches = useMediaQuery('(min-width: 1160px)');
 
   const isWhite =
     location.pathname.startsWith('/real-estate-details') ||
@@ -30,7 +30,7 @@ const Header = () => {
       <Container>
         <Group position="apart" spacing={0}>
           <CompanyLogo isWhite={isWhite} />
-          {matches ? <BurgerMenu isWhite={isWhite} /> : <ListItem isWhite={isWhite} />}
+          {!matches ? <BurgerMenu isWhite={isWhite} /> : <ListItem isWhite={isWhite} />}
         </Group>
       </Container>
     </HeaderWrapper>

@@ -8,7 +8,7 @@ export const NavbarWrapper = styled(motion.ul)`
   list-style: none;
   gap: 8px;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1160px) {
     flex-direction: row;
   }
 `;

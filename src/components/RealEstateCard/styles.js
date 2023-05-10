@@ -37,6 +37,7 @@ export const ImageWrapper = styled.div`
 
 export const Img = styled.img`
   width: calc(100% + 50px);
+  height: 100%;
   opacity: 1;
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(-10px, 0, 0) scale(1.1);

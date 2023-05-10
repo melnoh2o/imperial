@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
+import { useMediaQuery } from '@mantine/hooks';
 
 import { RealEstatesServices } from '../../../services/realEstateServices';
-import { useMediaQuery } from '../../../helpers/hooks/useMediaQuery';
 import { Variants } from '../../../constants/animation';
 import MobileRange from './MobileRange';
 import MobileItem from './MobileItem';
@@ -22,13 +22,13 @@ const FilterListItem = ({
   setFinalPrice,
   minMax,
 }) => {
-  const matches = useMediaQuery('(max-width: 970px)');
+  const matches = useMediaQuery('(min-width: 1024px)');
 
   const { data } = useQuery(['filer-values'], () => RealEstatesServices.getFilterValues());
 
   return (
     <>
-      {matches ? (
+      {!matches && (
         <FilterMobileWrapper>
           <FilterMobileTitle>Фильтр</FilterMobileTitle>
           <MobileRange
@@ -55,7 +55,8 @@ const FilterListItem = ({
             <MobileItem data={data.handovers} values={handovers} setValue={setHandovers} label="Дата сдачи" />
           )}
         </FilterMobileWrapper>
-      ) : (
+      )}
+      {matches && (
         <FilterWrapper
           initial="hidden"
           exit="exit"
