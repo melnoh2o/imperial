@@ -4,8 +4,8 @@ import { IoMdPlay } from 'react-icons/io';
 import { Variants } from '../../../constants/animation';
 import { Container, Subtitle, Title, TitleStack } from '../../styles';
 import Carousel from './Carousel';
-import { PlayButton, VideoBox, VideoWrapper, Wrapper } from './styles';
 import ModalVideo from './ModalVideo';
+import { PlayButton, VideoBox, VideoWrapper, Wrapper } from './styles';
 
 const Video = () => {
   const [isOpen, setIsOpen] = useState(false);

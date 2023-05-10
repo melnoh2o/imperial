@@ -9,6 +9,7 @@ const variables = css`
     --white5: #f2f2f2;
     --white6: #eee;
     --white7: #f8f8f8;
+    --white8: #cccccc;
     --white-gray: #ddd;
     --white-gray2: #aaa;
     --black: #000000;
@@ -35,9 +36,19 @@ const variables = css`
     --dark-purple: #360536;
 
     --transition: all 0.2s ease-in-out 0s;
+
     --fs14: clamp(0.75rem, calc(0.7rem + 0.24vw), 0.88rem);
     --fs16: clamp(0.88rem, calc(0.83rem + 0.24vw), 1rem);
+    --fs20: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
     --fs24: clamp(1.25rem, calc(1.15rem + 0.49vw), 1.5rem);
+    --fs33: clamp(1.75rem, calc(1.63rem + 0.61vw), 2.06rem);
+
+    --ln32: clamp(1.5rem, calc(1.3rem + 0.98vw), 2rem);
+
+    --gap30: clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem);
+    --gap40: clamp(1.88rem, calc(1.63rem + 1.22vw), 2.5rem);
+    --gap50: clamp(1.88rem, calc(1.39rem + 2.44vw), 3.13rem);
+    --gap95: clamp(4.38rem, calc(3.77rem + 3.05vw), 5.94rem);
   }
 `;
 

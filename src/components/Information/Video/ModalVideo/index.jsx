@@ -1,15 +1,20 @@
 import { Modal } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 const ModalVideo = ({ isOpen, close }) => {
+  const smallSize = useMediaQuery('(min-width: 320px)');
   const WIDTH = 800;
   const HEIGHT = 500;
+
+  const smWidth = smallSize && 350;
+  const smHeight = smallSize && 250;
 
   return (
     <Modal
       centered
       opened={isOpen}
       onClose={close}
-      size={WIDTH}
+      size="90%"
       padding={0}
       styles={{
         content: {
@@ -33,13 +38,13 @@ const ModalVideo = ({ isOpen, close }) => {
       }}
     >
       <iframe
-        width={WIDTH}
-        height={HEIGHT}
+        width={smWidth}
+        height={smHeight}
         src="https://www.youtube.com/embed/m6PQpwti-CI"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </Modal>
   );

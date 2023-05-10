@@ -1,9 +1,11 @@
-import { Stack as MantineStack, Box } from '@mantine/core';
+import { Box } from '@mantine/core';
 
-import { Container } from '../../styles/index';
+import { Container, TitleStack } from '../../styles/index';
+import { Variants } from '../../../constants/animation';
 import { useServicesData } from './helpers/useServicesData';
+import ListItem from './ListItem';
 import {
-  ContentWrapper,
+  BodyWrapper,
   Grid,
   Overlay,
   ServiceBg,
@@ -15,24 +17,22 @@ import {
   Title,
   Wrapper,
 } from './styles';
-import ListItem from './ListItem';
-import { Variants } from '../../../constants/animation';
 
 const Services = () => {
   const { services } = useServicesData();
 
   return (
-    <Wrapper>
+    <Wrapper $isFirst>
       <Container>
         <ListItem />
       </Container>
       <Box style={{ position: 'relative' }}>
         <ServiceBg />
         <Overlay />
-        <ContentWrapper>
+        <BodyWrapper>
           <Container>
             <Stack>
-              <MantineStack spacing={18}>
+              <TitleStack>
                 <Subtitle
                   initial="hidden"
                   exit="exit"
@@ -51,7 +51,7 @@ const Services = () => {
                 >
                   Это то, что мы делаем.
                 </Title>
-              </MantineStack>
+              </TitleStack>
 
               <Grid variants={Variants.container} initial="hidden" whileInView="visible">
                 {services.slice(0, 3).map((service) => {
@@ -67,7 +67,7 @@ const Services = () => {
               </Grid>
             </Stack>
           </Container>
-        </ContentWrapper>
+        </BodyWrapper>
       </Box>
     </Wrapper>
   );

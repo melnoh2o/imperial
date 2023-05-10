@@ -1,21 +1,25 @@
 import styled from 'styled-components';
 
-import { ContentStack } from '../../styles';
+import { ContentStack, Description } from '../../styles';
 import { motion } from 'framer-motion';
 
 const bg = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683133338/number-bg_ao5i3d.jpg';
 
-export const Wrapper = styled.section`
-  padding: 70px 0;
-`;
-
 export const FlexContainer = styled(motion.div)`
   ${({ theme }) => theme.mixins.apart}
   gap: 20px;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+  }
 `;
 
 export const Stack = styled(ContentStack)`
   width: 41%;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+  }
 `;
 
 export const NumbersWrapper = styled(motion.div)`
@@ -26,6 +30,10 @@ export const NumbersWrapper = styled(motion.div)`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+  }
 `;
 
 export const NumberContentWrapper = styled.div`
@@ -65,5 +73,30 @@ export const NumberContentWrapper = styled.div`
         font-weight: 300;
       }
     }
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    grid-template-columns: 1fr;
+
+    svg {
+      height: 125px;
+
+      mask {
+        .number {
+          font-size: 35px;
+        }
+
+        .title {
+          font-size: 14px;
+          letter-spacing: 3.5px;
+        }
+      }
+    }
+  }
+`;
+
+export const NumberDescription = styled(Description)`
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    text-align: center;
   }
 `;

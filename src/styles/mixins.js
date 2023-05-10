@@ -35,7 +35,7 @@ const mixins = {
 
   fontSize16: css`
     font-size: 16px;
-    line-height: 32px;
+    line-height: clamp(1.63rem, calc(1.48rem + 0.73vw), 2rem);
   `,
 
   fontSize26: css`

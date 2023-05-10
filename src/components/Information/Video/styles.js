@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import styled, { keyframes } from 'styled-components';
 
+import { ContentWrapper } from '../../styles';
+
 const bgPreview = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683310095/IMPERIAL_zbxaoq.jpg';
 
-export const Wrapper = styled(motion.section)`
+export const Wrapper = styled(ContentWrapper)`
   ${({ theme }) => theme.mixins.column};
   align-items: flex-start;
-  gap: 50px;
-  padding: 70px 0;
+  gap: var(--gap50);
 `;
 
 export const VideoWrapper = styled(motion.div)`
@@ -15,16 +16,27 @@ export const VideoWrapper = styled(motion.div)`
   width: 100%;
   min-height: 420px;
   ${({ theme }) => theme.mixins.apart};
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    flex-direction: column;
+    gap: var(--gap30);
+  }
 `;
 
 export const VideoBox = styled(motion.div)`
-  position: absolute;
+  position: relative;
   width: 58%;
-  height: 100%;
+  height: 420px;
   background-image: url(${bgPreview});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
+    height: 370px;
+    ${({ theme }) => theme.mixins.fCenter};
+  }
 `;
 
 const pulse = keyframes`
@@ -40,9 +52,9 @@ const pulse = keyframes`
 `;
 
 export const PlayButton = styled(motion.button)`
-  position: absolute;
+  /* position: absolute;
   top: 40%;
-  right: -40px;
+  right: -40px; */
   width: 80px;
   height: 80px;
   ${({ theme }) => theme.mixins.fCenter};
@@ -50,7 +62,7 @@ export const PlayButton = styled(motion.button)`
   color: var(--white);
   border: 1px solid var(--black);
   border-radius: 50%;
-  background-color: var(--black);
+  background: var(--black);
   animation: ${pulse} 2s infinite;
   transition: all 0.3s ease-in;
 
@@ -60,6 +72,12 @@ export const PlayButton = styled(motion.button)`
 
   &:is(:hover, :active, :focus) {
     color: var(--black);
-    background-color: var(--white);
+    background: var(--white);
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    color: var(--black);
+    border-color: transparent;
+    background: transparent;
   }
 `;

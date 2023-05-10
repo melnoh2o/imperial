@@ -1,37 +1,20 @@
 import { useState } from 'react';
 
 import { Variants } from '../../../constants/animation';
-import { Container } from '../../styles';
+import { Container, Subtitle, Title, TitleStack } from '../../styles';
 import { useTestimonialsData } from './helpers/useTestimonialsData';
 import Slider from './Slider';
 import Pagination from './Pagination';
-import { Group, Subtitle, Title, TitleStack, Wrapper } from './styles';
+import { Group, Wrapper } from './styles';
 
 const Testimonials = () => {
   const { testimonials } = useTestimonialsData();
   const [testimonial, setTestimonial] = useState(testimonials[0]);
   const [slideIndex, setSlideIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const nextClick = () => {
-  //     if (slideIndex !== testimonials?.length) {
-  //       setSlideIndex((prev) => prev + 1);
-  //     } else if (slideIndex - 1 === testimonials?.length) {
-  //       setSlideIndex(0);
-  //       console.log('end');
-  //     }
-  //   };
-
-  //   const intervalId = setInterval(nextClick, 2000);
-
-  //   return () => {
-  //     clearInterval(intervalId);
-  //   };
-  // }, []);
-
   return (
     <Container>
-      <Wrapper initial="hidden" exit="exit" whileInView="enter">
+      <Wrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }} $isLast>
         <TitleStack>
           <Subtitle variants={Variants.opacity} custom={1.2}>
             ОТЗЫВЫ

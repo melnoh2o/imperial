@@ -15,8 +15,12 @@ export const Wrapper = styled.div`
     height: calc(100% - 17px);
     top: 17px;
     left: 1px;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--white8);
     z-index: -1;
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    width: 100%;
   }
 `;
 
@@ -25,6 +29,10 @@ export const ListContainer = styled(motion.ul)`
   ${({ theme }) => theme.mixins.column};
   align-items: flex-start;
   overflow: auto;
+
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    min-height: 134px;
+  }
 `;
 
 export const Item = styled(motion.li)`

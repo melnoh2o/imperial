@@ -16,7 +16,8 @@ export const Card = styled(motion.div)`
   ${({ theme }) => theme.mixins.column};
   gap: 16px;
   background-color: var(--white5);
-  padding: clamp(2.38rem, calc(2.13rem + 1.22vw), 3rem) 15px 38px 50px;
+  padding: clamp(2.38rem, calc(2.13rem + 1.22vw), 3rem) 15px 38px
+    clamp(2.19rem, calc(1.82rem + 1.83vw), 3.13rem);
 `;
 
 export const CardTitle = styled.p`

@@ -24,7 +24,7 @@ export const ImgsGroup = styled(motion.div)`
   border-bottom: 1px solid var(--gray6);
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
-    max-width: 400px;
+    max-width: 350px;
     overflow: scroll;
   }
 `;
@@ -43,6 +43,6 @@ export const ImgButton = styled(motion.button)`
   }
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
-    width: 50%;
+    width: 20%;
   }
 `;
