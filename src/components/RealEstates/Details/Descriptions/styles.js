@@ -12,7 +12,7 @@ export const TitleStack = styled(motion.div)`
 
 export const Title = styled.h4`
   font-size: clamp(1.75rem, calc(1.65rem + 0.49vw), 2rem);
-  line-height: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem);
+  /* line-height: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem); */
   color: var(--black);
 `;
 

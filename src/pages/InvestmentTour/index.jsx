@@ -14,9 +14,9 @@ const InvestmentTour = () => {
         type="application"
       />
       <HeroBg
-        url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683133332/information-bg_tbs5y6.jpg"
-        title="Тур по недвижимости на Северном Кипре"
-        subtitle="Инвестиционный тур"
+        url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683825397/IMG_2078_iwqad3.jpg"
+        title="Imperial"
+        subtitle="Инвестиционный тур по недвижимости"
       />
       <TourCard />
       <FAQ />

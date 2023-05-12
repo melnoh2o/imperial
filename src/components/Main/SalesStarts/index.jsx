@@ -1,21 +1,13 @@
 import { Carousel } from '@mantine/carousel';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { BsArrowRight } from 'react-icons/bs';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import useStore from '../../../store';
 import { Variants } from '../../../constants/animation';
 import { ContentWrapper, Container, Description } from '../../styles/index';
 import { useSalesStartsData } from './helpers/useSalesStartsData';
-import {
-  Button,
-  ImageWrapper,
-  Img,
-  InnerTitle,
-  InnerTitleStack,
-  InnerWrapper,
-  YearLine,
-  Space,
-} from './styles';
+import { Button, ImageWrapper, InnerTitle, InnerTitleStack, InnerWrapper, YearLine, Space } from './styles';
 
 const SalesStarts = () => {
   const open = useStore((store) => store.openCallbackModal);
@@ -87,7 +79,7 @@ const SalesStarts = () => {
             >
               {data.images.map((item) => (
                 <Carousel.Slide key={item.id}>
-                  <Img src={item.thumbUrl} alt={data.title} />
+                  <LazyLoadImage effect="blur" src={item.thumbUrl} alt={data.title} />
                 </Carousel.Slide>
               ))}
             </Carousel>

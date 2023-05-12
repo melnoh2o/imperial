@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Wrapper = styled(motion.div)`
+  height: 100%;
   position: relative;
   overflow: hidden;
   background: var(--gray4);
@@ -26,6 +27,19 @@ export const ImageWrapper = styled.div`
   height: 200px;
   overflow: hidden;
 
+  span {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: calc(100% + 50px);
+    height: 100%;
+    opacity: 1;
+    transition: var(--transition);
+    transform: translate3d(-10px, 0, 0) scale(1.1);
+  }
+
   @media ${({ theme }) => theme.bp.bpTinyS} {
     height: 170px;
   }
@@ -33,14 +47,6 @@ export const ImageWrapper = styled.div`
   @media ${({ theme }) => theme.bp.bpTinyL} {
     height: 200px;
   }
-`;
-
-export const Img = styled.img`
-  width: calc(100% + 50px);
-  height: 100%;
-  opacity: 1;
-  transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(-10px, 0, 0) scale(1.1);
 `;
 
 export const InfoWrapper = styled.div`

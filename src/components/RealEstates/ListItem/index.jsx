@@ -53,7 +53,15 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
     setEndPrice(isFinalPrice);
   }, [developers, locations, handovers, currentPage, searchPriceStart, searchPriceEnd]);
 
-  useSetToLocalStorage(developers, locations, handovers, currentPage, searchPriceStart, searchPriceEnd);
+  useSetToLocalStorage(
+    developers,
+    locations,
+    handovers,
+    currentPage,
+    searchPriceStart,
+    searchPriceEnd,
+    setCurrentPage
+  );
 
   return (
     <Wrapper>

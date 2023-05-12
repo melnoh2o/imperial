@@ -33,6 +33,7 @@ const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFin
               min={minMax?.min}
               max={minMax?.max}
             />
+            {/* <DoubleRangeInput min={minMax?.min} max={minMax?.max} /> */}
           </TrackWrapper>
           <InputGroup>
             <Input

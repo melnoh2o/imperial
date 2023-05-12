@@ -25,7 +25,7 @@ const Benefits = () => {
           <InnerWrapper>
             <InnerTitleStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
               <InnerTitle variants={Variants.opacity} custom={1.2}>
-                Работа вместе с Imperial
+                Imperial Corporation
               </InnerTitle>
               <InnerDescription variants={Variants.opacity} custom={1.3}>
                 Почему нужно приобретать недвижимость на Северном Кипре?

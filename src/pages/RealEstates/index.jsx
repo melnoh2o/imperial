@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 import { RealEstatesServices } from '../../services/realEstateServices';
@@ -17,6 +17,13 @@ const RealEstates = () => {
   const [handovers, setHandovers] = useState([]);
   const [initialPrice, setInitialPrice] = useState(minMax?.min);
   const [finalPrice, setFinalPrice] = useState(minMax?.max);
+
+  useEffect(() => {
+    if (minMax) {
+      setInitialPrice(minMax.min);
+      setFinalPrice(minMax.max);
+    }
+  }, [minMax]);
 
   return (
     <>

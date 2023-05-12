@@ -12,8 +12,8 @@ const Main = () => {
       <SEO title="Главная" description="Главная страница." name="ImperialCorporation" type="application" />
       <HeroBg
         url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683133352/main-bg_so7zdj.png"
-        title="Наличие идеи. Создание пространств."
-        subtitle="МЫ ВЫСТУПАЕМ ЗА"
+        title="Imperial"
+        subtitle="ОТКРОЙТЕ ДВЕРЬ К СВОЕМУ ДОМУ НА СЕВЕРНОМ КИПРЕ !"
       />
 
       <AboutUs />

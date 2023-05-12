@@ -1,39 +1,8 @@
 import { Variants } from '../../../constants/animation';
 import { Container, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles/index';
+import Card from './Card';
 import { useNumberData } from './helpers';
 import { FlexContainer, NumberContentWrapper, NumberDescription, NumbersWrapper, Stack } from './styles';
-
-const Svg = ({ title, subtitle, titlePosition, subtitlePosition }) => {
-  return (
-    <svg>
-      <defs>
-        <mask id="mask" x="0" y="0" width="100" height="50">
-          <rect className="coming-alpha" x="0" y="0" width="100%" height="100%" />
-          <text
-            className="number"
-            textAnchor="middle"
-            alignmentBaseline="middle"
-            x={`${titlePosition.x}%`}
-            y={`${titlePosition.y}%`}
-            dy="1"
-          >
-            {title}
-          </text>
-          <text
-            className="title"
-            textAnchor="middle"
-            x={`${subtitlePosition.x}%`}
-            y={`${subtitlePosition.y}%`}
-            dy="1"
-          >
-            {subtitle}
-          </text>
-        </mask>
-      </defs>
-      <rect className="base" x="0" y="0" width="100%" height="100%" mask="url(#mask)"></rect>
-    </svg>
-  );
-};
 
 const Numbers = () => {
   const { numbers } = useNumberData();
@@ -44,20 +13,22 @@ const Numbers = () => {
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
             <TitleStack variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.3 }}>
-              <Subtitle>Число</Subtitle>
-              <Title>Делать с любовью все, что мы делаем.</Title>
+              <Subtitle>Скидки и бонусы</Subtitle>
+              <Title>Imperial</Title>
             </TitleStack>
             <NumberDescription variants={Variants.opacity} custom={1.4} viewport={{ amount: 0.2 }}>
-              Наша команда берет на себя все, от разработки идеи и концепции до реализации. Мы верим в
-              традиции и учитываем их в наших инновациях. Все наши проекты сочетают в себе уникальный
-              художественный образ и функциональные решения.
+              Мы предлагаем конкурентные цены на все объекты недвижимости на Северном Кипре и всегда готовы
+              предоставить дополнительные скидки и бонусы для наших клиентов.
             </NumberDescription>
           </Stack>
           <NumbersWrapper variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.2 }}>
             <NumberContentWrapper>
-              {numbers.map((number) => (
-                <Svg
+              {numbers.map((number, index) => (
+                <Card
                   key={number.id}
+                  index={index + 1}
+                  x={number.x}
+                  y={number.y}
                   title={number.numbers}
                   subtitle={number.title}
                   titlePosition={number.numbersPosition}

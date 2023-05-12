@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Modal as MantineModal, Stack, rem } from '@mantine/core';
 import { Carousel, useAnimationOffsetEffect } from '@mantine/carousel';
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Variants } from '../../../../constants/animation';
 import { FlexContainer, Separator, LinkBtn, ImageWrapper, InfoDescription } from './styles';
@@ -94,12 +95,12 @@ const Modal = ({ isOpen, close, description, images, location }) => {
               images.map((image, idx) => (
                 <Carousel.Slide key={idx}>
                   <ImageWrapper>
-                    <img src={image.thumbUrl} alt="Slider Photo" />
+                    <LazyLoadImage effect="blur" src={image.thumbUrl} alt="Slider Photo" />
                   </ImageWrapper>
                 </Carousel.Slide>
               ))}
           </Carousel>
-          <LinkBtn onClick={navigateToRealEstatesPage}>ещё объекты...</LinkBtn>
+          <LinkBtn onClick={navigateToRealEstatesPage}>Перейти к объектам...</LinkBtn>
         </motion.div>
         <Stack spacing={10}>
           <Separator variants={Variants.opacity} custom={1.2} />

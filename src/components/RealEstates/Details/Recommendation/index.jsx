@@ -4,7 +4,7 @@ import { Carousel } from '@mantine/carousel';
 import { Variants } from '../../../../constants/animation';
 import { RealEstatesServices } from '../../../../services/realEstateServices';
 import RealEstateCard from '../../../RealEstateCard';
-import { Title, Wrapper } from './styles';
+import { Title, Wrapper, Container } from './styles';
 
 const Recommendation = ({ currentItemId, developer }) => {
   const { data: realEstate } = useQuery(['filter-by-developer', developer], () =>
@@ -14,16 +14,15 @@ const Recommendation = ({ currentItemId, developer }) => {
   const filteredItems = realEstate?.filter((item) => item.id !== currentItemId);
 
   return (
-    <>
+    <Container>
       {filteredItems && filteredItems.length ? (
         <Wrapper variants={Variants.container} initial="hidden" whileInView="visible">
           <Title variants={Variants.item}>СВЯЗАННЫЕ НЕДВИЖИМОСТИ</Title>
           <Carousel
-            slideSize="33.333333%"
             slideGap="md"
+            slideSize="50%"
             loop
             align="start"
-            slidesToScroll={3}
             styles={{
               controls: {
                 right: 0,
@@ -98,7 +97,7 @@ const Recommendation = ({ currentItemId, developer }) => {
           </Carousel>
         </Wrapper>
       ) : null}
-    </>
+    </Container>
   );
 };
 

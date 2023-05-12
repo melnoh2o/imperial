@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <ContentWrapper $isFirst>
       <Container>
-        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 02 }}>
+        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
           <AboutUsTitle variants={Variants.opacity} custom={1.2}>
             Imperial Corporation
           </AboutUsTitle>

@@ -40,7 +40,7 @@ const Services = () => {
                   variants={Variants.opacity}
                   custom={1.2}
                 >
-                  УСЛУГИ
+                  Наша сила - в нашем единстве
                 </Subtitle>
                 <Title
                   initial="hidden"
@@ -49,7 +49,7 @@ const Services = () => {
                   variants={Variants.opacity}
                   custom={1.2}
                 >
-                  Это то, что мы делаем.
+                  Imperial
                 </Title>
               </TitleStack>
 

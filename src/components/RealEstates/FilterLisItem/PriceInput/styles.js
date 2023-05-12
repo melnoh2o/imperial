@@ -6,17 +6,29 @@ export const FilterPriceContainer = styled.div`
   height: 35px;
 
   input[type='range'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    pointer-events: none;
+    position: absolute;
+    height: 0;
     width: 100%;
     outline: none;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    background-color: transparent;
-    pointer-events: none;
+
+    &::-webkit-slider-thumb {
+      background-color: #f1f5f7;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 0 1px 1px #ced4da;
+      cursor: pointer;
+      height: 18px;
+      width: 18px;
+      margin-top: 34px;
+      pointer-events: all;
+      position: relative;
+    }
   }
 `;
 

@@ -37,6 +37,17 @@ export const ConceptStack = styled.div`
 `;
 
 export const ConceptImgWrapper = styled(motion.div)`
+  span {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 350px;
     height: 230px;
@@ -67,12 +78,6 @@ export const ConceptImgWrapper = styled(motion.div)`
     width: 100%;
     height: 370px;
   }
-`;
-
-export const ConceptImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
 
 export const ConceptTitleStack = styled(motion.div)`

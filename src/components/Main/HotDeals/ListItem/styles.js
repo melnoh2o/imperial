@@ -13,24 +13,36 @@ export const Wrapper = styled.div`
 `;
 
 export const CardWrapper = styled(motion.div)`
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: space-between;
+  gap: var(--gap30);
+  background: var(--gray4);
+  padding: 225px 30px 25px;
   overflow: hidden;
 `;
 
 export const ImageWrapper = styled(motion.div)`
   width: 100%;
-`;
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 
-export const Img = styled(motion.img)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
+  span {
+    width: 100%;
+    height: 100%;
+  }
 
-export const ContentBox = styled(motion.div)`
-  ${({ theme }) => theme.mixins.column};
-  gap: var(--gap30);
-  padding: 25px 30px;
-  background: var(--gray4);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const CardTitle = styled(motion.h6)`
@@ -62,6 +74,7 @@ export const PriceDescriptionList = styled(motion.div)`
 export const CardButton = styled(motion.button)`
   position: relative;
   width: auto;
+  max-height: 38px;
   font-size: 14px;
   font-weight: 400;
   color: var(--white);

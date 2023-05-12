@@ -58,67 +58,14 @@ export const NumbersWrapper = styled(motion.div)`
 export const NumberContentWrapper = styled.div`
   position: relative;
   display: grid;
-
-  svg {
-    width: 100%;
-
-    .base {
-      fill: white;
-      width: 100%;
-      height: 100%;
-    }
-
-    mask {
-      width: 100%;
-      height: 100%;
-
-      .coming-alpha {
-        fill: white;
-        width: 100%;
-        height: 100%;
-      }
-
-      .number {
-        font-size: 70px;
-        font-weight: 700;
-      }
-
-      .title {
-        font-size: 14px;
-        letter-spacing: 3.5px;
-        font-weight: 300;
-      }
-    }
-  }
+  background: white;
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     grid-template-columns: 1fr;
-
-    svg {
-      height: 125px;
-
-      mask {
-        .number {
-          font-size: 35px;
-        }
-      }
-    }
   }
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
     grid-template-columns: 1fr 1fr;
-  }
-
-  @media ${({ theme }) => theme.bp.bpSmall} {
-    svg {
-      height: 185px;
-
-      mask {
-        .number {
-          font-size: 70px;
-        }
-      }
-    }
   }
 `;
 

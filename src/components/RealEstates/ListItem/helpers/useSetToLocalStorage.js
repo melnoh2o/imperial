@@ -6,9 +6,14 @@ export function useSetToLocalStorage(
   handovers,
   currentPage,
   searchPriceStart,
-  searchPriceEnd
+  searchPriceEnd,
+  setCurrentPage
 ) {
   useEffect(() => {
     localStorage.setItem('page', JSON.stringify(currentPage));
-  }, [developers, locations, handovers, currentPage, searchPriceStart, searchPriceEnd]);
+  }, [currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [developers, locations, handovers, searchPriceStart, searchPriceEnd]);
 }

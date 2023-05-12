@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     margin-inline: auto;
   }
 
-  @media ${({ theme }) => theme.bp.bpTinyL} {
+  @media ${({ theme }) => theme.bp.bpMedium} {
     width: 30%;
   }
 `;

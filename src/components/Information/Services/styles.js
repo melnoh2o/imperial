@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { ContentWrapper } from '../../styles';
 
-const bgImg = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683133345/services-bg_mdnxib.jpg';
+const bgImg = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683825343/IMG_2085_c7gdjd.jpg';
 
 export const Wrapper = styled(ContentWrapper)`
   position: relative;

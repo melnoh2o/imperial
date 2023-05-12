@@ -17,7 +17,8 @@ export function useSalesStartsData() {
       },
       {
         id: useId(),
-        thumbUrl: 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683131851/castle2_leroat.jpg',
+        thumbUrl:
+          'https://res.cloudinary.com/diwpzmuai/image/upload/v1683829140/1yfhyp_s5zcn6dv-ppsezqy-y7aki4cc5_1_.com_d_1yfhyp_s5zcn6dv_ppsezqy_y7aki4cc5_xxeewy.jpg',
       },
     ],
   };

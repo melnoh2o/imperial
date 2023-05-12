@@ -13,7 +13,7 @@ const PriceDescription = ({ prices }) => {
     <Wrapper>
       <PricesStack>
         <PriceTitle variants={Variants.opacity} custom={1.2}>
-          числа
+          Планировки и стоимость:
         </PriceTitle>
 
         <Stack variants={Variants.container} initial="hidden" whileInView="visible">

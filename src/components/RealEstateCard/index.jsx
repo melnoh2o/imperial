@@ -1,4 +1,5 @@
 import { BsCalendar3 } from 'react-icons/bs';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Variants } from '../../constants/animation';
 import {
@@ -8,7 +9,6 @@ import {
   FooterWrapper,
   Handover,
   ImageWrapper,
-  Img,
   InfoTitle,
   InfoWrapper,
   Location,
@@ -19,7 +19,7 @@ const RealEstateCard = ({ item }) => {
   return (
     <Wrapper variants={Variants.item}>
       <ImageWrapper>
-        <Img className="img" src={item.image} />
+        <LazyLoadImage effect="blur" className="img" src={item.image} />
         <InfoWrapper>
           <InfoTitle>{item.price.toLocaleString()}£</InfoTitle>
         </InfoWrapper>

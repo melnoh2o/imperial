@@ -17,10 +17,10 @@ const Testimonials = () => {
       <Wrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }} $isLast>
         <TitleStack>
           <Subtitle variants={Variants.opacity} custom={1.2}>
-            ОТЗЫВЫ
+            Они нас любят
           </Subtitle>
           <Title variants={Variants.opacity} custom={1.3}>
-            Они любят нас.
+            Отзывы
           </Title>
         </TitleStack>
         <Group>

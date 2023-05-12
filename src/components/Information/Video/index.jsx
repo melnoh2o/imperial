@@ -18,10 +18,10 @@ const Video = () => {
         <Wrapper initial="hidden" exit="exit" whileInView="enter">
           <TitleStack>
             <Subtitle variants={Variants.opacity} custom={1.2}>
-              Imperial
+              Сделаем вашу мечту о доме реальностью
             </Subtitle>
             <Title variants={Variants.opacity} custom={1.3}>
-              Сделаем вашу мечту о доме реальностью
+              Imperial
             </Title>
           </TitleStack>
           <VideoWrapper>

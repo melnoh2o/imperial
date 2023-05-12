@@ -41,7 +41,7 @@ export const WelcomeTitleBox = styled(motion.p)`
   font-weight: 400;
   color: var(--black5);
   text-align: center;
-  padding: clamp(1.25rem, calc(1.13rem + 0.61vw), 1.56rem) clamp(1.56rem, calc(1.44rem + 0.61vw), 1.88rem);
+  padding: clamp(1.88rem, calc(1.66rem + 1.09vw), 2.5rem) clamp(1.56rem, calc(1.35rem + 1.09vw), 2.19rem);
   background-color: var(--gray4);
   box-shadow: var(--black-bg4) 0px 30px 50px;
 `;

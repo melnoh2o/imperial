@@ -6,8 +6,8 @@ import { Variants } from '../../../constants/animation';
 import { MailServices } from '../../../services/mailServices';
 import Loader from '../../Loader';
 import CustomPhoneInput from '../../CustomPhoneInput';
-import { SuccessMessage, FormButton, useInputStyles } from '../../styles/index.js';
-import { CheckboxTitle, FormWrapper, useCheckboxStyles } from './styles';
+import { SuccessMessage, useInputStyles } from '../../styles/index.js';
+import { Button, CheckboxTitle, FormWrapper, useCheckboxStyles } from './styles';
 
 const ModalForm = () => {
   const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.senMail });
@@ -65,9 +65,9 @@ const ModalForm = () => {
               />
             </Checkbox.Group>
           </Stack>
-          <FormButton disabled={isLoading}>
+          <Button disabled={isLoading}>
             {isLoading ? <Loader size={25} /> : 'Получить детальную информацию'}
-          </FormButton>
+          </Button>
         </FormWrapper>
       ) : (
         <SuccessMessage initial="hidden" exit="exit" animate="enter" variants={Variants.opacity} custom={1.2}>

@@ -17,7 +17,7 @@ export const ApartContainer = styled(motion.div)`
     justify-content: center;
   }
 
-  @media ${({ theme }) => theme.bp.bpTinyS} {
+  @media ${({ theme }) => theme.bp.bpExtraSmall} {
     flex-direction: row;
     justify-content: space-between;
   }

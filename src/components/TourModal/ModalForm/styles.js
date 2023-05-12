@@ -1,6 +1,7 @@
 import { createStyles } from '@mantine/core';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { FormButton } from '../../styles';
 
 export const FormWrapper = styled(motion.form)`
   ${({ theme }) => theme.mixins.column};
@@ -36,3 +37,19 @@ export const useCheckboxStyles = createStyles(() => ({
     },
   },
 }));
+
+export const Button = styled(FormButton)`
+  @media ${({ theme }) => theme.bp.bpTinyS} {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  @media ${({ theme }) => theme.bp.bpTinyL} {
+    &::after,
+    &::before {
+      display: block;
+    }
+  }
+`;

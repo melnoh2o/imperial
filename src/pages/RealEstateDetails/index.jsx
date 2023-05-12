@@ -7,14 +7,14 @@ const RealEstatesDetails = () => {
   return (
     <>
       <SEO
-        title="Детали недвижимости"
+        title="Описание недвижимости"
         description="Страница дополнительной информации."
         name="ImperialCorporation"
         type="application"
       />
       <SmallHeroBg
         imgUrl="https://res.cloudinary.com/diwpzmuai/image/upload/v1683310040/image_33_v8manr.png"
-        title="Детали недвижимости"
+        title="Описание недвижимости"
       />
       <Details />
       <MotionPrivacyScreen />

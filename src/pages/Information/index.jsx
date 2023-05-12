@@ -17,9 +17,9 @@ const Information = () => {
         type="application"
       />
       <HeroBg
-        url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683133352/main-bg_so7zdj.png"
-        title="Информация."
-        subtitle="Информация"
+        url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683825397/IMG_2083_jt9g4c.jpg"
+        title="Imperial"
+        subtitle="Почему мы?"
       />
       <Services />
       <Video />

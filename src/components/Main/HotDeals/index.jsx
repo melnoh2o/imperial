@@ -7,10 +7,10 @@ const HotDeals = () => {
   return (
     <ContentWrapper>
       <Container>
-        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
-          <TitleStack variants={Variants.opacity} custom={1.2}>
-            <Subtitle>Последние старты продаж</Subtitle>
-            <Title>Возможность приобрести недвижимость по лучшим условиям</Title>
+        <FlexContainer initial="hidden" exit="exit" whileInView="enter">
+          <TitleStack variants={Variants.opacity} custom={1.2} viewport={{ amount: 0.2 }}>
+            <Subtitle>Горячие предложения</Subtitle>
+            <Title>Недвижимость на лучших условиях</Title>
           </TitleStack>
 
           <ListItem />

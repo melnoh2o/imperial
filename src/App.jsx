@@ -10,6 +10,7 @@ import TourModal from './components/TourModal';
 import CallBackFormModal from './components/CallbackFormModal';
 import CallBackButton from './components/CallbackButton';
 import './styles/global.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Main = lazy(() => import('./pages/Main'));
 const Locations = lazy(() => import('./pages/Locations'));
@@ -67,7 +68,7 @@ function App() {
     const handleOpenModal = () => {
       const timer = setTimeout(() => {
         open();
-      }, 30000);
+      }, 180000);
       return () => clearTimeout(timer);
     };
 

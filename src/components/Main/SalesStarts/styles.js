@@ -30,6 +30,17 @@ export const InnerWrapper = styled(motion.div)`
 `;
 
 export const ImageWrapper = styled(motion.div)`
+  span {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
   }
@@ -37,12 +48,6 @@ export const ImageWrapper = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpSmall} {
     width: 58%;
   }
-`;
-
-export const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
 
 export const InnerTitleStack = styled(TitleStack)`

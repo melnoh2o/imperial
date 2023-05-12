@@ -17,6 +17,13 @@ export const FlexContainer = styled(motion.div)`
 `;
 
 export const ImageWrapper = styled.div`
+  height: 100%;
+
+  span {
+    width: 100%;
+    height: 100%;
+  }
+
   img {
     width: 100%;
     height: 100%;

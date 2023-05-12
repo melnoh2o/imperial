@@ -2,6 +2,7 @@ import { Carousel } from '@mantine/carousel';
 import { Group, Stack } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { MdOutlineLocationOn } from 'react-icons/md';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import useStore from '../../../../store';
 import { Variants } from '../../../../constants/animation';
@@ -11,9 +12,7 @@ import {
   CardDescription,
   CardTitle,
   CardWrapper,
-  ContentBox,
   ImageWrapper,
-  Img,
   PriceDescriptionList,
   Wrapper,
 } from './styles';
@@ -27,7 +26,9 @@ const ListItem = () => {
       <Carousel
         slideSize="33.333%"
         slideGap="sm"
+        height="100%"
         align="start"
+        loop
         styles={{
           control: {
             borderRadius: 0,
@@ -93,46 +94,50 @@ const ListItem = () => {
       >
         {hotDeals.map((item) => (
           <Carousel.Slide key={item.id}>
-            <CardWrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
-              <ImageWrapper variants={Variants.opacity} custom={1.2}>
-                <Img src={item.img} alt={`${item.title} photo`} />
+            <CardWrapper initial="hidden" exit="exit" whileInView="enter">
+              <ImageWrapper variants={Variants.opacity} custom={1.2} viewport={{ amount: 0.2 }}>
+                <LazyLoadImage effect="blur" src={item.img} alt={`${item.title} photo`} />
               </ImageWrapper>
-              <ContentBox>
-                <Stack spacing={8}>
-                  <CardTitle variants={Variants.opacity} custom={1.3}>
-                    {item.title}
-                  </CardTitle>
-                  <CardDescription variants={Variants.opacity} custom={1.3}>
-                    {item.description}
-                  </CardDescription>
-                </Stack>
+              <Stack spacing={8}>
+                <CardTitle variants={Variants.opacity} custom={1.3}>
+                  {item.title}
+                </CardTitle>
+                <CardDescription variants={Variants.opacity} custom={1.3}>
+                  {item.description}
+                </CardDescription>
+              </Stack>
 
-                <PriceDescriptionList
-                  variants={Variants.container}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ amount: 0.3 }}
-                >
-                  <motion.div variants={Variants.item}>
-                    <Group position="apart">
-                      <p>В продаже:</p>
-                      <Group spacing={4}>
-                        <MdOutlineLocationOn className="strong" />
-                        <p className="strong">{item.location}</p>
-                      </Group>
+              <PriceDescriptionList
+                variants={Variants.container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.3 }}
+              >
+                <motion.div variants={Variants.item}>
+                  <Group position="apart">
+                    <p>В продаже:</p>
+                    <Group spacing={4}>
+                      <MdOutlineLocationOn className="strong" />
+                      <p className="strong">{item.location}</p>
                     </Group>
-                  </motion.div>
-                  {item.descriptions.map((item) => (
-                    <motion.p variants={Variants.item} key={item.id}>
-                      {item.description}
-                    </motion.p>
-                  ))}
-                </PriceDescriptionList>
+                  </Group>
+                </motion.div>
+                {item.descriptions.map((item) => (
+                  <motion.p variants={Variants.item} key={item.id}>
+                    {item.description}
+                  </motion.p>
+                ))}
+              </PriceDescriptionList>
 
-                <CardButton onClick={openModal} type="button" variants={Variants.opacity} custom={1.4}>
-                  Узнать подробнее
-                </CardButton>
-              </ContentBox>
+              <CardButton
+                onClick={openModal}
+                type="button"
+                variants={Variants.opacity}
+                custom={1.4}
+                viewport={{ amount: 0.3 }}
+              >
+                Узнать подробнее
+              </CardButton>
             </CardWrapper>
           </Carousel.Slide>
         ))}

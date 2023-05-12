@@ -61,7 +61,7 @@ const TourModal = () => {
     >
       <MantieneStack spacing={24}>
         <Stack>
-          <Title>Долгожданный инвестиционный тур по Северному Кипру</Title>
+          <Title>Бесплатный инвестиционный тур по Северному Кипру</Title>
           <MantieneStack spacing={2} align="center">
             {data.map((item) => (
               <Subtitle key={item.id}>• {item.title}</Subtitle>

@@ -19,7 +19,7 @@ const LisItem = () => {
               Локации
             </Subtitle>
             <Title variants={Variants.opacity} custom={1.3}>
-              Делаем это со страстью.
+              Северный Кипр
             </Title>
           </TitleStack>
           <FlexContainer variants={Variants.container} initial="hidden" animate="visible">
