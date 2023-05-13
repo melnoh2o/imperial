@@ -9,7 +9,7 @@ export const Wrapper = styled(motion.div)`
 
   @media ${({ theme }) => theme.bp.bpTinyS} {
     width: 100%;
-    height: 280px;
+    min-height: 280px;
   }
 
   @media ${({ theme }) => theme.bp.bpTinyL} {
@@ -17,7 +17,7 @@ export const Wrapper = styled(motion.div)`
   }
 
   @media ${({ theme }) => theme.bp.bpSmall} {
-    height: 305px;
+    min-height: 305px;
   }
 `;
 

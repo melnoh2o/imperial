@@ -4,8 +4,8 @@ export function useNumberData() {
   const numbers = [
     {
       id: useId(),
-      numbers: '39',
-      title: 'БОЛЕЕ ОБЪЕКТОВ',
+      numbers: '45',
+      title: 'И БОЛЕЕ ОБЪЕКТОВ',
     },
     {
       id: useId(),
@@ -14,7 +14,7 @@ export function useNumberData() {
     },
     {
       id: useId(),
-      numbers: '835',
+      numbers: '350',
       title: 'ДОВОЛЬНЫХ КЛИЕНТОВ',
     },
     {
