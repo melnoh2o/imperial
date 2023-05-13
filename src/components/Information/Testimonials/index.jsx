@@ -14,7 +14,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <Wrapper initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }} $isLast>
+      <Wrapper initial="hidden" exit="exit" whileInView="enter" $isLast>
         <TitleStack>
           <Subtitle variants={Variants.opacity} custom={1.2}>
             Они нас любят

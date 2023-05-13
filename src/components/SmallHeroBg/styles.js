@@ -6,7 +6,21 @@ export const Wrapper = styled.section`
   height: clamp(16.25rem, calc(15.27rem + 4.88vw), 18.75rem);
   ${({ theme }) => theme.mixins.center};
   justify-content: flex-start;
-  background: ${(props) => `url(${props.$imgUrl})`} center/cover no-repeat;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const Overlay = styled.div`

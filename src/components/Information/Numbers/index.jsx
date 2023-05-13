@@ -12,16 +12,16 @@ const Numbers = () => {
       <Container>
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
-            <TitleStack variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.3 }}>
+            <TitleStack variants={Variants.opacity} custom={1.3}>
               <Subtitle>Скидки и бонусы</Subtitle>
               <Title>Imperial</Title>
             </TitleStack>
-            <NumberDescription variants={Variants.opacity} custom={1.4} viewport={{ amount: 0.2 }}>
+            <NumberDescription variants={Variants.opacity} custom={1.4}>
               Мы предлагаем конкурентные цены на все объекты недвижимости на Северном Кипре и всегда готовы
               предоставить дополнительные скидки и бонусы для наших клиентов.
             </NumberDescription>
           </Stack>
-          <NumbersWrapper variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.2 }}>
+          <NumbersWrapper variants={Variants.opacity} custom={1.3}>
             <NumberContentWrapper>
               {numbers.map((number, index) => (
                 <Card

@@ -45,7 +45,7 @@ export const LinkBtn = styled(motion.button)`
   font-style: italic;
   line-height: 18px;
   letter-spacing: 1.1px;
-  color: var(--purple);
+  color: var(--blue);
   border: none;
   background: none;
   transition: var(--transition);
@@ -58,13 +58,13 @@ export const LinkBtn = styled(motion.button)`
     position: absolute;
     bottom: 0;
     left: 0;
-    background: var(--purple);
+    background: var(--blue);
     transition: var(--transition);
   }
 
   &:is(:hover, :active, :focus) {
     outline: none;
-    color: var(--dark-purple);
+    color: var(--blue-hover);
 
     &::after {
       width: 100%;

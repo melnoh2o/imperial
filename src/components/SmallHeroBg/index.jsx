@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Container } from '../styles/index';
 import { Overlay, Title, Wrapper } from './styles';
 
 const SmallHeroBg = ({ imgUrl, title }) => {
   return (
-    <Wrapper $imgUrl={imgUrl}>
+    <Wrapper>
+      <LazyLoadImage effect="blur" src={imgUrl} alt={`${title} - photo`} />
       <Overlay />
       <Container>
         <motion.div style={{ position: 'relative' }}>

@@ -35,6 +35,8 @@ const variables = css`
     --black-bg5: rgba(0, 0, 0, 0.3);
     --purple: #740374;
     --dark-purple: #360536;
+    --blue: #0c0cc1;
+    --blue-hover: #1313f6;
 
     --transition: all 0.2s ease-in-out 0s;
 

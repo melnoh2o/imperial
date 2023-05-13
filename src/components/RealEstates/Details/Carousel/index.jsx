@@ -78,7 +78,7 @@ const Carousel = ({ images }) => {
         {images?.map((image) => (
           <MantineCarousel.Slide key={image.id}>
             <ImgWrapper>
-              <Img src={image.thumbUrl} />
+              <Img src={image.thumbUrl} alt="slider-photo" />
             </ImgWrapper>
           </MantineCarousel.Slide>
         ))}

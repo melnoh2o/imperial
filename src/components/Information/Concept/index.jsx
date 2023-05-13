@@ -20,14 +20,14 @@ const Concept = () => {
   return (
     <ContentWrapper>
       <Container>
-        <FlexContainer initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.3 }}>
+        <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           {concepts &&
             concepts.map((concept, index) => (
               <ConceptStack key={concept.id}>
                 <ConceptImgWrapper $isOrderChange={index % 2} variants={Variants.opacity} custom={1.3}>
                   <LazyLoadImage effect="blur" src={concept.img} alt={`${concept.title} - photo`} />
                 </ConceptImgWrapper>
-                <ConceptTitleStack variants={Variants.opacity} custom={1.3} viewport={{ amount: 0.2 }}>
+                <ConceptTitleStack variants={Variants.opacity} custom={1.3}>
                   <ConceptNumber>{index + 1}</ConceptNumber>
                   <ConceptTitle>{concept.title}</ConceptTitle>
                   <Stack spacing={10}>

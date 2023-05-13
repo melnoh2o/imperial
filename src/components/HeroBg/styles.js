@@ -8,6 +8,21 @@ export const Wrapper = styled(motion.section)`
   position: relative;
   ${({ theme }) => theme.mixins.fCenter};
   background: ${(props) => `url(${props.$imgUrl}) center/cover no-repeat`};
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -18,6 +33,7 @@ export const Overlay = styled.div`
   bottom: 0;
   opacity: 0.4;
   background: var(--black-bg);
+  z-index: 0;
 `;
 
 export const ContentWrapper = styled(motion.div)`
@@ -27,6 +43,7 @@ export const ContentWrapper = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
+  z-index: 2;
 `;
 
 export const Subtitle = styled(motion.p)`

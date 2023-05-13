@@ -27,3 +27,11 @@ export const Grid = styled(motion.div)`
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
+
+export const NotFoundTitle = styled(motion.p)`
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  color: var(--black);
+`;

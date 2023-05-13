@@ -8,7 +8,7 @@ import RealEstateCard from '../../RealEstateCard';
 import { useSetToLocalStorage } from './helpers/useSetToLocalStorage';
 import PaginationButtons from './PaginationButtons';
 import Loader from './Loader';
-import { Grid, Wrapper } from './styles';
+import { Grid, NotFoundTitle, Wrapper } from './styles';
 
 const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers }) => {
   const [currentPage, setCurrentPage] = useState(JSON.parse(localStorage.getItem('page')) || 1);
@@ -67,6 +67,9 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
     <Wrapper>
       {!isLoading && !!realEstates ? (
         <>
+          {realEstates?.totalQuantity === 0 ? (
+            <NotFoundTitle>По вашему запросу объектов не найдено!</NotFoundTitle>
+          ) : null}
           <Grid variants={Variants.container} initial="hidden" animate="visible" viewport={{ once: true }}>
             {realEstates?.data?.map((item) => (
               <RealEstateCard key={item.id} item={item} />

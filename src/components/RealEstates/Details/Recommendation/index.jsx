@@ -23,6 +23,7 @@ const Recommendation = ({ currentItemId, developer }) => {
             slideSize="50%"
             loop
             align="start"
+            slidesToScroll={1}
             styles={{
               controls: {
                 right: 0,

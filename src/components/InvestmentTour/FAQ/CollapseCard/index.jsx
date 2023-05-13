@@ -16,7 +16,7 @@ const CollapseCard = ({ item }) => {
       </CollapseButton>
 
       <Collapse in={opened}>
-        <CollapseText>{item.answer}</CollapseText>
+        <CollapseText dangerouslySetInnerHTML={{ __html: item.answer }} />
       </Collapse>
     </Wrapper>
   );

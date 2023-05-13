@@ -1,15 +1,9 @@
 import { useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Variants } from '../../../../constants/animation';
 import Modal from '../Modal';
-import {
-  LocationCard,
-  LocationImg,
-  Bg,
-  LocationInfo,
-  LocationInfoTitle,
-  LocationInfoSubtitle,
-} from './styles';
+import { LocationCard, Bg, LocationInfo, LocationInfoTitle, LocationInfoSubtitle } from './styles';
 
 const Item = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +18,8 @@ const Item = ({ item }) => {
         location={item.location}
       />
       <LocationCard onClick={() => setIsOpen(true)} variants={Variants.item}>
-        <LocationImg src={item.thumbUrl} />
+        <LazyLoadImage effect="blur" src={item.thumbUrl} alt={`${item.location} - photo`} className="img" />
+
         <Bg imgUrl={item.thumbUrl} className="bg" />
         <LocationInfo className="locationInfo">
           <LocationInfoTitle>{item.location}</LocationInfoTitle>

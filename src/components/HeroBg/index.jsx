@@ -1,12 +1,13 @@
 import { Stack } from '@mantine/core';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { Variants } from '../../constants/animation';
 import { Container } from '../styles/index';
 import { ContentWrapper, Overlay, Title, Wrapper, Subtitle } from './styles';
 
 const HeroBg = ({ url, title, subtitle }) => {
   return (
-    <Wrapper $imgUrl={url}>
+    <Wrapper>
+      <LazyLoadImage effect="blur" src={url} alt={`${title} - photo`} className="img" />
       <Overlay />
       <ContentWrapper>
         <Container>

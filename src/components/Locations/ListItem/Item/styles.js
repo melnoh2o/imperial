@@ -6,6 +6,17 @@ export const LocationCard = styled(motion.div)`
   position: relative;
   overflow: hidden;
 
+  span {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &:hover {
     img {
       visibility: hidden;
@@ -28,11 +39,6 @@ export const LocationCard = styled(motion.div)`
   @media ${({ theme }) => theme.bp.bpTinyS} {
     min-height: 235px;
   }
-`;
-
-export const LocationImg = styled.img`
-  width: 100%;
-  object-fit: cover;
 `;
 
 export const Bg = styled.div`
