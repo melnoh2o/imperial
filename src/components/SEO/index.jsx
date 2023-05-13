@@ -8,7 +8,7 @@ const SEO = ({ title, description, name, type, keywords, href }) => {
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Imperial Corporation" />
-      <meta name="theme-color" content="#007bff" />
+      <meta name="theme-color" content="#000000" />
       <meta name="robots" content="index, follow" />
       {/* End standard metadata tags */}
       {/* Facebook tags */}
