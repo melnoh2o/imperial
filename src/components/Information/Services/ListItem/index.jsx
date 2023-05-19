@@ -6,7 +6,7 @@ const ListItem = () => {
   const { services } = useServicesData();
 
   return (
-    <Wrapper variants={Variants.container} initial="hidden" whileInView="visible">
+    <Wrapper variants={Variants.container} initial="hidden" animate="visible">
       {services.slice(3).map((service) => (
         <Card key={service.id} variants={Variants.item}>
           <CardTitle>{service.title}</CardTitle>

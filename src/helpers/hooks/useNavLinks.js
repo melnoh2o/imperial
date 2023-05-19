@@ -53,12 +53,12 @@ export function useNavLinks() {
     {
       id: useId(),
       icon: BsInstagram,
-      path: 'https://instagram.com/imperial__corporation?igshid=ZGUzMzM3NWJiOQ==',
+      path: 'https://www.instagram.com/imperialkktc/?next=%2Fimperialkktc%2F',
     },
     {
       id: useId(),
       icon: TfiYoutube,
-      path: 'https://www.youtube.com/@StepanIakovlev',
+      path: 'https://www.youtube.com/channel/UCG9tdO0vEhGsBIqq0YfIw0A',
     },
   ];
 

@@ -53,7 +53,7 @@ const Services = () => {
                 </Title>
               </TitleStack>
 
-              <Grid variants={Variants.container} initial="hidden" whileInView="visible">
+              <Grid variants={Variants.container} initial="hidden" animate="visible">
                 {services.slice(0, 3).map((service) => {
                   const Icon = service.icon;
                   return (

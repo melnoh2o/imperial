@@ -7,12 +7,13 @@ import { ShowMore } from './styles';
 
 const Item = ({ data, values, setValues, label }) => {
   const [isSliced, setIsSliced] = useState(true);
+  const slicedRealEstates = isSliced ? data.slice(0, 10) : data.slice(0);
 
   return (
     <FilterStack>
       <FilterTitle>{label}</FilterTitle>
       <Stack spacing={4}>
-        {data.slice(0, isSliced ? 10 : -1).map((item) => (
+        {slicedRealEstates.map((item) => (
           <FilterButton key={item.id} item={item} values={values} setValue={setValues} />
         ))}
       </Stack>
