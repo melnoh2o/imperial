@@ -1,5 +1,6 @@
 import { Suspense, cloneElement, lazy, useEffect } from 'react';
 import { useRoutes, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 
 import useStore from './store';
@@ -62,7 +63,7 @@ function App() {
 
   if (!element) return null;
 
-  const isFormClosed = useStore((state) => state.isFormClosed);
+  const { isFormClosed, lang } = useStore((state) => state);
   const open = useStore((state) => state.open);
 
   useEffect(() => {
@@ -78,17 +79,23 @@ function App() {
     }
   }, []);
 
+  // useInitMultiLang();
+
   return (
-    <Suspense fallback={<FullPageLoader />}>
-      <Layout>
-        <TourModal />
-        <CallBackFormModal />
-        <CallBackButton />
-        <AnimatePresence mode="wait" initial={false}>
-          {cloneElement(element, { key: location.pathname })}
-        </AnimatePresence>
-      </Layout>
-    </Suspense>
+    <>
+      <Helmet htmlAttributes={{ lang }} />
+
+      <Suspense fallback={<FullPageLoader />}>
+        <Layout>
+          <TourModal />
+          <CallBackFormModal />
+          <CallBackButton />
+          <AnimatePresence mode="wait" initial={false}>
+            {cloneElement(element, { key: location.pathname })}
+          </AnimatePresence>
+        </Layout>
+      </Suspense>
+    </>
   );
 }
 

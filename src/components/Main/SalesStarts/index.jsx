@@ -1,5 +1,5 @@
-import { Carousel } from '@mantine/carousel';
 import { useTranslation } from 'react-i18next';
+import { Carousel } from '@mantine/carousel';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { BsArrowRight } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

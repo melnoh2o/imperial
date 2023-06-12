@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Variants } from '../../../constants/animation';
 import { Container, ContentWrapper, Subtitle, Title, TitleStack } from '../../styles/index';
 import Card from './Card';
@@ -5,6 +7,8 @@ import { useNumberData } from './helpers';
 import { FlexContainer, NumberContentWrapper, NumberDescription, NumbersWrapper, Stack } from './styles';
 
 const Numbers = () => {
+  const { t } = useTranslation();
+
   const { numbers } = useNumberData();
 
   return (
@@ -13,27 +17,17 @@ const Numbers = () => {
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
             <TitleStack variants={Variants.opacity} custom={1.3}>
-              <Subtitle>Скидки и бонусы</Subtitle>
-              <Title>Imperial</Title>
+              <Subtitle>{t('information.numbers.subtitle')}</Subtitle>
+              <Title>{t('information.numbers.title')}</Title>
             </TitleStack>
             <NumberDescription variants={Variants.opacity} custom={1.4}>
-              Мы предлагаем конкурентные цены на все объекты недвижимости на Северном Кипре и всегда готовы
-              предоставить дополнительные скидки и бонусы для наших клиентов.
+              {t('information.numbers.description')}
             </NumberDescription>
           </Stack>
           <NumbersWrapper variants={Variants.opacity} custom={1.3}>
             <NumberContentWrapper>
-              {numbers.map((number, index) => (
-                <Card
-                  key={number.id}
-                  index={index + 1}
-                  x={number.x}
-                  y={number.y}
-                  title={number.numbers}
-                  subtitle={number.title}
-                  titlePosition={number.numbersPosition}
-                  subtitlePosition={number.titlePosition}
-                />
+              {numbers.map((number) => (
+                <Card key={number.id} title={number.numbers} subtitle={number.title} />
               ))}
             </NumberContentWrapper>
           </NumbersWrapper>

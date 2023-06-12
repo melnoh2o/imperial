@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Variants } from '../../../constants/animation';
 import { Container, Subtitle, Title, TitleStack } from '../../styles';
@@ -8,7 +9,10 @@ import Pagination from './Pagination';
 import { Group, Wrapper } from './styles';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+
   const { testimonials } = useTestimonialsData();
+
   const [testimonial, setTestimonial] = useState(testimonials[0]);
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -17,10 +21,10 @@ const Testimonials = () => {
       <Wrapper initial="hidden" exit="exit" whileInView="enter" $isLast>
         <TitleStack>
           <Subtitle variants={Variants.opacity} custom={1.2}>
-            Они нас любят
+            {t('information.testimonials.subtitle')}
           </Subtitle>
           <Title variants={Variants.opacity} custom={1.3}>
-            Отзывы
+            {t('information.testimonials.title')}
           </Title>
         </TitleStack>
         <Group>

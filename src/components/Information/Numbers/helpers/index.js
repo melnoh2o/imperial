@@ -1,26 +1,29 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useNumberData() {
+  const { t } = useTranslation();
+
   const numbers = [
     {
       id: useId(),
       numbers: '45',
-      title: 'И БОЛЕЕ ОБЪЕКТОВ',
+      title: t('information.numbers.firstItem.title'),
     },
     {
       id: useId(),
       numbers: '9000',
-      title: 'МЕТРОВ² ЖИЛОЙ ПЛОЩАДИ',
+      title: t('information.numbers.secondItem.title'),
     },
     {
       id: useId(),
       numbers: '350',
-      title: 'ДОВОЛЬНЫХ КЛИЕНТОВ',
+      title: t('information.numbers.thirdItem.title'),
     },
     {
       id: useId(),
       numbers: '2021',
-      title: 'ГОД ОСНОВАНИЯ',
+      title: t('information.numbers.fourthItem.title'),
     },
   ];
 

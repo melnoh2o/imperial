@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const FlexContainer = styled(motion.div)`
-  min-height: 100vh;
+  min-height: 20vh;
   position: relative;
   display: grid;
   gap: var(--gap30);

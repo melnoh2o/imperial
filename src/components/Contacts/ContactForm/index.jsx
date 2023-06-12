@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { Stack, TextInput, Textarea } from '@mantine/core';
 import { useForm } from '@mantine/form';
@@ -27,6 +28,8 @@ import {
 } from './styles';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const { contacts } = useNavLinks();
   const {
     classes: { input, root },
@@ -66,15 +69,14 @@ const ContactForm = () => {
             <Stack spacing={15}>
               <TitleStack>
                 <Subtitle variants={Variants.opacity} custom={1.1}>
-                  КОНТАКТ
+                  {t('contacts.form.subtitle')}
                 </Subtitle>
                 <Title variants={Variants.opacity} custom={1.2}>
-                  Связь с нами:
+                  {t('contacts.form.title')}
                 </Title>
               </TitleStack>
               <FormDescription variants={Variants.opacity} custom={1.3}>
-                Если у вас есть вопросы, пожалуйста, заполните форму ниже. Мы свяжемся с вами в ближайшее
-                время.
+                {t('contacts.form.description')}
               </FormDescription>
             </Stack>
             <ContactGroup>
@@ -93,7 +95,11 @@ const ContactForm = () => {
             <FormWrapper onSubmit={form.onSubmit(handleSubmit)}>
               <FormStack variants={Variants.opacity} custom={1.3}>
                 <Group>
-                  <TextInput {...form.getInputProps('name')} placeholder="Имя" classNames={{ input, root }} />
+                  <TextInput
+                    {...form.getInputProps('name')}
+                    placeholder={t('contacts.form.nameInput.placeholder')}
+                    classNames={{ input, root }}
+                  />
                   <PhoneInput
                     country={'cy'}
                     {...form.getInputProps('phone')}
@@ -115,19 +121,23 @@ const ContactForm = () => {
                     }}
                   />
                 </Group>
-                <TextInput {...form.getInputProps('mail')} placeholder="Почта" classNames={{ input }} />
+                <TextInput
+                  {...form.getInputProps('mail')}
+                  placeholder={t('contacts.form.mailInput.placeholder')}
+                  classNames={{ input }}
+                />
                 <Textarea
                   {...form.getInputProps('message')}
                   autosize
                   minRows={2}
-                  placeholder="Сообщение"
+                  placeholder={t('contacts.form.textarea.placeholder')}
                   classNames={{ input }}
                 ></Textarea>
               </FormStack>
               <FormButton>
                 {!isLoading ? (
                   <>
-                    <span>Отправить</span>
+                    <span>{t('contacts.form.btnText')}</span>
                     <AiOutlineArrowRight />
                   </>
                 ) : (
@@ -136,7 +146,7 @@ const ContactForm = () => {
               </FormButton>
             </FormWrapper>
           ) : (
-            <SuccessMessage> Спасибо, наш эксперт предоставит информацию в ближайшее время</SuccessMessage>
+            <SuccessMessage>{t('contacts.form.successMessage')}</SuccessMessage>
           )}
         </Grid>
       </Container>

@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { Carousel } from '@mantine/carousel';
 import { Group, Stack } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

@@ -1,6 +1,6 @@
 import { Text } from './styles';
 
-const Card = ({ title, subtitle, titlePosition, subtitlePosition, index, x, y }) => {
+const Card = ({ title, subtitle }) => {
   return (
     <Text>
       <span className="number">{title}</span>

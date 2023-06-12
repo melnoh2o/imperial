@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box } from '@mantine/core';
 
 import { Container, TitleStack } from '../../styles/index';
@@ -19,6 +20,8 @@ import {
 } from './styles';
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const { services } = useServicesData();
 
   return (
@@ -40,7 +43,7 @@ const Services = () => {
                   variants={Variants.opacity}
                   custom={1.2}
                 >
-                  Наша сила - в нашем единстве
+                  {t('information.services.subtitle')}
                 </Subtitle>
                 <Title
                   initial="hidden"
@@ -49,7 +52,7 @@ const Services = () => {
                   variants={Variants.opacity}
                   custom={1.2}
                 >
-                  Imperial
+                  {t('information.services.title')}
                 </Title>
               </TitleStack>
 

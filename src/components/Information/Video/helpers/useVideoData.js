@@ -1,25 +1,24 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useVideoData() {
+  const { t } = useTranslation();
+
   const data = [
-    // 1
     {
       id: useId(),
-      title: 'Эксклюзивные предложения',
-      description:
-        'Мы имеем обширную базу эксклюзивных объектов на Северном Кипре, включающую в себя роскошные виллы, современные квартиры, уединенные дома у моря и многое другое.',
+      title: t('information.video.firstItem.title'),
+      description: t('information.video.firstItem.description'),
     },
     {
       id: useId(),
-      title: 'Знания экспертов',
-      description:
-        'Мы гордимся тем, что наши эксперты знают Северный Кипр вдоль и поперек, и могут предложить вам самую полезную информацию о районах, местных условиях и потенциале инвестиций. Наша команда всегда готова ответить на ваши вопросы и предоставить профессиональную консультацию, чтобы помочь вам сделать осознанный выбор.',
+      title: t('information.video.secondItem.title'),
+      description: t('information.video.secondItem.description'),
     },
     {
       id: useId(),
-      title: 'Языковые навыки',
-      description:
-        ' Imperial может иметь специалистов, которые говорят на нескольких языках, что может помочь им привлекать клиентов со всего мира и обеспечивать более эффективное общение с ними.',
+      title: t('information.video.thirdItem.title'),
+      description: t('information.video.thirdItem.description'),
     },
   ];
 

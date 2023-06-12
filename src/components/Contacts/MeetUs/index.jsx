@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Variants } from '../../../constants/animation';
 import { ContentWrapper, TitleStack } from '../../styles/index';
 import { Subtitle } from '../../styles/index';
@@ -7,6 +9,8 @@ import { useAddressesData } from './helpers';
 import { Grid, MeetUsCard, MeetUsLink, MeetUsTitle, MeetUsTitleStack, Separator } from './styles';
 
 const MeetUs = () => {
+  const { t } = useTranslation();
+
   const { addresses } = useAddressesData();
 
   return (
@@ -15,10 +19,10 @@ const MeetUs = () => {
         <ContentStack>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
             <Subtitle variants={Variants.opacity} custom={1.1}>
-              МЕСТА
+              {t('contacts.meetUs.subtitle')}
             </Subtitle>
             <Title variants={Variants.opacity} custom={1.2}>
-              Встретьтесь с нами в вашем городе.
+              {t('contacts.meetUs.title')}
             </Title>
           </TitleStack>
           <Grid variants={Variants.container} initial="hidden" whileInView="visible">

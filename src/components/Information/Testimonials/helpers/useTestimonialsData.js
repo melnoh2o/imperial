@@ -1,30 +1,33 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useTestimonialsData() {
+  const { t } = useTranslation();
+
   const testimonials = [
     {
       id: useId(),
-      name: 'Попов Денис',
-      profession: 'Менеджер',
-      testimonial: `Я очень доволен работой агентства недвижимости Imperial на Северном Кипре. Они помогли мне найти идеальную квартиру по очень хорошей цене, и я был приятно удивлен их профессионализмом и вниманием к деталям. Я определенно буду рекомендовать их своим друзьям и знакомым.`,
+      name: t('information.testimonials.firstItem.name'),
+      profession: t('information.testimonials.firstItem.profession'),
+      testimonial: t('information.testimonials.firstItem.testimonial'),
     },
     {
       id: useId(),
-      name: 'Кузнецова Мария',
-      profession: 'Менеджер',
-      testimonial: `Сотрудники агентства недвижимости Imperial на Северном Кипре были очень профессиональны и внимательны к нашим потребностям. Они нашли нам прекрасную виллу в красивом месте и предоставили нам всю необходимую информацию о районе. Я очень благодарна им за отличный сервис и рекомендую их всем, кто ищет жилье на Северном Кипре.`,
+      name: t('information.testimonials.secondItem.name'),
+      profession: t('information.testimonials.secondItem.profession'),
+      testimonial: t('information.testimonials.secondItem.testimonial'),
     },
     {
       id: useId(),
-      name: 'Иванов Николай',
-      profession: 'Менеджер',
-      testimonial: `Я был очень доволен работой агентства недвижимости Imperial на Северном Кипре. Они быстро нашли мне дом моей мечты и предоставили мне всю необходимую информацию о процессе покупки недвижимости на Кипре. Я очень благодарен им за их профессионализм и рекомендую их всем, кто ищет качественный сервис и надежных агентов.`,
+      name: t('information.testimonials.thirdItem.name'),
+      profession: t('information.testimonials.thirdItem.profession'),
+      testimonial: t('information.testimonials.thirdItem.testimonial'),
     },
     {
       id: useId(),
-      name: 'Андреев Артем',
-      profession: 'Менеджер',
-      testimonial: `Мне было приятно работать с агентством недвижимости Imperial на Северном Кипре. Они предоставили мне большой выбор объектов недвижимости, учитывая все мои требования и пожелания. Команда агентства профессионально организовала все этапы сделки и была всегда на связи, чтобы помочь и ответить на все мои вопросы. Я рекомендую Imperial всем, кто ищет квартиру или дом на Северном Кипре.`,
+      name: t('information.testimonials.fourthItem.name'),
+      profession: t('information.testimonials.fourthItem.profession'),
+      testimonial: t('information.testimonials.fourthItem.testimonial'),
     },
   ];
 

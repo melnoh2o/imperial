@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Variants } from '../../../constants/animation';
 import { Container, ContentWrapper, Subtitle, Title } from '../../styles/index';
 import { useTourCardData } from './helpers/useTourCardData';
@@ -5,6 +7,8 @@ import Card from './Card';
 import { FlexContainer, Stack, Grid } from './styles';
 
 const TourCard = () => {
+  const { t } = useTranslation();
+
   const { data } = useTourCardData();
 
   return (
@@ -13,10 +17,10 @@ const TourCard = () => {
         <FlexContainer initial="hidden" exit="exit" whileInView="enter">
           <Stack>
             <Subtitle variants={Variants.opacity} custom={1.1}>
-              ТУР
+              {t('investmentTour.tourCard.subtitle')}
             </Subtitle>
             <Title variants={Variants.opacity} custom={1.2}>
-              Приглашаем вас на бесплатный 3-х дневный тур
+              {t('investmentTour.tourCard.title')}
             </Title>
           </Stack>
 

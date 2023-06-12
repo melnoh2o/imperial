@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 import { Variants } from '../../../constants/animation';
@@ -7,6 +8,8 @@ import CollapseCard from './CollapseCard';
 import { FlexContainer } from './styles';
 
 const FAQ = () => {
+  const { t } = useTranslation();
+
   const { data } = useFAQData();
 
   return (
@@ -15,10 +18,10 @@ const FAQ = () => {
         <FlexContainer>
           <TitleStack initial="hidden" exit="exit" whileInView="enter">
             <Subtitle variants={Variants.opacity} custom={1.1}>
-              вопросы
+              {t('investmentTour.FAQ.subtitle')}
             </Subtitle>
             <Title variants={Variants.opacity} custom={1.2}>
-              Часто задаваемые вопросы?
+              {t('investmentTour.FAQ.title')}
             </Title>
           </TitleStack>
 

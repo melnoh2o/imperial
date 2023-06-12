@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from '@tanstack/react-query';
 
 import useStore from '../../../store';
 import { Variants } from '../../../constants/animation';

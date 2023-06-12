@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { useForm } from '@mantine/form';
 import { Stack, TextInput, Checkbox } from '@mantine/core';
@@ -8,19 +9,23 @@ import Loader from '../../Loader';
 import CustomPhoneInput from '../../CustomPhoneInput';
 import { SuccessMessage, useInputStyles } from '../../styles/index.js';
 import { Button, CheckboxTitle, FormWrapper, useCheckboxStyles } from './styles';
+import NumberInput from '../../NumberInput';
 
 const ModalForm = () => {
-  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.senMail });
+  const { t } = useTranslation();
+
+  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.submitTourRequest });
 
   const form = useForm({
     initialValues: {
       phone: '',
       name: '',
-      format: '',
+      price: 0 || '',
+      communicationMethod: '',
     },
     validate: {
-      name: (value) => (value.length < 2 ? 'Пожалуйста, введите имя!' : null),
-      phone: (value) => (value.length < 3 ? 'Пожалуйста, введите номер телефона!' : null),
+      name: (value) => (value.length < 2 ? t('tourModal.form.nameInput.validation') : null),
+      phone: (value) => (value.length < 3 ? t('tourModal.form.phoneInput.validation') : null),
     },
   });
 
@@ -33,7 +38,10 @@ const ModalForm = () => {
 
   const handleSubmit = async (values) => {
     try {
-      await mutateAsync(values);
+      await mutateAsync({
+        ...values,
+        communicationMethod: String(values.communicationMethod),
+      });
       form.reset();
     } catch (error) {
       console.log(error);
@@ -51,11 +59,28 @@ const ModalForm = () => {
           variants={Variants.opacity}
           custom={1.1}
         >
-          <TextInput placeholder="Имя" {...form.getInputProps('name')} classNames={{ input }} />
+          <TextInput
+            {...form.getInputProps('name')}
+            placeholder={t('tourModal.form.nameInput.placeholder')}
+            classNames={{ input }}
+          />
           <CustomPhoneInput {...form.getInputProps('phone')} />
+          <NumberInput
+            {...form.getInputProps('price')}
+            min={0}
+            hideControls
+            parser={(value) => value.replace(/\£\s?|(,*)/g, '')}
+            formatter={(value) =>
+              !Number.isNaN(parseFloat(value))
+                ? `£ ${value}`.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+                : '£ '
+            }
+            placeholder={t('tourModal.form.priceInput.placeholder')}
+            classNames={{ input }}
+          />
           <Stack spacing={5}>
-            <CheckboxTitle>Выберите удобный для вас мессенджер для получения информации</CheckboxTitle>
-            <Checkbox.Group {...form.getInputProps('format')}>
+            <CheckboxTitle>{t('tourModal.form.checkbox.title')}</CheckboxTitle>
+            <Checkbox.Group {...form.getInputProps('communicationMethod')}>
               <Checkbox value="WhatsApp" label="WhatsApp" classNames={{ label, input: checkboxInput }} />
               <Checkbox
                 value="Telegram"
@@ -66,12 +91,12 @@ const ModalForm = () => {
             </Checkbox.Group>
           </Stack>
           <Button disabled={isLoading}>
-            {isLoading ? <Loader size={25} /> : 'Получить детальную информацию'}
+            {isLoading ? <Loader size={25} /> : t('tourModal.form.btnText')}
           </Button>
         </FormWrapper>
       ) : (
         <SuccessMessage initial="hidden" exit="exit" animate="enter" variants={Variants.opacity} custom={1.2}>
-          Спасибо, наш эксперт предоставит информацию в ближайшее время
+          {t('tourModal.form.successMessage')}
         </SuccessMessage>
       )}
     </>

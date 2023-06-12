@@ -6,11 +6,11 @@ export function useSalesStartsData() {
 
   const data = {
     id: useId(),
-    title: t('main.salesStart.listFirst.title'),
+    title: t('main.salesStart.firstItem.title'),
     year: 2025,
-    location: t('main.salesStart.listFirst.location'),
-    description1: t('main.salesStart.listFirst.description1'),
-    description2: t('main.salesStart.listFirst.description2'),
+    location: t('main.salesStart.firstItem.location'),
+    description1: t('main.salesStart.firstItem.firstDescription'),
+    description2: t('main.salesStart.firstItem.secondDescription'),
     images: [
       {
         id: useId(),

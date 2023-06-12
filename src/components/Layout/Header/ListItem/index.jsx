@@ -3,8 +3,9 @@ import { changeLanguage } from 'i18next';
 
 import useStore from '../../../../store';
 import { LANG } from '../../../../constants/lang';
+import { Variants } from '../../../../constants/animation';
 import { useNavLinks } from '../../../../helpers/hooks/useNavLinks';
-import { NavbarWrapper, NavBarItem, NavBarLink } from './styles';
+import { NavbarWrapper, NavBarItem, NavBarLink, ChangeLangBtn } from './styles';
 
 const variantContainer = {
   open: {
@@ -63,9 +64,17 @@ const ListItem = ({ isWhite }) => {
           </NavBarLink>
         </NavBarItem>
       ))}
-      <button onClick={toggleLang} aria-label="language change button">
+      <ChangeLangBtn
+        onClick={toggleLang}
+        aria-label="language change button"
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={Variants.opacity}
+        viewport={{ once: true }}
+      >
         {lang}
-      </button>
+      </ChangeLangBtn>
     </NavbarWrapper>
   );
 };

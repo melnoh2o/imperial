@@ -8,7 +8,7 @@ export const NavbarWrapper = styled(motion.ul)`
   list-style: none;
   gap: 8px;
 
-  @media (min-width: 1160px) {
+  @media (min-width: 1175px) {
     flex-direction: row;
   }
 `;
@@ -61,4 +61,28 @@ export const NavBarLink = styled.button`
         border-bottom: 1px solid var(--black);
       }
     `}
+`;
+
+export const ChangeLangBtn = styled(motion.button)`
+  width: 34px;
+  ${({ theme }) => theme.mixins.fontSize14}
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background: transparent;
+  padding: clamp(0rem, -0.12rem + 0.61vw, 0.31rem) 8px;
+  transition: var(--transition);
+
+  &:is(:hover, :active, :focus) {
+    color: var(--black);
+    border: 1px solid var(--black);
+    background: var(--white);
+  }
+
+  @media (max-width: 1175px) {
+    position: absolute;
+    top: 21px;
+    left: 40px;
+  }
 `;

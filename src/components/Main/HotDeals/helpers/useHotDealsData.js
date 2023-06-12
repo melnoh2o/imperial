@@ -14,119 +14,119 @@ export function useHotDealsData() {
   const hotDeals = [
     {
       id: useId(),
-      title: t('main.hotDeals.listFirst.title'),
-      description: t('main.hotDeals.listFirst.description'),
-      location: t('main.hotDeals.listFirst.location'),
+      title: t('main.hotDeals.firstItem.title'),
+      description: t('main.hotDeals.firstItem.description'),
+      location: t('main.hotDeals.firstItem.location'),
       img: bg1,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listFirst.firstDescription'),
+          description: t('main.hotDeals.firstItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listFirst.secondDescription'),
+          description: t('main.hotDeals.firstItem.secondDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listFirst.thirdDescription'),
+          description: t('main.hotDeals.firstItem.thirdDescription'),
         },
       ],
     },
     {
       id: useId(),
-      title: t('main.hotDeals.listSecond.title'),
-      description: t('main.hotDeals.listSecond.description'),
-      location: t('main.hotDeals.listSecond.location'),
+      title: t('main.hotDeals.secondItem.title'),
+      description: t('main.hotDeals.secondItem.description'),
+      location: t('main.hotDeals.secondItem.location'),
       img: bg3,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listSecond.firstDescription'),
+          description: t('main.hotDeals.secondItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listSecond.secondDescription'),
+          description: t('main.hotDeals.secondItem.secondDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listSecond.thirdDescription'),
+          description: t('main.hotDeals.secondItem.thirdDescription'),
         },
       ],
     },
     {
       id: useId(),
-      title: t('main.hotDeals.listThird.title'),
-      description: t('main.hotDeals.listThird.description'),
-      location: t('main.hotDeals.listThird.location'),
+      title: t('main.hotDeals.thirdItem.title'),
+      description: t('main.hotDeals.thirdItem.description'),
+      location: t('main.hotDeals.thirdItem.location'),
       img: bg2,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listThird.firstDescription'),
+          description: t('main.hotDeals.thirdItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listThird.secondDescription'),
+          description: t('main.hotDeals.thirdItem.secondDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listThird.thirdDescription'),
+          description: t('main.hotDeals.thirdItem.thirdDescription'),
         },
       ],
     },
     {
       id: useId(),
-      title: t('main.hotDeals.listFourth.title'),
-      description: t('main.hotDeals.listFourth.description'),
-      location: t('main.hotDeals.listFourth.location'),
+      title: t('main.hotDeals.fourthItem.title'),
+      description: t('main.hotDeals.fourthItem.description'),
+      location: t('main.hotDeals.fourthItem.location'),
       img: bg4,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listFourth.firstDescription'),
+          description: t('main.hotDeals.fourthItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listFourth.secondDescription'),
+          description: t('main.hotDeals.fourthItem.secondDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listFourth.thirdDescription'),
+          description: t('main.hotDeals.fourthItem.thirdDescription'),
         },
       ],
     },
     {
       id: useId(),
-      title: t('main.hotDeals.listFifth.title'),
-      description: t('main.hotDeals.listFifth.description'),
-      location: t('main.hotDeals.listFifth.location'),
+      title: t('main.hotDeals.fifthItem.title'),
+      description: t('main.hotDeals.fifthItem.description'),
+      location: t('main.hotDeals.fifthItem.location'),
       img: bg5,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listFifth.firstDescription'),
+          description: t('main.hotDeals.fifthItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listFifth.secondDescription'),
+          description: t('main.hotDeals.fifthItem.secondDescription'),
         },
       ],
     },
     {
       id: useId(),
-      title: t('main.hotDeals.listSixth.title'),
-      description: t('main.hotDeals.listSixth.description'),
-      location: t('main.hotDeals.listSixth.location'),
+      title: t('main.hotDeals.sixthItem.title'),
+      description: t('main.hotDeals.sixthItem.description'),
+      location: t('main.hotDeals.sixthItem.location'),
       img: bg6,
       descriptions: [
         {
           id: useId(),
-          description: t('main.hotDeals.listSixth.firstDescription'),
+          description: t('main.hotDeals.sixthItem.firstDescription'),
         },
         {
           id: useId(),
-          description: t('main.hotDeals.listSixth.secondDescription'),
+          description: t('main.hotDeals.sixthItem.secondDescription'),
         },
       ],
     },

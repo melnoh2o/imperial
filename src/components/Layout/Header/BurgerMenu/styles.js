@@ -9,6 +9,6 @@ export const BackgroundWrapper = styled(motion.div)`
   height: 100vh;
   width: 300px;
   ${({ theme }) => theme.mixins.fCenter};
-  padding: 45px;
+  padding: 40px;
   background: var(--black);
 `;

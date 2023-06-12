@@ -1,0 +1,504 @@
+{
+  "layout": {
+    "header": {
+      "main": "Main",
+      "locations": "Locations",
+      "realEstates": "Real Estate",
+      "information": "Information",
+      "investmentTour": "Investment tour",
+      "contacts": "Contacts"
+    },
+
+    "footer": {
+      "phone": "PHONE",
+      "mail": "MAIL",
+      "address": {
+        "header": "Address",
+        "title": "District Polatli 1, city Kyrenia, North Cyprus"
+      },
+      "description": "We are a team of professionals specialized in providing services for the purchase, sale and rental of property in North Cyprus.",
+      "getInTouchLink": "CONTACT",
+      "allRightsReserved": "All rights reserved"
+    }
+  },
+
+  "tourModal": {
+    "title": "Free North Cyprus Investment Tour",
+
+    "firstItem": {
+      "title": "Northern Cyprus Investment Tour"
+    },
+
+    "secondItem": {
+      "title": "Airport Transfer"
+    },
+
+    "thirdItem": {
+      "title": "Free stay: 3 days"
+    },
+
+    "form": {
+      "nameInput": {
+        "placeholder": "Name",
+        "validation": "Please enter a name!"
+      },
+
+      "phoneInput": {
+        "validation": "Please enter a phone number!"
+      },
+
+      "priceInput": {
+        "placeholder": "Price from"
+      },
+
+      "checkbox": {
+        "title": "Choose a convenient messenger for you to receive information"
+      },
+
+      "btnText": "Get detailed information",
+
+      "successMessage": "Thank you, our expert will provide information shortly!"
+    }
+  },
+
+  "callbackModal": {
+    "title": "Leave a request and get current prices, layouts and conditions from our expert",
+
+    "form": {
+      "nameInput": {
+        "label": "Name",
+        "placeholder": "Name",
+        "validation": "Please enter a name!"
+      },
+
+      "phoneInput": {
+        "label": "Phone number",
+        "validation": "Please enter a phone number!"
+      },
+
+      "btnText": "Submit request",
+
+      "successMessage": "Thank you, our expert will provide information shortly!"
+    }
+  },
+
+  "main": {
+    "head": {
+      "title": "Home",
+      "description": "Imperial Corporation is a real estate agency in Northern Cyprus that helps its clients to purchase real estate on this beautiful island. With us you can buy apartments, houses, land plots and commercial real estate on favorable terms.",
+      "keywords": "Imperial, real estate in Northern Cyprus, real estate agency, buying real estate, selling real estate, renting real estate, housing in Northern Cyprus"
+    },
+
+    "title": "Imperial",
+    "subtitle": "OPEN THE DOOR TO YOUR HOME IN NORTHERN CYPRUS!",
+
+    "aboutUs": {
+      "title": "Imperial Corporation",
+      "description": "Welcome to Imperial Corporation – a real estate agency that specializes in the sale and rental of real estate in Northern Cyprus. We are experts in this field and offer a wide range of real estate in all areas of Northern Cyprus – from residential apartments and houses to commercial real estate."
+    },
+
+    "hotDeals": {
+      "title": "Real estate on the best terms",
+      "subtitle": "Hot offers",
+      "card": {
+        "title": "On sale:",
+        "btnText": "Learn more"
+      },
+
+      "firstItem": {
+        "title": "PHUKET HEALTH & WELLNESS RESORT",
+        "description": "Phuket is a place where you can feel a piece of Thailand. The project offers an image of a healthy lifestyle, as there are many walking paths, cycling routes, sports grounds, gym, meditation and yoga areas, spas and swimming pools.",
+        "location": "Tatlysu",
+        "firstDescription": "1+0 apartments - from 35 m2",
+        "secondDescription": "1+1 apartments - from 50 m2",
+        "thirdDescription": "2+1 apartments - from 75 m2"
+      },
+
+      "secondItem": {
+        "title": "CASA DELMRE",
+        "description": "Thanks to the convenience of transportation provided by proximity to the airport, excellent distance to Kyrenia and the location of Casa del Mare on the seashore, you will live in a magnificent area. Life here is wonderful: sea, sun, sand, rest and laughter against the azure landscapes of the Mediterranean Sea.",
+        "location": "Esentepe",
+        "firstDescription": "1+0 apartments - from 82 m2",
+        "secondDescription": "1+1 apartments - from 112 m2",
+        "thirdDescription": "2+1 apartments - from 92 m2"
+      },
+
+      "thirdItem": {
+        "title": "MOUNTAIN HILL2",
+        "description": "The new complex under construction \"Mountainın Hıll-2\" will be located 10 km from Kyrenia in the cozy village of Alsancak, in the mountains. Our complex will be located 3 km from the sea, in the Cyrenian Mountains. The great advantage of the location of the Complex will be the incomparable mountain, fresh air and amazing, fascinating panoramic views of the sea. ",
+        "location": "Alsancak",
+        "firstDescription": "1+1 apartments - from 45 m2",
+        "secondDescription": "1+1 apartments - from 70 m2",
+        "thirdDescription": "Duplex 2+1 apartments - from 70 m2"
+      },
+
+      "fourthItem": {
+        "title": "Hawaii Homes,",
+        "description": "Welcome to Hawaii Homes! Hawaii Homes is the largest residential project in Cyprus on the seashore with studios, attic penthouses 1+1, 2+1 and luxury villas with 3 bedrooms, a total of 500 apartments.",
+        "location": "Esentepe",
+        "firstDescription": "1+0 apartments - from 35 m2",
+        "secondDescription": "1+1 apartments - from 50 m2",
+        "thirdDescription": "2+1 apartments - from 75 m2"
+      },
+
+      "fifthItem": {
+        "title": "AVANGART PLUS,",
+        "description": "Our project \"AVANGART Plus\" consists of 3 blocks and 47 apartments. All blocks consist of a parking lot, 3 regular floors and an attic. Each block has its own covered canopy. All apartments have useful terraces.",
+        "location": "Girne",
+        "firstDescription": "2+1 apartments - from 95 m2",
+        "secondDescription": "3+1 apartments - from 110 m2"
+      },
+
+      "sixthItem": {
+        "title": "BAHAMAS THREE,",
+        "description": "Located in the east of Kyrenia, Bahamas Homes offers you the Bahamas. With its modern and unique design, variety of types and all the amenities it has to offer, Bahamas Homes is sure to attract attention.",
+        "location": "Esentepe",
+        "firstDescription": "1+0 apartments - from 35 m2",
+        "secondDescription": "Penthouse 2+1 apartments - from 75 m2"
+      }
+    },
+
+    "benefits": {
+      "title": "Imperial Corporation",
+      "description": "Why do I need to buy a property in Northern Cyprus?",
+
+      "firstText": "Low real estate prices: Northern Cyprus offers an excellent opportunity to purchase real estate at lower prices than in other parts of Cyprus. This may be an ideal choice for those who are looking for a property in Europe at more affordable prices. ",
+
+      "secondText": "Beautiful nature: Northern Cyprus offers incredible natural beauty. From the blue waters of the Mediterranean Sea to the picturesque mountain scenery, there is everything you need for those who love nature and space.",
+
+      "thirdText": "History and culture: Northern Cyprus is rich in history and culture that can interest any traveler. Here you can visit local museums, archaeological excavations and other attractions to immerse yourself in the history of the island.",
+
+      "fourthText": "Safety and comfort: Northern Cyprus is considered one of the safest places to live in Cyprus. There is a high quality of life here, with affordable medicine, education and infrastructure, which makes life here comfortable.",
+
+      "fifthText": "Ideal climate: Northern Cyprus is located on the Mediterranean coast, which means that there is an ideal climate all year round. Here you can enjoy warm sunny days, even in winter, and spend time on the beach or outdoors.",
+
+      "sixthText": "Investment opportunities: Buying a property in Northern Cyprus can be an excellent investment opportunity. The value of real estate here may increase in the future, which makes it attractive to investors."
+    },
+
+    "salesStart": {
+      "btnText": "Learn more",
+
+      "firstItem": {
+        "title": "ELYSIUM",
+        "location": "Iskele",
+        "firstDescription": "One townhouse with a pool view has returned for sale! 385,000 GBP. Ready November 2025. Installments of 36 months.",
+        "secondDescription": "For sale: <br />Apartments renovated 220m2 of living space."
+      }
+    }
+  },
+
+  "location": {
+    "head": {
+      "title": "Locations",
+      "description": "Discover the beauty of Northern Cyprus and find your ideal home or apartment in one of the many locations offered by Imperial Corporation. Find out more about each location and how we can help you buy a property here.",
+      "keywords": "Imperial, real estate in Girna, real estate in Famagusta, real estate in Kyrenia, real estate in Iskel, real estate in Lefkosh"
+    },
+
+    "title": "Imperial",
+    "subtitle": "The key to your future home",
+
+    "expandMore": "Go to objects...",
+
+    "list": {
+      "subtitle": "Locations",
+      "title": "Northern Cyprus"
+    }
+  },
+
+  "realEstate": {
+    "head": {
+      "title": "Real Estate",
+      "description": "Imperial Corporation is a real estate agency in Northern Cyprus that offers a wide selection of real estate on this beautiful island. On this page you can find apartments, houses, commercial real estate for sale on favorable terms.",
+      "keywords": "Imperial, real estate in Northern Cyprus, apartments in Northern Cyprus, villas in Northern Cyprus, houses in Northern Cyprus, commercial real estate in Northern Cyprus, real estate for sale in Northern Cyprus, real estate for rent in Northern Cyprus, real estate market in Northern Cyprus, real estate prices in Northern Cyprus, description of real estate in Northern Cyprus, photos of real estate in Northern Cyprus, purchase of real estate in Northern Cyprus, sale of real estate in Northern Cyprus, rental of real estate in Northern Cyprus"
+    },
+
+    "title": "Imperial",
+    "subtitle": "Where your heart is, there is your home",
+    "notFoundTitle": "No objects were found according to your request!",
+
+    "card": {
+      "developer": "Developer",
+      "location": "Location:"
+    },
+
+    "details": {
+      "priceTitle": "Layout and cost:",
+      "btnText": "Submit a request",
+      "recommendationTitle": "RELATED PROPERTIES"
+    },
+
+    "filter": {
+      "price": "Price",
+      "developer": "Developer",
+      "locations": "Locations",
+      "handover": "Delivery date",
+      "showAll": "Show all",
+      "hideAll": "Hide all"
+    },
+
+    "mobileFilter": {
+      "title": "Filter"
+    }
+  },
+
+  "information": {
+    "head": {
+      "title": "Information",
+      "description": "Imperial Corporation is a real estate agency in Northern Cyprus, which provides its clients with high–quality services for the purchase and sale of real estate on the island. Learn more about our team and experience in this field.",
+      "keywords": "Imperial, Imperial Corporation, real estate agency in Northern Cyprus, company history, our team, our values"
+    },
+
+    "title": "Imperial",
+    "subtitle": "Why us?",
+
+    "services": {
+      "subtitle": "Our strength is in our unity",
+      "title": "Imperial",
+      "description": "We offer competitive prices for all properties in Northern Cyprus and are always ready to provide additional discounts and bonuses for our clients.",
+
+      "firstItem": {
+        "title": "Our mission",
+        "description": "The mission of our real estate agency is to provide our clients with the highest level of professional services in the field of real estate. We strive to help our clients achieve their goals in buying, selling or renting real estate in Northern Cyprus."
+      },
+
+      "secondItem": {
+        "title": "Our vision",
+        "description": "Whether you are looking for a family home, an apartment for rent, commercial real estate for business or investment opportunities in the real estate market, we are ready to provide you with our knowledge and experience to help you achieve your goals."
+      },
+
+      "thirdItem": {
+        "title": "Our values",
+        "description": "We strive to ensure that our customers are fully satisfied with our services, and therefore we do our best to provide our customers with an individual approach and high-quality service."
+      },
+
+      "fourthItem": {
+        "title": "Strong staff",
+        "description": "We are professionals in the field of real estate in Northern Cyprus. Our team consists of highly qualified specialists with extensive experience in this field."
+      },
+
+      "fifthItem": {
+        "title": "Large selection of properties",
+        "description": "We offer a wide selection of properties in Northern Cyprus, including apartments, villas, houses and land plots. Our database is constantly updated, so we can offer you the most up-to-date options."
+      },
+
+      "sixthItem": {
+        "title": "Long-term relationship",
+        "description": "We value our customers and strive to establish long-term relationships with them. We not only help our clients to buy or sell real estate, but also provide them with after-sales service so that they can feel supported and protected at any time."
+      },
+
+      "seventhItem": {
+        "title": "Legal support",
+        "description": "We provide full legal support to our clients to ensure that all transactions are legal and safe. We have extensive experience in working with the legislation of Northern Cyprus, so you can be sure that your transaction will be executed in accordance with local requirements and regulations."
+      }
+    },
+
+    "video": {
+      "subtitle": "Let's make your dream of a house a reality",
+      "title": "Imperial",
+      "description": "We offer competitive prices for all properties in Northern Cyprus and are always ready to provide additional discounts and bonuses for our clients.",
+
+      "firstItem": {
+        "title": "Exclusive offers",
+        "description": "We have an extensive database of exclusive properties in Northern Cyprus, including luxury villas, modern apartments, secluded houses by the sea and much more."
+      },
+
+      "secondItem": {
+        "title": "Expert knowledge",
+        "description": "We are proud that our experts know Northern Cyprus inside and out, and can offer you the most useful information about the areas, local conditions and investment potential. Our team is always ready to answer your questions and provide professional advice to help you make an informed choice."
+      },
+
+      "thirdItem": {
+        "title": "Language skills",
+        "description": " Imperial can have specialists who speak several languages, which can help them attract customers from all over the world and ensure more effective communication with them."
+      }
+    },
+
+    "numbers": {
+      "subtitle": "Discounts and bonuses",
+      "title": "Imperial",
+      "description": "We offer competitive prices for all properties in Northern Cyprus and are always ready to provide additional discounts and bonuses for our clients.",
+
+      "firstItem": {
+        "title": "AND MORE OBJECTS"
+      },
+
+      "secondItem": {
+        "title": "METROV2 OF LIVING SPACE"
+      },
+
+      "thirdItem": {
+        "title": "SATISFIED CUSTOMERS"
+      },
+
+      "fourthItem": {
+        "title": "YEAR OF FOUNDATION"
+      }
+    },
+
+    "concept": {
+      "firstItem": {
+        "title": "Expertise in the real estate market",
+
+        "firstDescription": "Imperial Agency can have expertise in the real estate market in Northern Cyprus. The company can provide clients with useful information about the real estate market, help them make informed decisions and transactions, as well as assist in the preparation of all necessary documents and procedures."
+      },
+
+      "secondItem": {
+        "title": "Full package of services",
+
+        "firstDescription": "Imperial can offer its clients a full package of services, including legal support, assistance in obtaining a visa, paperwork, etc. This allows customers to get all the necessary services in one place, without having to contact other specialists."
+      },
+
+      "thirdItem": {
+        "title": "Cooperation with other agencies",
+
+        "firstDescription": "We are proud to announce the cooperation of Imperial Corporation with the leading real estate agency in Northern Cyprus, Bastau. This partnership brings together two industry leaders to provide exceptional real estate services and investment opportunities in Northern Cyprus."
+      }
+    },
+
+    "testimonials": {
+      "subtitle": "They love us",
+      "title": "Reviews",
+      "description": "We offer competitive prices for all properties in Northern Cyprus and are always ready to provide additional discounts and bonuses for our clients.",
+
+      "firstItem": {
+        "name": "Denis Popov",
+        "profession": "Manager",
+        "testimonial": "I am very pleased with the work of the Imperial real estate agency in Northern Cyprus. They helped me find the perfect apartment at a very good price, and I was pleasantly surprised by their professionalism and attention to detail. I will definitely recommend them to my friends and acquaintances."
+      },
+
+      "secondItem": {
+        "name": "Maria Kuznetsova",
+        "profession": "Manager",
+        "testimonial": "The staff of the Imperial real estate agency in Northern Cyprus were very professional and attentive to our needs. They found us a beautiful villa in a beautiful location and provided us with all the necessary information about the area. I am very grateful to them for their excellent service and recommend them to anyone looking for accommodation in Northern Cyprus."
+      },
+
+      "thirdItem": {
+        "name": "Ivanov Nikolay",
+        "profession": "Manager",
+        "testimonial": "I was very pleased with the work of the Imperial real estate agency in Northern Cyprus. They quickly found me the house of my dreams and provided me with all the necessary information about the process of buying a property in Cyprus. I am very grateful to them for their professionalism and recommend them to anyone who is looking for quality service and reliable agents."
+      },
+
+      "fourthItem": {
+        "name": "Andreyev Artem",
+        "profession": "Manager",
+        "testimonial": "It was a pleasure to work with the Imperial real estate agency in Northern Cyprus. They provided me with a large selection of properties, taking into account all my requirements and wishes. The agency's team professionally organized all stages of the transaction and was always in touch to help and answer all my questions. I recommend Imperial to anyone looking for an apartment or a house in Northern Cyprus."
+      }
+    }
+  },
+
+  "investmentTour": {
+    "head": {
+      "title": "Investment tour",
+      "description": "Learn more about real estate investment opportunities in Northern Cyprus with the help of Imperial Corporation. Our investment tour provides a unique opportunity to get acquainted with the real estate market on the island and find out how we can help you achieve your financial goals.",
+      "keywords": "Imperial, real estate investments in Northern Cyprus, investment opportunities in Northern Cyprus, investment tour to Northern Cyprus, real estate for investors, investment program"
+    },
+
+    "title": "Imperial",
+    "subtitle": "Real estate Investment Tour",
+
+    "tourCard": {
+      "subtitle": "TOUR",
+      "title": "We invite you to a free 3-day tour",
+
+      "firstItem": {
+        "description": "You will have the opportunity to personally assess the location, quality of construction, infrastructure, as well as the development of the region as a whole"
+      },
+
+      "secondItem": {
+        "description": "The tour will help you get to know the island, its life, culture and real estate market intimately"
+      },
+
+      "thirdItem": {
+        "description": "Our individual program will be compiled based on your goals and preferences so that viewing objects meets your expectations and capabilities"
+      }
+    },
+
+    "FAQ": {
+      "subtitle": "questions",
+      "title": "Frequently Asked Questions?",
+
+      "firstItem": {
+        "question": "How to fly to Cyprus?",
+        "answer": "To get to Cyprus, you can use flights to one of the two international airports on the island - Ercan Airport in the northern part of Cyprus or Larnaca Airport in the southern part of the island. Depending on the place of departure, direct or connecting flights of various airlines are available."
+      },
+
+      "secondItem": {
+        "question": "Why do I need a tour?",
+        "answer": "The tour will help you not only to get acquainted with the real estate market of Northern Cyprus and the investment attractiveness of the objects, but also to learn more about life on the island, how the districts and infrastructure are developing."
+      },
+
+      "thirdItem": {
+        "question": "What is included in the free tour?",
+        "answer": "The free tour includes the following services: airport transfer, free accommodation for 3 days, presentation of projects from developers. <br/> ★ In addition, when buying real estate, we guarantee a refund of ticket prices."
+      },
+
+      "fourthItem": {
+        "question": "What documents are required to purchase real estate in Northern Cyprus?",
+        "answer": "When buying from documents, only your passport and a certificate of non-conviction will be required."
+      },
+
+      "fifthItem": {
+        "question": "Is it possible to pay for real estate in a currency other than pounds sterling?",
+        "answer": "In addition to pounds sterling, it is possible to pay in US dollars or Euros. Upon purchase, a recalculation will be made at the exchange rate. It is also possible to purchase if your capital is in cryptocurrencies."
+      }
+    }
+  },
+
+  "contacts": {
+    "head": {
+      "title": "Contacts",
+      "description": "Contact us for more information about our services.",
+      "keywords": "Imperial, Imperial Corporation contacts, contact the real estate agency, company address and phone number, email for communication, feedback form"
+    },
+
+    "title": "Imperial",
+    "subtitle": "Together we build our empire",
+
+    "form": {
+      "subtitle": "CONTACT",
+      "title": "Contact us:",
+      "description": "If you have any questions, please fill out the form below. We will contact you as soon as possible.",
+      "nameInput": {
+        "placeholder": "Name"
+      },
+      "mailInput": {
+        "placeholder": "Mail"
+      },
+      "textarea": {
+        "placeholder": "Message"
+      },
+      "btnText": "Send",
+      "successMessage": "Thank you, our expert will provide information soon"
+    },
+
+    "meetUs": {
+      "subtitle": "PLACES",
+      "title": "Meet us in your city.",
+
+      "firstItem": {
+        "location": "Northern Cyprus",
+        "title": "District Polatli 1, city Kyrenia, North Cyprus"
+      }
+    }
+  },
+
+  "realEstateDetails": {
+    "head": {
+      "title": "Description of real estate",
+      "description": "Imperial Corporation is a real estate agency in Northern Cyprus that offers a wide selection of real estate on this beautiful island. On this page you can find apartments, houses, commercial real estate for sale on favorable terms.",
+      "keywords": "Imperial, real estate in Northern Cyprus, apartments in Northern Cyprus, villas in Northern Cyprus, houses in Northern Cyprus, commercial real estate in Northern Cyprus, real estate for sale in Northern Cyprus, real estate for rent in Northern Cyprus, real estate market in Northern Cyprus, real estate prices in Northern Cyprus, description of real estate in Northern Cyprus, photos of real estate in Northern Cyprus, purchase of real estate in Northern Cyprus, sale of real estate in Northern Cyprus, rental of real estate in Northern Cyprus"
+    },
+
+    "title": "Property description"
+  },
+
+  "realEstatesByLocation": {
+    "head": {
+      "title": "Real estate by location",
+      "description": "Discover the beauty of Northern Cyprus and find your ideal home or apartment in one of the many locations offered by Imperial Corporation. Find out more about each location and how we can help you buy a property here.",
+      "keywords": "Imperial, real estate in Girna, real estate in Famagusta, real estate in Kyrenia, real estate in Iskel, real estate in Lefkosh"
+    },
+
+    "title": "Property description"
+  }
+}

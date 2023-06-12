@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { Modal, Stack } from '@mantine/core';
 import { useForm } from '@mantine/form';
@@ -12,10 +13,12 @@ import { FormButton, SuccessMessage, useInputStyles } from '../styles/index';
 import { FormWrapper, Label, useStyles } from './styles';
 
 const CallBackFormModal = () => {
+  const { t } = useTranslation();
+
   const isOpen = useStore((store) => store.isCallbackFormOpen);
   const onClose = useStore((store) => store.closeCallbackModal);
 
-  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.senMail });
+  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.submitTourRequest });
 
   const {
     classes: { input },
@@ -30,8 +33,8 @@ const CallBackFormModal = () => {
       name: '',
     },
     validate: {
-      name: (value) => (value.length < 2 ? 'Пожалуйста, введите имя!' : null),
-      phone: (value) => (value.length < 3 ? 'Пожалуйста, введите номер телефона!' : null),
+      name: (value) => (value.length < 2 ? t('callbackModal.form.nameInput.validation') : null),
+      phone: (value) => (value.length < 3 ? t('callbackModal.form.phoneInput.validation') : null),
     },
   });
 
@@ -50,7 +53,7 @@ const CallBackFormModal = () => {
       opened={isOpen}
       onClose={onClose}
       size={540}
-      title="Оставьте заявку и получите от нашего эксперта актуальные цены, планировки и условия"
+      title={t('callbackModal.title')}
       styles={{
         inner: {
           zIndex: 2000,
@@ -108,15 +111,14 @@ const CallBackFormModal = () => {
           custom={1.1}
         >
           <TextInput
-            label="Имя"
-            placeholder="Имя"
+            label={t('callbackModal.form.nameInput.label')}
+            placeholder={t('callbackModal.form.nameInput.label')}
             {...form.getInputProps('name')}
             classNames={{ input, label }}
           />
           <Stack spacing={0}>
-            <Label>Номер телефона</Label>
+            <Label>{t('callbackModal.form.phoneInput.label')}</Label>
             <CustomPhoneInput {...form.getInputProps('phone')} isHigh={true} />
-            {/* {form.errors && form.errors.phone && <p>{form.errors.phone}</p>} */}
           </Stack>
           <FormButton
             disabled={isLoading}
@@ -126,12 +128,12 @@ const CallBackFormModal = () => {
             variants={Variants.opacity}
             custom={1.2}
           >
-            {isLoading ? <Loader size={25} /> : 'Оставить заявку'}
+            {isLoading ? <Loader size={25} /> : t('callbackModal.form.btnText')}
           </FormButton>
         </FormWrapper>
       ) : (
         <SuccessMessage initial="hidden" exit="exit" animate="enter" variants={Variants.opacity} custom={1.2}>
-          Спасибо, наш эксперт предоставит информацию в ближайшее время!
+          {t('callbackModal.form.successMessage')}
         </SuccessMessage>
       )}
     </Modal>

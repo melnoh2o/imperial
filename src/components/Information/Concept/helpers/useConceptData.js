@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const bg1 = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683825341/IMG_2077_skhn9l.png';
 const bg2 = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683133337/information2_fxesvu.png';
@@ -6,27 +7,31 @@ const bg3 =
   'https://res.cloudinary.com/diwpzmuai/image/upload/v1686296921/310230483_200731148969979_105613259542334987_n_czanvq.jpg';
 
 export function useConceptData() {
+  const { t } = useTranslation();
+
   const concepts = [
     {
       id: useId(),
-      title: 'Экспертиза на рынке недвижимости',
+      title: t('information.concept.firstItem.title'),
       descriptions: [
         {
           id: useId(),
-          text: 'Агентство Imperial может иметь экспертизу на рынке недвижимости на Северном Кипре. Компания может предоставлять клиентам полезную информацию о рынке недвижимости, помогать им принимать обоснованные решения и сделки, а также содействовать в оформлении всех необходимых документов и процедур.',
+          text: t('information.concept.firstItem.firstDescription'),
         },
       ],
       img: bg1,
     },
     {
       id: useId(),
-      title: 'Полный пакет услуг',
+      title: t('information.concept.secondItem.title'),
       descriptions: [
         {
           id: useId(),
-          text: ' Imperial может предложить своим клиентам полный пакет услуг, включая юридическое сопровождение, помощь в получении визы, оформлении документов и т.д. Это позволяет клиентам получить все необходимые услуги в одном месте, без необходимости обращаться к другим специалистам.',
+          text: t('information.concept.secondItem.firstDescription'),
         },
       ],
+      img: bg2,
+      // TODO:
       provide: {
         text: 'При выборе нашего агенства, мы предосталяем вам следующее:',
         services: [
@@ -48,15 +53,14 @@ export function useConceptData() {
           },
         ],
       },
-      img: bg2,
     },
     {
       id: useId(),
-      title: 'Сотрудничество с другими агентствами',
+      title: t('information.concept.thirdItem.title'),
       descriptions: [
         {
           id: useId(),
-          text: ' Мы с гордостью объявляем о сотрудничестве Imperial Corporation с ведущим агентством недвижимости на Северном Кипре, Bastau. Это партнерство объединяет двух лидеров отрасли, чтобы предоставить исключительные услуги в сфере недвижимости и возможности для инвестиций на территории Северного Кипра.',
+          text: t('information.concept.thirdItem.firstDescription'),
         },
       ],
       img: bg3,

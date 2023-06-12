@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Modal, Stack as MantieneStack } from '@mantine/core';
 
 import useStore from '../../store';
@@ -6,21 +7,23 @@ import ModalForm from './ModalForm';
 import { Stack, Subtitle, Title } from './styles';
 
 const TourModal = () => {
+  const { t } = useTranslation();
+
   const isOpen = useStore((state) => state.isOpen);
   const onClose = useStore((state) => state.close);
 
   const data = [
     {
       id: useId(),
-      title: 'Инвестиционный тур по Северному Кипру',
+      title: t('tourModal.firstItem.title'),
     },
     {
       id: useId(),
-      title: 'Трансфер с аэропорта',
+      title: t('tourModal.secondItem.title'),
     },
     {
       id: useId(),
-      title: 'Бесплатное проживание: 3 дня',
+      title: t('tourModal.thirdItem.title'),
     },
   ];
 
@@ -65,7 +68,7 @@ const TourModal = () => {
     >
       <MantieneStack spacing={24}>
         <Stack>
-          <Title>Бесплатный инвестиционный тур по Северному Кипру</Title>
+          <Title>{t('tourModal.title')}</Title>
           <MantieneStack spacing={2} align="center">
             {data.map((item) => (
               <Subtitle key={item.id}>• {item.title}</Subtitle>

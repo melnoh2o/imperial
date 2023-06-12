@@ -3,6 +3,8 @@ import { persist } from 'zustand/middleware';
 
 import { LANG } from '../constants/lang';
 
+export const STORAGE_NAME = 'cyprus';
+
 const useStore = create(
   persist(
     (set) => ({
@@ -20,8 +22,8 @@ const useStore = create(
       changeLang: (value) => set({ lang: value }),
     }),
     {
-      name: 'cyprus', // unique name
-      getStorage: () => sessionStorage, // (optional) by default the 'localStorage' is used
+      name: STORAGE_NAME,
+      getStorage: () => sessionStorage,
     }
   )
 );

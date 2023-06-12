@@ -1,35 +1,34 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useFAQData() {
+  const { t } = useTranslation();
+
   const data = [
     {
       id: useId(),
-      question: 'Как прилететь на Кипр?',
-      answer:
-        'Чтобы добраться до Кипра, вы можете воспользоваться авиарейсами до одного из двух международных аэропортов на острове - Аэропорта Эрджан на северной части Кипра или Аэропорта Ларнака на южной части острова. В зависимости от места отправления, доступны прямые или пересадочные рейсы различных авиакомпаний.',
+      question: t('investmentTour.FAQ.firstItem.question'),
+      answer: t('investmentTour.FAQ.firstItem.answer'),
     },
     {
       id: useId(),
-      question: 'Зачем мне тур?',
-      answer:
-        'Тур поможет вам не только познакомиться с рынком недвижимости Северного Кипра и инвестиционной привлекательностью объектов, но и узнать ближе жизнь на острове, как развиваются районы и инфраструктура.',
+      question: t('investmentTour.FAQ.secondItem.question'),
+      answer: t('investmentTour.FAQ.secondItem.answer'),
     },
     {
       id: useId(),
-      question: 'Что входит в бесплатный тур?',
-      answer:
-        'Бесплатный тур включает в себя следующие услуги: трансфер с аэропорта, бесплатное проживание в течении 3-ёх дней, презентацию проектов от застройщиков. <br/> ★ Кроме того, при покупке недвижимости мы гарантируем возврат цен за билеты.',
+      question: t('investmentTour.FAQ.thirdItem.question'),
+      answer: t('investmentTour.FAQ.thirdItem.answer'),
     },
     {
       id: useId(),
-      question: 'Какие документы необходимы для покупки недвижимости на Северном Кипре?',
-      answer: 'При покупке из документов понадобится только ваш паспорт и справка о несудимости.',
+      question: t('investmentTour.FAQ.fourthItem.question'),
+      answer: t('investmentTour.FAQ.fourthItem.answer'),
     },
     {
       id: useId(),
-      question: 'Возможно ли оплата за недвижимость в другой валюте кроме фунтов стерлингов?',
-      answer:
-        'Кроме фунтов стерлингов, возможно оплатить в долларах США или Евро. При покупке будет произведен перерасчет по курсу валют. Также возможна покупка, если ваш капитал находится в криптовалютах.',
+      question: t('investmentTour.FAQ.fifthItem.question'),
+      answer: t('investmentTour.FAQ.fifthItem.answer'),
     },
   ];
 
