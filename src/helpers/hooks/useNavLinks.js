@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { BsWhatsapp, BsInstagram } from 'react-icons/bs';
 import { TfiYoutube } from 'react-icons/tfi';
@@ -6,36 +7,38 @@ import { TfiYoutube } from 'react-icons/tfi';
 import { Paths } from '../../constants/Paths';
 
 export function useNavLinks() {
+  const { t } = useTranslation();
+
   const navLinks = [
     {
       id: useId(),
       path: Paths.MAIN,
-      title: 'Главная',
+      title: t('layout.header.main'),
     },
     {
       id: useId(),
       path: Paths.LOCATIONS,
-      title: 'Локации',
+      title: t('layout.header.locations'),
     },
     {
       id: useId(),
       path: Paths.REAL_ESTATES,
-      title: 'Недвижимость',
+      title: t('layout.header.realEstates'),
     },
     {
       id: useId(),
       path: Paths.INFORMATION,
-      title: 'Информация',
+      title: t('layout.header.information'),
     },
     {
       id: useId(),
       path: Paths.INVESTMENT_TOUR,
-      title: 'Инвестиционный тур',
+      title: t('layout.header.investmentTour'),
     },
     {
       id: useId(),
       path: Paths.CONTACTS,
-      title: 'Контакты',
+      title: t('layout.header.contacts'),
     },
   ];
 
@@ -65,20 +68,20 @@ export function useNavLinks() {
   const contacts = [
     {
       id: useId(),
-      header: 'ТЕЛЕФОН',
+      header: t('layout.footer.phone'),
       title: '+905338879769',
       path: 'tel://1234567920',
     },
     {
       id: useId(),
-      header: 'ПОЧТА',
+      header: t('layout.footer.mail'),
       title: 'imperialkktc@gmail.com',
       path: 'mailto:info@yoursite.com',
     },
     {
       id: useId(),
-      header: 'Адресс',
-      title: 'District Polatli 1, city Kyrenia, North Cyprus',
+      header: t('layout.footer.address.header'),
+      title: t('layout.footer.address.title'),
       path: '#',
     },
   ];

@@ -1,4 +1,5 @@
 import { Carousel } from '@mantine/carousel';
+import { useTranslation } from 'react-i18next';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { BsArrowRight } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -10,6 +11,8 @@ import { useSalesStartsData } from './helpers/useSalesStartsData';
 import { Button, ImageWrapper, InnerTitle, InnerTitleStack, InnerWrapper, YearLine, Space } from './styles';
 
 const SalesStarts = () => {
+  const { t } = useTranslation();
+
   const open = useStore((store) => store.openCallbackModal);
   const { data } = useSalesStartsData();
 
@@ -35,7 +38,7 @@ const SalesStarts = () => {
             </Description>
 
             <Button onClick={open} type="button" variants={Variants.opacity} custom={1.5}>
-              <span>Подробнее</span>
+              <span>{t('main.salesStart.btnText')}</span>
               <BsArrowRight />
             </Button>
           </InnerTitleStack>

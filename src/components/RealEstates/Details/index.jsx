@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useMediaQuery } from '@mantine/hooks';
 
+import useStore from '../../../store';
 import { RealEstatesServices } from '../../../services/realEstateServices';
 import { Container } from '../../styles/index';
 import Loader from '../../Loader';
@@ -14,10 +15,12 @@ import { FlexContainer, BodyWrapper, Wrapper, Group, LoaderWrapper } from './sty
 
 const Details = () => {
   const { id } = useParams();
+  const { lang } = useStore();
+
   const matches = useMediaQuery('(max-width:  768px)');
 
-  const { data: realEstate, isLoading } = useQuery(['filer-values', id], () =>
-    RealEstatesServices.getRealEstateById(id || 0)
+  const { data: realEstate, isLoading } = useQuery(['filer-values', id, lang], () =>
+    RealEstatesServices.getRealEstateById(id || 0, lang)
   );
 
   return (

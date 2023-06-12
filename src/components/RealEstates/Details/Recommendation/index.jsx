@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { Carousel } from '@mantine/carousel';
 
@@ -7,6 +8,8 @@ import RealEstateCard from '../../../RealEstateCard';
 import { Title, Wrapper, Container } from './styles';
 
 const Recommendation = ({ currentItemId, developer }) => {
+  const { t } = useTranslation();
+
   const { data: realEstate } = useQuery(['filter-by-developer', developer], () =>
     RealEstatesServices.getByDeveloper(developer)
   );
@@ -17,7 +20,7 @@ const Recommendation = ({ currentItemId, developer }) => {
     <Container>
       {filteredItems && filteredItems.length ? (
         <Wrapper variants={Variants.container} initial="hidden" whileInView="visible">
-          <Title variants={Variants.item}>СВЯЗАННЫЕ НЕДВИЖИМОСТИ</Title>
+          <Title variants={Variants.item}>{t('realEstate.details.recommendationTitle')}</Title>
           <Carousel
             slideGap="md"
             slideSize="50%"

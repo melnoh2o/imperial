@@ -86,12 +86,7 @@ const Carousel = ({ images }) => {
 
       <ImgsGroup variants={Variants.container} initial="hidden" whileInView="visible">
         {images.slice(0, 6).map((image) => (
-          <ImgButton
-            key={image.id}
-            type="button"
-            $imgUrl={image.thumbUrl}
-            variants={Variants.item}
-          ></ImgButton>
+          <ImgButton key={image.id} type="button" $imgUrl={image.thumbUrl} variants={Variants.item} />
         ))}
       </ImgsGroup>
     </Wrapper>

@@ -131,7 +131,7 @@ const CallBackFormModal = () => {
         </FormWrapper>
       ) : (
         <SuccessMessage initial="hidden" exit="exit" animate="enter" variants={Variants.opacity} custom={1.2}>
-          Спасибо, наш эксперт предоставит информацию в ближайшее время
+          Спасибо, наш эксперт предоставит информацию в ближайшее время!
         </SuccessMessage>
       )}
     </Modal>

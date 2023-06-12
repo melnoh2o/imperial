@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next';
+
 import SliderGradient from '../SliderGradient';
 import { FilterStack, FilterTitle, Input } from '../styles';
 import { FilterPriceContainer, InputGroup, RangeInput } from './styles';
 
 const PriceInput = ({ initialPrice, finalPrice, minMax, setFinalPrice, setInitialPrice }) => {
+  const { t } = useTranslation();
+
   return (
     <FilterStack>
-      <FilterTitle>Цена</FilterTitle>
+      <FilterTitle>{t('realEstate.filter.price')}</FilterTitle>
       <FilterPriceContainer>
         <SliderGradient initialPrice={initialPrice} finalPrice={finalPrice} max={minMax?.max} />
         <RangeInput

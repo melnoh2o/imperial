@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Variants } from '../../../constants/animation';
 import { ContentWrapper, Container } from '../../styles/index';
 import { useBenefitData } from './helpers/useBenefitData';
@@ -14,6 +16,8 @@ import {
 } from './styles';
 
 const Benefits = () => {
+  const { t } = useTranslation();
+
   const { benefits } = useBenefitData();
 
   return (
@@ -25,10 +29,10 @@ const Benefits = () => {
           <InnerWrapper>
             <InnerTitleStack initial="hidden" exit="exit" whileInView="enter" viewport={{ amount: 0.2 }}>
               <InnerTitle variants={Variants.opacity} custom={1.2}>
-                Imperial Corporation
+                {t('main.benefits.title')}
               </InnerTitle>
               <InnerDescription variants={Variants.opacity} custom={1.3}>
-                Почему нужно приобретать недвижимость на Северном Кипре?
+                {t('main.benefits.description')}
               </InnerDescription>
             </InnerTitleStack>
 

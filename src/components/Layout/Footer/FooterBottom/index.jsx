@@ -1,18 +1,19 @@
-import React from 'react';
-import { Group } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 import { useNavLinks } from '../../../../helpers/hooks/useNavLinks';
 import { Variants } from '../../../../constants/animation';
 import { CopyrightTitle, SocialLinksGroup, SocialLink, Wrapper, ApartContainer } from './styles';
 
 const FooterBottom = () => {
+  const { t } = useTranslation();
+
   const { socialLinks } = useNavLinks();
 
   return (
     <Wrapper initial="hidden" exit="exit" whileInView="enter">
       <ApartContainer>
         <CopyrightTitle variants={Variants.opacity} custom={1.3}>
-          © {new Date().getFullYear()} Все права защищены
+          © {new Date().getFullYear()} {t('layout.footer.allRightsReserved')}
         </CopyrightTitle>
         <SocialLinksGroup>
           {socialLinks.map((socialLink) => {

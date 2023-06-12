@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Modal as MantineModal, Stack, rem } from '@mantine/core';
 import { Carousel, useAnimationOffsetEffect } from '@mantine/carousel';
 import { motion } from 'framer-motion';
@@ -10,16 +11,17 @@ import { FlexContainer, Separator, LinkBtn, ImageWrapper, InfoDescription } from
 
 const TRANSITION_DURATION = 200;
 
-const Modal = ({ isOpen, close, description, images, location }) => {
+const Modal = ({ isOpen, close, images, location, description, name }) => {
   const [embla, setEmbla] = useState(null);
 
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useAnimationOffsetEffect(embla, TRANSITION_DURATION);
 
   const navigateToRealEstatesPage = () => {
     close();
-    navigate(`/real-estates-by-location?location=${location}`);
+    navigate(`/real-estates-by-location?location=${location}&name=${name}`);
   };
 
   return (
@@ -100,7 +102,7 @@ const Modal = ({ isOpen, close, description, images, location }) => {
                 </Carousel.Slide>
               ))}
           </Carousel>
-          <LinkBtn onClick={navigateToRealEstatesPage}>Перейти к объектам...</LinkBtn>
+          <LinkBtn onClick={navigateToRealEstatesPage}>{t('location.expandMore')}</LinkBtn>
         </motion.div>
         <Stack spacing={10}>
           <Separator variants={Variants.opacity} custom={1.2} />

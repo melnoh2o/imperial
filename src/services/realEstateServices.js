@@ -20,8 +20,8 @@ export const RealEstatesServices = {
     return data;
   },
 
-  async getRealEstateById(id) {
-    const { data } = await axios.get(`${URL_BASE}/real-estate/get-by-id/${id}`);
+  async getRealEstateById(id, lang = 'ru') {
+    const { data } = await axios.get(`${URL_BASE}/real-estate/get-by-id/${id}?lang=${lang}`);
     return data.data;
   },
 

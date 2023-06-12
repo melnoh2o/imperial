@@ -11,6 +11,7 @@ import CallBackFormModal from './components/CallbackFormModal';
 import CallBackButton from './components/CallbackButton';
 import './styles/global.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import './localization';
 
 const Main = lazy(() => import('./pages/Main'));
 const Locations = lazy(() => import('./pages/Locations'));

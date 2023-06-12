@@ -2,7 +2,8 @@ import { useId } from 'react';
 
 const bg1 = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683825341/IMG_2077_skhn9l.png';
 const bg2 = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683133337/information2_fxesvu.png';
-const bg3 = 'https://res.cloudinary.com/diwpzmuai/image/upload/v1683285923/image_22_ikht5d.png';
+const bg3 =
+  'https://res.cloudinary.com/diwpzmuai/image/upload/v1686296921/310230483_200731148969979_105613259542334987_n_czanvq.jpg';
 
 export function useConceptData() {
   const concepts = [
@@ -51,11 +52,11 @@ export function useConceptData() {
     },
     {
       id: useId(),
-      title: 'Использование новых технологий',
+      title: 'Сотрудничество с другими агентствами',
       descriptions: [
         {
           id: useId(),
-          text: ' Imperial следит за новыми технологиями и старается использовать их в своей работе. Компания предоставляет своим клиентам удобный онлайн-сервис для поиска недвижимости и возможность проведения онлайн-транзакций, что позволяет сократить время и улучшить качество обслуживания клиентов.',
+          text: ' Мы с гордостью объявляем о сотрудничестве Imperial Corporation с ведущим агентством недвижимости на Северном Кипре, Bastau. Это партнерство объединяет двух лидеров отрасли, чтобы предоставить исключительные услуги в сфере недвижимости и возможности для инвестиций на территории Северного Кипра.',
         },
       ],
       img: bg3,

@@ -1,3 +1,3 @@
 export const URL_BASE = import.meta.env.DEV
-  ? 'http://localhost:8000/api'
+  ? 'http://imperial-server-production.up.railway.app/api'
   : 'https://imperial-server-production.up.railway.app/api';

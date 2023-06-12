@@ -6,6 +6,8 @@ import Modal from '../Modal';
 import { LocationCard, Bg, LocationInfo, LocationInfoTitle, LocationInfoSubtitle } from './styles';
 
 const Item = ({ item }) => {
+  const { location, thumbUrl, images, descriptionLocaleRu, descriptionLocaleEn } = item;
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -13,17 +15,20 @@ const Item = ({ item }) => {
       <Modal
         isOpen={isOpen}
         close={() => setIsOpen(false)}
-        description={item.description}
-        images={item.images}
-        location={item.location}
+        location={location}
+        images={images}
+        name={descriptionLocaleRu?.name || descriptionLocaleEn?.name}
+        description={descriptionLocaleRu?.description || descriptionLocaleEn?.description}
       />
       <LocationCard onClick={() => setIsOpen(true)} variants={Variants.item}>
-        <LazyLoadImage effect="blur" src={item.thumbUrl} alt={`${item.location} - photo`} className="img" />
+        <LazyLoadImage effect="blur" src={thumbUrl} alt={`${location} - photo`} className="img" />
 
-        <Bg imgUrl={item.thumbUrl} className="bg" />
+        <Bg imgUrl={thumbUrl} className="bg" />
         <LocationInfo className="locationInfo">
-          <LocationInfoTitle>{item.location}</LocationInfoTitle>
-          <LocationInfoSubtitle>{item.area}</LocationInfoSubtitle>
+          <LocationInfoTitle>{descriptionLocaleRu?.name || descriptionLocaleEn?.name}</LocationInfoTitle>
+          <LocationInfoSubtitle>
+            {descriptionLocaleRu?.area || descriptionLocaleEn?.area}
+          </LocationInfoSubtitle>
         </LocationInfo>
       </LocationCard>
     </>

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Paths } from '../../constants/Paths';
 import SEO from '../../components/SEO';
 import HeroBg from '../../components/HeroBg';
@@ -8,20 +10,22 @@ import Benefits from '../../components/Main/Benefits';
 import SalesStarts from '../../components/Main/SalesStarts';
 
 const Main = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <SEO
-        title="Главная"
-        description="Imperial Corporation – агентство недвижимости на Северном Кипре, которое помогает своим клиентам приобретать недвижимость на этом красивом острове. У нас вы можете купить квартиры, дома, земельные участки и коммерческую недвижимость на выгодных условиях."
-        keywords="Империал, недвижимость на Северном Кипре, агентство недвижимости, покупка недвижимости, продажа недвижимости, аренда недвижимости, жилье на Северном Кипре"
+        title={t('main.head.title')}
+        description={t('main.head.description')}
+        keywords={t('main.head.keywords')}
         name="ImperialCorporation"
         type="application"
         href={Paths.MAIN}
       />
       <HeroBg
         url="https://res.cloudinary.com/diwpzmuai/image/upload/v1684000921/IMG_2085_b3mt1w.jpg"
-        title="Imperial"
-        subtitle="ОТКРОЙТЕ ДВЕРЬ К СВОЕМУ ДОМУ НА СЕВЕРНОМ КИПРЕ!"
+        title={t('main.title')}
+        subtitle={t('main.subtitle')}
       />
 
       <AboutUs />

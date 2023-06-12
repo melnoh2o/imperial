@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 
 import { Variants } from '../../../constants/animation';
@@ -17,6 +18,8 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
   const [handoverParam, setHandoverParam] = useState('');
   const [startPrice, setStartPrice] = useState('');
   const [endPrice, setEndPrice] = useState('');
+
+  const { t } = useTranslation();
 
   const searchPriceStart = useDebounce(initialPrice, 500);
   const searchPriceEnd = useDebounce(finalPrice, 500);
@@ -68,7 +71,7 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
       {!isLoading && !!realEstates ? (
         <>
           {realEstates?.totalQuantity === 0 ? (
-            <NotFoundTitle>По вашему запросу объектов не найдено!</NotFoundTitle>
+            <NotFoundTitle>{t('realEstate.notFoundTitle')}</NotFoundTitle>
           ) : null}
           <Grid variants={Variants.container} initial="hidden" animate="visible" viewport={{ once: true }}>
             {realEstates?.data?.map((item) => (

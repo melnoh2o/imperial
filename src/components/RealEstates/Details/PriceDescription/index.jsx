@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Group } from '@mantine/core';
 import { IoMdBed } from 'react-icons/io';
 import { CiMoneyBill } from 'react-icons/ci';
@@ -7,13 +8,15 @@ import { Variants } from '../../../../constants/animation';
 import { CallbackButton, PriceGroup, PriceTitle, PricesStack, Stack, Wrapper } from './styles';
 
 const PriceDescription = ({ prices }) => {
+  const { t } = useTranslation();
+
   const openCallbackModal = useStore((store) => store.openCallbackModal);
 
   return (
     <Wrapper>
       <PricesStack>
         <PriceTitle variants={Variants.opacity} custom={1.2}>
-          Планировки и стоимость:
+          {t('realEstate.details.priceTitle')}
         </PriceTitle>
 
         <Stack variants={Variants.container} initial="hidden" whileInView="visible">
@@ -37,7 +40,7 @@ const PriceDescription = ({ prices }) => {
             viewport={{ once: true }}
             onClick={openCallbackModal}
           >
-            Оставить заявку
+            {t('realEstate.details.btnText')}
           </CallbackButton>
         </Stack>
       </PricesStack>

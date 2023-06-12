@@ -1,5 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { Group, Stack } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -18,6 +19,8 @@ import {
 } from './styles';
 
 const ListItem = () => {
+  const { t } = useTranslation();
+
   const openModal = useStore((store) => store.openCallbackModal);
   const { hotDeals } = useHotDealsData();
 
@@ -115,7 +118,7 @@ const ListItem = () => {
               >
                 <motion.div variants={Variants.item}>
                   <Group position="apart">
-                    <p>В продаже:</p>
+                    <p>{t('main.hotDeals.card.title')}</p>
                     <Group spacing={4}>
                       <MdOutlineLocationOn className="strong" />
                       <p className="strong">{item.location}</p>
@@ -136,7 +139,7 @@ const ListItem = () => {
                 custom={1.4}
                 viewport={{ amount: 0.3 }}
               >
-                Узнать подробнее
+                {t('main.hotDeals.card.btnText')}
               </CardButton>
             </CardWrapper>
           </Carousel.Slide>

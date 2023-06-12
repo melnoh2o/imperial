@@ -5,13 +5,17 @@ import { Variants } from '../../../../constants/animation';
 import { Item, ListContainer, Location, Title, TitleStack, Wrapper } from './styles';
 
 const Descriptions = ({ realEstate }) => {
+  const { name, location, descriptionLocaleEn, descriptionLocaleRu } = realEstate;
+
+  const descriptions = descriptionLocaleEn || descriptionLocaleRu;
+
   return (
     <Wrapper>
       <TitleStack variants={Variants.opacity} custom={1.3}>
         <Group position="apart">
-          <Title>{realEstate.name}</Title>
+          <Title>{name}</Title>
           <Location>
-            <span>{realEstate.location}</span>
+            <span>{location}</span>
             <GoLocation />
           </Location>
         </Group>
@@ -22,11 +26,12 @@ const Descriptions = ({ realEstate }) => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {realEstate.descriptions.map((item) => (
-            <Item key={item.id} variants={Variants.item}>
-              <p>{item.description}</p>
-            </Item>
-          ))}
+          {descriptions &&
+            descriptions.map((item) => (
+              <Item key={item.id} variants={Variants.item}>
+                <p>{item.description}</p>
+              </Item>
+            ))}
         </ListContainer>
       </TitleStack>
     </Wrapper>

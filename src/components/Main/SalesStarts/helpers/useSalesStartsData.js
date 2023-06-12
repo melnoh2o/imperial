@@ -1,14 +1,16 @@
 import { useId } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useSalesStartsData() {
+  const { t } = useTranslation();
+
   const data = {
     id: useId(),
-    title: 'ELYSIUM',
+    title: t('main.salesStart.listFirst.title'),
     year: 2025,
-    location: 'Искеле',
-    description1:
-      ' В продажу вернулся один таунхаус с видом на бассейн! 385 000 GBP. Готовность ноябрь 2025 года. Рассрочка 36 месяцев.',
-    description2: 'В продаже: <br />Апартаменты с ремонтом 220м² жилой площади.',
+    location: t('main.salesStart.listFirst.location'),
+    description1: t('main.salesStart.listFirst.description1'),
+    description2: t('main.salesStart.listFirst.description2'),
     images: [
       {
         id: useId(),

@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { changeLanguage } from 'i18next';
 
 import useStore from '../../../../store';
+import { LANG } from '../../../../constants/lang';
 import { useNavLinks } from '../../../../helpers/hooks/useNavLinks';
 import { NavbarWrapper, NavBarItem, NavBarLink } from './styles';
 
@@ -34,13 +36,18 @@ const ListItem = ({ isWhite }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const close = useStore((store) => store.closeBurgerMenu);
+  const { closeBurgerMenu, changeLang, lang } = useStore((store) => store);
 
   const { navLinks } = useNavLinks();
 
   const handleNavigate = (path) => {
     navigate(path);
-    close();
+    closeBurgerMenu();
+  };
+
+  const toggleLang = () => {
+    changeLang(lang === LANG.RU ? LANG.EN : LANG.RU);
+    changeLanguage(lang === LANG.RU ? LANG.EN : LANG.RU);
   };
 
   return (
@@ -56,6 +63,9 @@ const ListItem = ({ isWhite }) => {
           </NavBarLink>
         </NavBarItem>
       ))}
+      <button onClick={toggleLang} aria-label="language change button">
+        {lang}
+      </button>
     </NavbarWrapper>
   );
 };

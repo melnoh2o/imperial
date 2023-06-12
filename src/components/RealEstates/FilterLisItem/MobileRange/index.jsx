@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Collapse } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
@@ -7,12 +8,14 @@ import { FilterMobileButton, FilterStack, Input } from '../styles';
 import { FlexContainer, InputGroup, TrackWrapper } from './styles';
 
 const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFinalPrice }) => {
+  const { t } = useTranslation();
+
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
     <FilterStack>
       <FilterMobileButton onClick={toggle} type="button" $isActive={opened}>
-        <span>Цена</span>
+        <span>{t('realEstate.filter.price')}</span>
         <Arrow isVisible={opened} />
       </FilterMobileButton>
       <Collapse in={opened}>
@@ -33,7 +36,6 @@ const MobileRange = ({ initialPrice, finalPrice, minMax, setInitialPrice, setFin
               min={minMax?.min}
               max={minMax?.max}
             />
-            {/* <DoubleRangeInput min={minMax?.min} max={minMax?.max} /> */}
           </TrackWrapper>
           <InputGroup>
             <Input

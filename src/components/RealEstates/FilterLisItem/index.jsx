@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { useMediaQuery } from '@mantine/hooks';
 
@@ -22,6 +23,8 @@ const FilterListItem = ({
   setFinalPrice,
   minMax,
 }) => {
+  const { t } = useTranslation();
+
   const matches = useMediaQuery('(min-width: 1024px)');
 
   const { data } = useQuery(['filer-values'], () => RealEstatesServices.getFilterValues());
@@ -30,7 +33,7 @@ const FilterListItem = ({
     <>
       {!matches && (
         <FilterMobileWrapper>
-          <FilterMobileTitle>Фильтр</FilterMobileTitle>
+          <FilterMobileTitle>{t('realEstate.mobileFilter.title')}</FilterMobileTitle>
           <MobileRange
             initialPrice={initialPrice}
             finalPrice={finalPrice}
@@ -43,16 +46,26 @@ const FilterListItem = ({
               data={data.developers}
               values={developers}
               setValue={setDevelopers}
-              label="Застройщик"
+              label={t('realEstate.filter.developer')}
             />
           )}
 
           {!!data && !!data.locations && (
-            <MobileItem data={data.locations} values={locations} setValue={setLocations} label="Локация" />
+            <MobileItem
+              data={data.locations}
+              values={locations}
+              setValue={setLocations}
+              label={t('realEstate.filter.locations')}
+            />
           )}
 
           {!!data && !!data.handovers && (
-            <MobileItem data={data.handovers} values={handovers} setValue={setHandovers} label="Дата сдачи" />
+            <MobileItem
+              data={data.handovers}
+              values={handovers}
+              setValue={setHandovers}
+              label={t('realEstate.filter.handover')}
+            />
           )}
         </FilterMobileWrapper>
       )}
@@ -73,15 +86,30 @@ const FilterListItem = ({
           />
 
           {!!data && !!data.developers && (
-            <Item data={data.developers} values={developers} setValues={setDevelopers} label="Застройщик" />
+            <Item
+              data={data.developers}
+              values={developers}
+              setValues={setDevelopers}
+              label={t('realEstate.filter.developer')}
+            />
           )}
 
           {!!data && !!data.locations && (
-            <Item data={data.locations} values={locations} setValues={setLocations} label="Локация" />
+            <Item
+              data={data.locations}
+              values={locations}
+              setValues={setLocations}
+              label={t('realEstate.filter.locations')}
+            />
           )}
 
           {!!data && !!data.handovers && (
-            <Item data={data.handovers} values={handovers} setValues={setHandovers} label="Дата сдачи" />
+            <Item
+              data={data.handovers}
+              values={handovers}
+              setValues={setHandovers}
+              label={t('realEstate.filter.handover')}
+            />
           )}
         </FilterWrapper>
       )}

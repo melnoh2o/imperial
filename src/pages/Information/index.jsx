@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Paths } from '../../constants/Paths';
 import SEO from '../../components/SEO';
 import HeroBg from '../../components/HeroBg';
@@ -9,20 +11,22 @@ import Concept from '../../components/Information/Concept';
 import Video from '../../components/Information/Video';
 
 const Information = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <SEO
-        title="Информация"
-        description="Imperial Corporation – агентство недвижимости на Северном Кипре, которое предоставляет своим клиентам качественные услуги по приобретению и продаже недвижимости на острове. Узнайте больше о нашей команде и опыте работы в этой области."
-        keywords="Империал, Imperial Corporation, агентство недвижимости на Северном Кипре, история компании, наша команда, наши ценности"
+        title={t('information.head.title')}
+        description={t('information.head.description')}
+        keywords={t('information.head.keywords')}
         name="ImperialCorporation"
         type="application"
         href={Paths.INFORMATION}
       />
       <HeroBg
         url="https://res.cloudinary.com/diwpzmuai/image/upload/v1683825397/IMG_2083_jt9g4c.jpg"
-        title="Imperial"
-        subtitle="Почему мы?"
+        title={t('information.title')}
+        subtitle={t('information.subtitle')}
       />
       <Services />
       <Video />

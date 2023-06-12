@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { Paths } from '../../constants/Paths';
 import SEO from '../../components/SEO';
 import HeroBg from '../../components/HeroBg';
@@ -7,20 +9,22 @@ import ContactMap from '../../components/Contacts/ContactMap';
 import MeetUs from '../../components/Contacts/MeetUs';
 
 const Contacts = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <SEO
-        title="Контакты"
-        description="Свяжитесь с нами для получения дополнительной информации о наших услугах."
-        keywords="Империал, контакты Imperial Corporation, связаться с агентством недвижимости, адрес и телефон компании, электронная почта для связи, форма обратной связи"
+        title={t('contacts.head.title')}
+        description={t('contacts.head.description')}
+        keywords={t('contacts.head.keywords')}
         name="ImperialCorporation"
         type="application"
         href={Paths.CONTACTS}
       />
       <HeroBg
         url="https://res.cloudinary.com/diwpzmuai/image/upload/v1684000921/IMG_2088_m3owpe.jpg"
-        title="Imperial"
-        subtitle="Вместе мы строим нашу империю"
+        title={t('contacts.title')}
+        subtitle={t('contacts.subtitle')}
       />
       <ContactForm />
       <ContactMap />

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 import { Paths } from '../../../../constants/Paths';
@@ -15,6 +16,8 @@ import {
 } from './styles';
 
 const FooterHeader = () => {
+  const { t } = useTranslation();
+
   const { contacts } = useNavLinks();
 
   return (
@@ -22,13 +25,12 @@ const FooterHeader = () => {
       <FlexContainer>
         <CompanyLogo />
         <Description variants={Variants.opacity} custom={1.2}>
-          Мы - команда профессионалов, специализирующихся на предоставлении услуг по покупке, продаже и аренде
-          недвижимости в Северном Кипре.
+          {t('layout.footer.description')}
         </Description>
       </FlexContainer>
       <Stack>
         <motion.div variants={Variants.opacity} custom={1.1}>
-          <GetInTouchLink to={Paths.CONTACTS}>СВЯЗАТЬСЯ</GetInTouchLink>
+          <GetInTouchLink to={Paths.CONTACTS}>{t('layout.footer.getInTouchLink')}</GetInTouchLink>
         </motion.div>
         <ListContainer>
           {contacts.map((contact) => (
