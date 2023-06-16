@@ -11,8 +11,9 @@ import PaginationButtons from './PaginationButtons';
 import Loader from './Loader';
 import { Grid, NotFoundTitle, Wrapper } from './styles';
 
-const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers }) => {
+const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers, types }) => {
   const [currentPage, setCurrentPage] = useState(JSON.parse(localStorage.getItem('page')) || 1);
+  const [typeParam, setTypeParam] = useState('');
   const [developerParam, setDeveloperParam] = useState('');
   const [locationParam, setLocationParam] = useState('');
   const [handoverParam, setHandoverParam] = useState('');
@@ -25,7 +26,7 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
   const searchPriceEnd = useDebounce(finalPrice, 500);
 
   const { data: realEstates, isLoading } = useQuery(
-    ['items', currentPage, developerParam, locationParam, handoverParam, startPrice, endPrice],
+    ['items', currentPage, developerParam, locationParam, handoverParam, startPrice, endPrice, typeParam],
     () =>
       RealEstatesServices.getAllRealEstate(
         currentPage,
@@ -33,11 +34,14 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
         locationParam,
         handoverParam,
         startPrice,
-        endPrice
+        endPrice,
+        typeParam
       )
   );
 
   useEffect(() => {
+    const isTypeParam = types.map((it) => `&type=${it}`).join('');
+    setTypeParam(isTypeParam);
     const isDeveloperParam = !!developers.length
       ? developers.map((developer) => `&developer=${developer.value}`).join('')
       : '';
@@ -54,9 +58,10 @@ const ListItems = ({ initialPrice, finalPrice, developers, locations, handovers 
     const isFinalPrice = searchPriceEnd ? `&finalPrice=${searchPriceEnd}` : '';
     setStartPrice(isStartPrice);
     setEndPrice(isFinalPrice);
-  }, [developers, locations, handovers, currentPage, searchPriceStart, searchPriceEnd]);
+  }, [developers, locations, handovers, currentPage, searchPriceStart, searchPriceEnd, types]);
 
   useSetToLocalStorage(
+    types,
     developers,
     locations,
     handovers,

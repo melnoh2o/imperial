@@ -33,4 +33,17 @@ export const Variants = {
     }),
     exit: { opacity: 0, x: -0, y: 20 },
   },
+
+  fade: {
+    hidden: { x: 0, y: 20 },
+    enter: {
+      x: 0,
+      y: 0,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+      },
+    },
+    exit: { x: -0, y: 20 },
+  },
 };

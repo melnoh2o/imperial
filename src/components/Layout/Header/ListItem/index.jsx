@@ -66,11 +66,12 @@ const ListItem = ({ isWhite }) => {
       ))}
       <ChangeLangBtn
         onClick={toggleLang}
+        $isWhite={isWhite}
         aria-label="language change button"
         initial="hidden"
         animate="enter"
         exit="exit"
-        variants={Variants.opacity}
+        variants={Variants.fade}
         viewport={{ once: true }}
       >
         {lang}

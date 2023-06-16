@@ -68,6 +68,7 @@ export const ChangeLangBtn = styled(motion.button)`
   ${({ theme }) => theme.mixins.fontSize14}
   font-weight: 400;
   letter-spacing: 2px;
+  opacity: 0.7;
   color: var(--white);
   border: 1px solid var(--white);
   background: transparent;
@@ -75,10 +76,23 @@ export const ChangeLangBtn = styled(motion.button)`
   transition: var(--transition);
 
   &:is(:hover, :active, :focus) {
+    opacity: 1;
     color: var(--black);
-    border: 1px solid var(--black);
     background: var(--white);
   }
+
+  ${(props) =>
+    props.$isWhite &&
+    css`
+      color: var(--black);
+      border-color: var(--black);
+
+      &:is(:hover, :active, :focus) {
+        color: var(--white);
+        border-color: var(--black);
+        background: var(--black);
+      }
+    `}
 
   @media (max-width: 1175px) {
     position: absolute;

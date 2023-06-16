@@ -6,11 +6,15 @@ import { RealEstatesServices } from '../../../services/realEstateServices';
 import { Variants } from '../../../constants/animation';
 import MobileRange from './MobileRange';
 import MobileItem from './MobileItem';
+import MobileByType from './MobileByType';
 import Item from './Item';
 import PriceInput from './PriceInput';
+import FilterByType from './FilterByType';
 import { FilterMobileTitle, FilterMobileWrapper, FilterWrapper } from './styles';
 
 const FilterListItem = ({
+  types,
+  setTypes,
   developers,
   setDevelopers,
   handovers,
@@ -34,6 +38,9 @@ const FilterListItem = ({
       {!matches && (
         <FilterMobileWrapper>
           <FilterMobileTitle>{t('realEstate.mobileFilter.title')}</FilterMobileTitle>
+
+          <MobileByType types={types} setTypes={setTypes} />
+
           <MobileRange
             initialPrice={initialPrice}
             finalPrice={finalPrice}
@@ -41,6 +48,7 @@ const FilterListItem = ({
             setFinalPrice={setFinalPrice}
             setInitialPrice={setInitialPrice}
           />
+
           {!!data && !!data.developers && (
             <MobileItem
               data={data.developers}
@@ -77,6 +85,8 @@ const FilterListItem = ({
           variants={Variants.opacity}
           custom={1.2}
         >
+          <FilterByType types={types} setTypes={setTypes} />
+
           <PriceInput
             initialPrice={initialPrice}
             finalPrice={finalPrice}

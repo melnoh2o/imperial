@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
+import { Badge as MantineBabge } from '@mantine/core';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Wrapper = styled(motion.div)`
@@ -117,5 +118,22 @@ export const Handover = styled.p`
 
   svg {
     color: var(--gray2);
+  }
+`;
+
+export const Badge = styled(MantineBabge)`
+  color: var(--white);
+  border: none;
+
+  &.apartment {
+    background: var(--light-blue);
+  }
+
+  &.villa {
+    background: linear-gradient(to right, var(--secondary-purple), var(--white-purple)) !important;
+  }
+
+  &.commercial {
+    background: var(--secondary-green);
   }
 `;

@@ -26,6 +26,7 @@ const variables = css`
     --gray5: rgba(17, 17, 17, 0.5);
     --gray6: #f5f5f5;
     --green: #62c584;
+    --secondary-green: #1f8a70;
     --brown: #696969;
     --brown2: #212529;
     --black-bg: rgba(0, 0, 0, 0.9);
@@ -34,9 +35,14 @@ const variables = css`
     --black-bg4: rgba(0, 0, 0, 0.2);
     --black-bg5: rgba(0, 0, 0, 0.3);
     --purple: #740374;
+    --secondary-purple: #a044ff;
+    --white-purple: #6a3093;
     --dark-purple: #360536;
     --blue: #0c0cc1;
     --blue-hover: #1313f6;
+    --light-blue: rgb(93, 171, 183);
+    --yellow: #f0cb35;
+    --red: #c02425;
 
     --transition: all 0.2s ease-in-out 0s;
 

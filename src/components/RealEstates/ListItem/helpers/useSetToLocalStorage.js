@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 export function useSetToLocalStorage(
+  types,
   developers,
   locations,
   handovers,
@@ -15,5 +16,5 @@ export function useSetToLocalStorage(
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [developers, locations, handovers, searchPriceStart, searchPriceEnd]);
+  }, [developers, locations, handovers, searchPriceStart, searchPriceEnd, types]);
 }

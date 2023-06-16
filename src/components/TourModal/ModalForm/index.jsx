@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { useForm } from '@mantine/form';
+import { DateInput } from '@mantine/dates';
 import { Stack, TextInput, Checkbox } from '@mantine/core';
 
 import { Variants } from '../../../constants/animation';
@@ -9,7 +10,6 @@ import Loader from '../../Loader';
 import CustomPhoneInput from '../../CustomPhoneInput';
 import { SuccessMessage, useInputStyles } from '../../styles/index.js';
 import { Button, CheckboxTitle, FormWrapper, useCheckboxStyles } from './styles';
-import NumberInput from '../../NumberInput';
 
 const ModalForm = () => {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ const ModalForm = () => {
     initialValues: {
       phone: '',
       name: '',
-      price: 0 || '',
+      date: null,
       communicationMethod: '',
     },
     validate: {
@@ -65,19 +65,26 @@ const ModalForm = () => {
             classNames={{ input }}
           />
           <CustomPhoneInput {...form.getInputProps('phone')} />
-          <NumberInput
-            {...form.getInputProps('price')}
-            min={0}
-            hideControls
-            parser={(value) => value.replace(/\£\s?|(,*)/g, '')}
-            formatter={(value) =>
-              !Number.isNaN(parseFloat(value))
-                ? `£ ${value}`.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
-                : '£ '
-            }
-            placeholder={t('tourModal.form.priceInput.placeholder')}
-            classNames={{ input }}
+          <DateInput
+            {...form.getInputProps('date')}
+            placeholder={t('tourModal.form.dateInput.placeholder')}
+            valueFormat="YYYY.MM.DD"
+            maw={400}
+            styles={{
+              root: {
+                width: '100%',
+                maxWidth: '100% !important',
+              },
+              wrapper: input,
+              input: {
+                width: '100%',
+                background: 'transparent',
+                border: 'none',
+                padding: 0,
+              },
+            }}
           />
+
           <Stack spacing={5}>
             <CheckboxTitle>{t('tourModal.form.checkbox.title')}</CheckboxTitle>
             <Checkbox.Group {...form.getInputProps('communicationMethod')}>

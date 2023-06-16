@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 
 import { Paths } from '../../constants/Paths';
+import { RealEstateTypes } from '../../constants/realEstateTypes';
 import { RealEstatesServices } from '../../services/realEstateServices';
 import SEO from '../../components/SEO';
 import HeroBg from '../../components/HeroBg';
@@ -16,6 +17,11 @@ const RealEstates = () => {
 
   const { data: minMax } = useQuery(['min-max'], () => RealEstatesServices.getMinMaxValues());
 
+  const [types, setTypes] = useState([
+    RealEstateTypes.APARTMENT,
+    RealEstateTypes.VILLA,
+    RealEstateTypes.COMMERCIAL,
+  ]);
   const [developers, setDevelopers] = useState([]);
   const [locations, setLocations] = useState([]);
   const [handovers, setHandovers] = useState([]);
@@ -46,9 +52,11 @@ const RealEstates = () => {
       />
       <FlexContainer $isBoth>
         <FilterListItem
+          types={types}
           developers={developers}
           locations={locations}
           handovers={handovers}
+          setTypes={setTypes}
           setDevelopers={setDevelopers}
           setLocations={setLocations}
           setHandovers={setHandovers}
@@ -59,6 +67,7 @@ const RealEstates = () => {
           minMax={minMax}
         />
         <ListItems
+          types={types}
           initialPrice={initialPrice}
           finalPrice={finalPrice}
           developers={developers}

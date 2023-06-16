@@ -50,7 +50,7 @@ const ContactForm = () => {
     },
   });
 
-  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.sentLetter });
+  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.submitApplication });
 
   const handleSubmit = async (values) => {
     try {

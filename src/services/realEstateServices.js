@@ -13,9 +13,17 @@ export const RealEstatesServices = {
     return data;
   },
 
-  async getAllRealEstate(currentPage, developerParam, locationParam, handoverParam, startPrice, finalPrice) {
+  async getAllRealEstate(
+    currentPage,
+    developerParam,
+    locationParam,
+    handoverParam,
+    startPrice,
+    finalPrice,
+    type
+  ) {
     const { data } = await axios.get(
-      `${URL_BASE}/real-estate/get-all?page=${currentPage}${developerParam}${locationParam}${handoverParam}${startPrice}${finalPrice}`
+      `${URL_BASE}/real-estate/get-all?page=${currentPage}${type}${developerParam}${locationParam}${handoverParam}${startPrice}${finalPrice}`
     );
     return data;
   },

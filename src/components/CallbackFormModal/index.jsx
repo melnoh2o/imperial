@@ -8,6 +8,7 @@ import { MailServices } from '../../services/mailServices';
 import { Variants } from '../../constants/animation';
 import TextInput from '../TextInput';
 import CustomPhoneInput from '../CustomPhoneInput';
+import NumberInput from '../NumberInput';
 import Loader from '../Loader';
 import { FormButton, SuccessMessage, useInputStyles } from '../styles/index';
 import { FormWrapper, Label, useStyles } from './styles';
@@ -18,7 +19,7 @@ const CallBackFormModal = () => {
   const isOpen = useStore((store) => store.isCallbackFormOpen);
   const onClose = useStore((store) => store.closeCallbackModal);
 
-  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.submitTourRequest });
+  const { mutateAsync, isLoading, isSuccess } = useMutation({ mutationFn: MailServices.submitRequest });
 
   const {
     classes: { input },
@@ -31,6 +32,7 @@ const CallBackFormModal = () => {
     initialValues: {
       phone: '',
       name: '',
+      price: 0 || '',
     },
     validate: {
       name: (value) => (value.length < 2 ? t('callbackModal.form.nameInput.validation') : null),
@@ -120,6 +122,19 @@ const CallBackFormModal = () => {
             <Label>{t('callbackModal.form.phoneInput.label')}</Label>
             <CustomPhoneInput {...form.getInputProps('phone')} isHigh={true} />
           </Stack>
+          <NumberInput
+            {...form.getInputProps('price')}
+            min={0}
+            hideControls
+            parser={(value) => value.replace(/\£\s?|(,*)/g, '')}
+            formatter={(value) =>
+              !Number.isNaN(parseFloat(value))
+                ? `£ ${value}`.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+                : '£ '
+            }
+            placeholder={t('callbackModal.form.priceInput.placeholder')}
+            classNames={{ input }}
+          />
           <FormButton
             disabled={isLoading}
             initial="hidden"

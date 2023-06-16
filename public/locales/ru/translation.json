@@ -47,8 +47,8 @@
         "validation": "Пожалуйста, введите номер телефона!"
       },
 
-      "priceInput": {
-        "placeholder": "Цена от"
+      "dateInput": {
+        "placeholder": "Дата приезда"
       },
 
       "checkbox": {
@@ -74,6 +74,10 @@
       "phoneInput": {
         "label": "Номер телефона",
         "validation": "Пожалуйста, введите номер телефона!"
+      },
+
+      "priceInput": {
+        "placeholder": "Цена от"
       },
 
       "btnText": "Оставить заявку",
@@ -233,7 +237,13 @@
       "locations": "Локации",
       "handover": "Дата сдачи",
       "showAll": "Показать все",
-      "hideAll": "Скрыть все"
+      "hideAll": "Скрыть все",
+      "type": "По типу",
+      "types": {
+        "villa": "ВИЛЛА",
+        "commercial": "КОММЕРЧЕСКОЕ",
+        "apartment": "КВАРТИРА"
+      }
     },
 
     "mobileFilter": {

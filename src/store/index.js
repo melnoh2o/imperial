@@ -13,6 +13,7 @@ const useStore = create(
       isFormClosed: false,
       isCallbackFormOpen: false,
       isBurgerMenuOpen: false,
+      modifiedFilterTypes: [],
       open: () => set({ isOpen: true }),
       openCallbackModal: () => set({ isCallbackFormOpen: true }),
       toggleBurgerMenu: () => set((state) => ({ isBurgerMenuOpen: !state.isBurgerMenuOpen })),
@@ -20,6 +21,7 @@ const useStore = create(
       closeCallbackModal: () => set({ isCallbackFormOpen: false }),
       closeBurgerMenu: () => set({ isBurgerMenuOpen: false }),
       changeLang: (value) => set({ lang: value }),
+      setModifiedFilterTypes: (value) => set({ modifiedFilterTypes: value }),
     }),
     {
       name: STORAGE_NAME,

@@ -14,9 +14,9 @@ export const Button = styled(motion.button)`
   height: 30px;
   font-size: 12px;
   line-height: 28px;
+  color: ${(props) => (props.$isActive ? 'var(--white)' : 'var(--black)')};
   background-color: ${(props) => (props.$isActive ? 'var(--black)' : 'var(--white)')};
   border: 1px solid var(--black);
-  color: ${(props) => (props.$isActive ? 'var(--white)' : 'var(--black)')};
   transition: border 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
 
   &:is(:hover, :active, :focus) {

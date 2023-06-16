@@ -1,9 +1,12 @@
+import { Group, Stack } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { BsCalendar3 } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Variants } from '../../constants/animation';
+import { determineRealEstateType } from '../../helpers/determineRealEstateType';
 import {
+  Badge,
   ContentLink,
   ContentWrapper,
   Developer,
@@ -31,9 +34,18 @@ const RealEstateCard = ({ item }) => {
       </ImageWrapper>
       <ContentWrapper>
         <ContentLink to={`/real-estate-details/${id}`}>{name}</ContentLink>
-        <Developer>
-          {t('realEstate.card.developer')} - <strong>{developer}</strong>
-        </Developer>
+        <Group position="apart">
+          <Developer>
+            {t('realEstate.card.developer')} - <strong>{developer}</strong>
+          </Developer>
+          <Stack spacing={4} align="center">
+            {item.type.map((type, idx) => (
+              <Badge key={`${type}-${idx}`} className={type.toLowerCase()}>
+                {determineRealEstateType(t, type)}
+              </Badge>
+            ))}
+          </Stack>
+        </Group>
       </ContentWrapper>
       <FooterWrapper>
         <Location>

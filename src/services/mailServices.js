@@ -7,7 +7,11 @@ export const MailServices = {
     await axios.post(`${URL_BASE}/mail/submit-tour-request`, values);
   },
 
-  async sentLetter(values) {
+  async submitRequest(values) {
+    await axios.post(`${URL_BASE}/mail/submit-request`, values);
+  },
+
+  async submitApplication(values) {
     await axios.post(`${URL_BASE}/mail/submit-application`, values);
   },
 };

@@ -47,8 +47,8 @@
         "validation": "Please enter a phone number!"
       },
 
-      "priceInput": {
-        "placeholder": "Price from"
+      "dateInput": {
+        "placeholder": "Arrival date"
       },
 
       "checkbox": {
@@ -74,6 +74,10 @@
       "phoneInput": {
         "label": "Phone number",
         "validation": "Please enter a phone number!"
+      },
+
+      "priceInput": {
+        "placeholder": "Price from"
       },
 
       "btnText": "Submit request",
@@ -109,52 +113,52 @@
         "title": "PHUKET HEALTH & WELLNESS RESORT",
         "description": "Phuket is a place where you can feel a piece of Thailand. The project offers an image of a healthy lifestyle, as there are many walking paths, cycling routes, sports grounds, gym, meditation and yoga areas, spas and swimming pools.",
         "location": "Tatlysu",
-        "firstDescription": "1+0 apartments - from 35 m2",
-        "secondDescription": "1+1 apartments - from 50 m2",
-        "thirdDescription": "2+1 apartments - from 75 m2"
+        "firstDescription": "1+0 apartments - from 35 m²",
+        "secondDescription": "1+1 apartments - from 50 m²",
+        "thirdDescription": "2+1 apartments - from 75 m²"
       },
 
       "secondItem": {
         "title": "CASA DELMRE",
         "description": "Thanks to the convenience of transportation provided by proximity to the airport, excellent distance to Kyrenia and the location of Casa del Mare on the seashore, you will live in a magnificent area. Life here is wonderful: sea, sun, sand, rest and laughter against the azure landscapes of the Mediterranean Sea.",
         "location": "Esentepe",
-        "firstDescription": "1+0 apartments - from 82 m2",
-        "secondDescription": "1+1 apartments - from 112 m2",
-        "thirdDescription": "2+1 apartments - from 92 m2"
+        "firstDescription": "1+0 apartments - from 82 m²",
+        "secondDescription": "1+1 apartments - from 112 m²",
+        "thirdDescription": "2+1 apartments - from 92 m²"
       },
 
       "thirdItem": {
         "title": "MOUNTAIN HILL2",
         "description": "The new complex under construction \"Mountainın Hıll-2\" will be located 10 km from Kyrenia in the cozy village of Alsancak, in the mountains. Our complex will be located 3 km from the sea, in the Cyrenian Mountains. The great advantage of the location of the Complex will be the incomparable mountain, fresh air and amazing, fascinating panoramic views of the sea. ",
         "location": "Alsancak",
-        "firstDescription": "1+1 apartments - from 45 m2",
-        "secondDescription": "1+1 apartments - from 70 m2",
-        "thirdDescription": "Duplex 2+1 apartments - from 70 m2"
+        "firstDescription": "1+1 apartments - from 45 m²",
+        "secondDescription": "1+1 apartments - from 70 m²",
+        "thirdDescription": "Duplex 2+1 apartments - from 70 m²"
       },
 
       "fourthItem": {
         "title": "Hawaii Homes,",
         "description": "Welcome to Hawaii Homes! Hawaii Homes is the largest residential project in Cyprus on the seashore with studios, attic penthouses 1+1, 2+1 and luxury villas with 3 bedrooms, a total of 500 apartments.",
         "location": "Esentepe",
-        "firstDescription": "1+0 apartments - from 35 m2",
-        "secondDescription": "1+1 apartments - from 50 m2",
-        "thirdDescription": "2+1 apartments - from 75 m2"
+        "firstDescription": "1+0 apartments - from 35 m²",
+        "secondDescription": "1+1 apartments - from 50 m²",
+        "thirdDescription": "2+1 apartments - from 75 m²"
       },
 
       "fifthItem": {
         "title": "AVANGART PLUS,",
         "description": "Our project \"AVANGART Plus\" consists of 3 blocks and 47 apartments. All blocks consist of a parking lot, 3 regular floors and an attic. Each block has its own covered canopy. All apartments have useful terraces.",
         "location": "Girne",
-        "firstDescription": "2+1 apartments - from 95 m2",
-        "secondDescription": "3+1 apartments - from 110 m2"
+        "firstDescription": "2+1 apartments - from 95 m²",
+        "secondDescription": "3+1 apartments - from 110 m²"
       },
 
       "sixthItem": {
         "title": "BAHAMAS THREE,",
         "description": "Located in the east of Kyrenia, Bahamas Homes offers you the Bahamas. With its modern and unique design, variety of types and all the amenities it has to offer, Bahamas Homes is sure to attract attention.",
         "location": "Esentepe",
-        "firstDescription": "1+0 apartments - from 35 m2",
-        "secondDescription": "Penthouse 2+1 apartments - from 75 m2"
+        "firstDescription": "1+0 apartments - from 35 m²",
+        "secondDescription": "Penthouse 2+1 apartments - from 75 m²"
       }
     },
 
@@ -182,7 +186,7 @@
         "title": "ELYSIUM",
         "location": "Iskele",
         "firstDescription": "One townhouse with a pool view has returned for sale! 385,000 GBP. Ready November 2025. Installments of 36 months.",
-        "secondDescription": "For sale: <br />Apartments renovated 220m2 of living space."
+        "secondDescription": "For sale: <br />Apartments renovated 220 m² of living space."
       }
     }
   },
@@ -233,7 +237,13 @@
       "locations": "Locations",
       "handover": "Delivery date",
       "showAll": "Show all",
-      "hideAll": "Hide all"
+      "hideAll": "Hide all",
+      "type": "By type",
+      "types": {
+        "villa": "VILLA",
+        "commercial": "COMMERCIAL",
+        "apartment": "APARTMENT"
+      }
     },
 
     "mobileFilter": {
@@ -323,7 +333,7 @@
       },
 
       "secondItem": {
-        "title": "METROV2 OF LIVING SPACE"
+        "title": "METERS² OF LIVING SPACE"
       },
 
       "thirdItem": {
